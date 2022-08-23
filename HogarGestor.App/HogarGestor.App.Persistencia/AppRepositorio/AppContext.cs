@@ -15,7 +15,7 @@ namespace HogarGestor.App.Persistencia{
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if (!optionsBuilder.IsConfigured){
-                optionsBuilder.UseSqlServer("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=HogarGestor");
+                optionsBuilder.UseSqlServer("data source=AKAMI;Initial Catalog=HogarGestor;Trusted_Connection=True;");
             }
         }
 
