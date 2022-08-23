@@ -1,0 +1,17 @@
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\bin\Debug\net6.0\HogarGestor.App.Persistencia.deps.json
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\bin\Debug\net6.0\HogarGestor.App.Persistencia.runtimeconfig.json
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\bin\Debug\net6.0\HogarGestor.App.Persistencia.dll
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\bin\Debug\net6.0\HogarGestor.App.Persistencia.pdb
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\bin\Debug\net6.0\HogarGestor.App.Dominio.dll
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\bin\Debug\net6.0\HogarGestor.App.Dominio.pdb
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\HogarGestor.App.Persistencia.csproj.AssemblyReference.cache
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\HogarGestor.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\HogarGestor.App.Persistencia.AssemblyInfoInputs.cache
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\HogarGestor.App.Persistencia.AssemblyInfo.cs
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\HogarGestor.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\HogarGestor.App.Persistencia.csproj.CopyComplete
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\HogarGestor.App.Persistencia.dll
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\refint\HogarGestor.App.Persistencia.dll
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\HogarGestor.App.Persistencia.pdb
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\HogarGestor.App.Persistencia.genruntimeconfig.cache
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Persistencia\obj\Debug\net6.0\ref\HogarGestor.App.Persistencia.dll
