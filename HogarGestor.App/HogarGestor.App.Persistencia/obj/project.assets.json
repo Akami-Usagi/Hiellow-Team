@@ -634,6 +634,16 @@
             "rid": "win"
           }
         }
+      },
+      "HogarGestor.App.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/HogarGestor.App.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HogarGestor.App.Dominio.dll": {}
+        }
       }
     }
   },
@@ -1855,10 +1865,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "HogarGestor.App.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../HogarGestor.App.Dominio/HogarGestor.App.Dominio.csproj",
+      "msbuildProject": "../HogarGestor.App.Dominio/HogarGestor.App.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "HogarGestor.App.Dominio >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.8",
@@ -1889,7 +1905,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj": {
+              "projectPath": "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

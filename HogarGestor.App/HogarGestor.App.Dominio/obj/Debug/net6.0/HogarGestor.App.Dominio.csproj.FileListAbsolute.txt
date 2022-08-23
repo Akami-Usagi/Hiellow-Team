@@ -1,0 +1,12 @@
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\bin\Debug\net6.0\HogarGestor.App.Dominio.deps.json
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\bin\Debug\net6.0\HogarGestor.App.Dominio.dll
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\bin\Debug\net6.0\HogarGestor.App.Dominio.pdb
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\obj\Debug\net6.0\HogarGestor.App.Dominio.csproj.AssemblyReference.cache
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\obj\Debug\net6.0\HogarGestor.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\obj\Debug\net6.0\HogarGestor.App.Dominio.AssemblyInfoInputs.cache
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\obj\Debug\net6.0\HogarGestor.App.Dominio.AssemblyInfo.cs
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\obj\Debug\net6.0\HogarGestor.App.Dominio.csproj.CoreCompileInputs.cache
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\obj\Debug\net6.0\HogarGestor.App.Dominio.dll
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\obj\Debug\net6.0\refint\HogarGestor.App.Dominio.dll
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\obj\Debug\net6.0\HogarGestor.App.Dominio.pdb
+C:\HiellowTeam\Hiellow-Team\HogarGestor.App\HogarGestor.App.Dominio\obj\Debug\net6.0\ref\HogarGestor.App.Dominio.dll
