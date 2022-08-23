@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7u0vp9QIcmPH1ENrQ0S7eCYV3J+jNEa1hc8f8OTqgjLEZo7c4nArj/I8CsC/97qS1oh7+QuOzUUgnr88SxGY6A==",
+  "dgSpecHash": "lsvkwgvZUM9A3l/SVTaZHfuPbfy0Ag7g61n2CIgO7LFQzadf9c2NgaFpX2tTC/c/mS1cfP8bARrm9o5PMzWAzQ==",
   "success": true,
-  "projectFilePath": "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Persistencia\\HogarGestor.App.Persistencia.csproj",
+  "projectFilePath": "C:\\HiellowTeam\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Persistencia\\HogarGestor.App.Persistencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

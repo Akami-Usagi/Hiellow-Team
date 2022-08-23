@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj": {}
+    "C:\\HiellowTeam\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj": {
+    "C:\\HiellowTeam\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj",
+        "projectUniqueName": "C:\\HiellowTeam\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj",
         "projectName": "HogarGestor.App.Dominio",
-        "projectPath": "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj",
+        "projectPath": "C:\\HiellowTeam\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\obj\\",
+        "outputPath": "C:\\HiellowTeam\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,7 +1,7 @@
-namespace HogarGestor.App.Persistencia.AppRepositorio{
+namespace HogarGestor.App.Persistencia{
     using Microsoft.EntityFrameworkCore;
     using HogarGestor.App.Dominio;
-    using HogarGestor.App.Persistencia;
+    
 
     public class AppContext : DbContext{
         
@@ -15,7 +15,7 @@ namespace HogarGestor.App.Persistencia.AppRepositorio{
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if (!optionsBuilder.IsConfigured){
-                optionsBuilder.UseSqlServer("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=HogarGestor");
+                optionsBuilder.UseSqlServer("data source=AKAMI;Initial Catalog=HogarGestor;Trusted_Connection=True;");
             }
         }
 
