@@ -14,4 +14,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HogarGestor.App.Persistencia\HogarGestor.App.Persistencia.csproj" />
+  </ItemGroup>
+
 </Project>

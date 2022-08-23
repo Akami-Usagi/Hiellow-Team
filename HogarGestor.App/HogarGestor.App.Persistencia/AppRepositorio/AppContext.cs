@@ -1,7 +1,7 @@
-namespace HogarGestor.App.Persistencia.AppRepositorio{
+namespace HogarGestor.App.Persistencia{
     using Microsoft.EntityFrameworkCore;
     using HogarGestor.App.Dominio;
-    using HogarGestor.App.Persistencia;
+    
 
     public class AppContext : DbContext{
         
