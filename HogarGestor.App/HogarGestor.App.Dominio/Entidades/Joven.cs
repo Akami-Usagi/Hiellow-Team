@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace HogarGestor.App.Dominio.Entidades
-{
-    public class Joven
-    {
+namespace HogarGestor.App.Dominio{
+    public class Joven{
         public int Id {get;set;}
         public string Direccion {get;set;}
         public float Latitud {get;set;}

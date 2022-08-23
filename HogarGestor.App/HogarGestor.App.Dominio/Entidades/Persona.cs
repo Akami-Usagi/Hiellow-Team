@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace HogarGestor.App.Dominio.Entidades
-{
-    public class Persona
-    {
+namespace HogarGestor.App.Dominio{
+    public class Persona{
         public int Id {get;set;}
         public string Nombre {get;set;}
         public string Apellidos {get;set;}
