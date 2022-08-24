@@ -7,7 +7,8 @@ namespace HogarGestor.App.Dominio{
         public string Ciudad {get;set;}
         public DateTime FechaNacimiento {get;set;}
         public Familiar FamiliarDesignado {get;set;}
-        public Medico MedicoAsignado {get;set;}
+        public Medico Pediatra {get;set;}
+        public Medico Nutricionista {get;set;}
         public Historia HistoriaJoven {get;set;}
         
     }
