@@ -121,7 +121,8 @@ namespace HogarGestor.App.Persistencia.Migrations
                     Ciudad = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FamiliarDesignadoId = table.Column<int>(type: "int", nullable: false),
-                    MedicoAsignadoId = table.Column<int>(type: "int", nullable: false),
+                    PediatraId = table.Column<int>(type: "int", nullable: false),
+                    NutricionistaId = table.Column<int>(type: "int", nullable: false),
                     HistoriaJovenId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -132,19 +133,25 @@ namespace HogarGestor.App.Persistencia.Migrations
                         column: x => x.FamiliarDesignadoId,
                         principalTable: "Familiares",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Jovenes_Historias_HistoriaJovenId",
                         column: x => x.HistoriaJovenId,
                         principalTable: "Historias",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
-                        name: "FK_Jovenes_Medicos_MedicoAsignadoId",
-                        column: x => x.MedicoAsignadoId,
+                        name: "FK_Jovenes_Medicos_NutricionistaId",
+                        column: x => x.NutricionistaId,
                         principalTable: "Medicos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_Jovenes_Medicos_PediatraId",
+                        column: x => x.PediatraId,
+                        principalTable: "Medicos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
@@ -158,9 +165,14 @@ namespace HogarGestor.App.Persistencia.Migrations
                 column: "HistoriaJovenId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Jovenes_MedicoAsignadoId",
+                name: "IX_Jovenes_NutricionistaId",
                 table: "Jovenes",
-                column: "MedicoAsignadoId");
+                column: "NutricionistaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Jovenes_PediatraId",
+                table: "Jovenes",
+                column: "PediatraId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PatronesCrecimientoJoven_HistoriaId",

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HogarGestor.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220823192159_Inicial")]
+    [Migration("20220827164136_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,7 +90,10 @@ namespace HogarGestor.App.Persistencia.Migrations
                     b.Property<float>("Latitud")
                         .HasColumnType("real");
 
-                    b.Property<int>("MedicoAsignadoId")
+                    b.Property<int>("NutricionistaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PediatraId")
                         .HasColumnType("int");
 
                     b.Property<float>("longitud")
@@ -102,7 +105,9 @@ namespace HogarGestor.App.Persistencia.Migrations
 
                     b.HasIndex("HistoriaJovenId");
 
-                    b.HasIndex("MedicoAsignadoId");
+                    b.HasIndex("NutricionistaId");
+
+                    b.HasIndex("PediatraId");
 
                     b.ToTable("Jovenes");
                 });
@@ -229,9 +234,15 @@ namespace HogarGestor.App.Persistencia.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("HogarGestor.App.Dominio.Medico", "MedicoAsignado")
+                    b.HasOne("HogarGestor.App.Dominio.Medico", "Nutricionista")
                         .WithMany()
-                        .HasForeignKey("MedicoAsignadoId")
+                        .HasForeignKey("NutricionistaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HogarGestor.App.Dominio.Medico", "Pediatra")
+                        .WithMany()
+                        .HasForeignKey("PediatraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -239,7 +250,9 @@ namespace HogarGestor.App.Persistencia.Migrations
 
                     b.Navigation("HistoriaJoven");
 
-                    b.Navigation("MedicoAsignado");
+                    b.Navigation("Nutricionista");
+
+                    b.Navigation("Pediatra");
                 });
 
             modelBuilder.Entity("HogarGestor.App.Dominio.PatronesCrecimiento", b =>
