@@ -29,6 +29,7 @@ namespace HogarGestor.App.Persistencia{
                 return;
             }
             _appContext.Jovenes.Remove(jovenEncontrado);
+            _appContext.SaveChanges();
         }
 
         public IEnumerable<Joven> GetAllJovenes()
@@ -38,7 +39,7 @@ namespace HogarGestor.App.Persistencia{
 
         public Joven GetJoven(int IdJoven)
         {
-            throw new NotImplementedException();
+            return _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
         }
 
         public Joven UpdateJoven(Joven joven)
