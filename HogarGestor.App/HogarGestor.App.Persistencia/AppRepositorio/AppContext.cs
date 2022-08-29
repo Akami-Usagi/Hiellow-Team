@@ -15,7 +15,7 @@ namespace HogarGestor.App.Persistencia{
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if (!optionsBuilder.IsConfigured){
-                optionsBuilder.UseSqlServer("data source=AKAMI;Initial Catalog=HogarGestor;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("data source=LocalHost;Initial Catalog=HogarGestor;Trusted_Connection=True;");
                 /// CAMBIAR EL DATA SOURCE AL NOMBRE DEL SERVIDOR INSTALADO EN CADA PC. EL MIO QUEDO CON ESE NOMBRE ENTONCES 
                 /// DEBEN CAMBIARLO AL NOMBRE DEL SERVIDOR DE CADA UNO, LOS DEMAS DATOS ESTAN BIEN Y FUNCIONALES.
             }

@@ -1,5 +1,5 @@
 namespace HogarGestor.App.Dominio{
-    public class Joven{
+    public class Joven : Persona{
         public int Id {get;set;}
         public string Direccion {get;set;}
         public float Latitud {get;set;}
