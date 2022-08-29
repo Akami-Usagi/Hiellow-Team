@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "HogarGestor.App.Consola/1.0.0": {
         "dependencies": {
+          "HogarGestor.App.Dominio": "1.0.0",
           "HogarGestor.App.Persistencia": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.8"
         },

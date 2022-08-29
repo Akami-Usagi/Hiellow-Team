@@ -1857,6 +1857,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "HogarGestor.App.Dominio >= 1.0.0",
       "HogarGestor.App.Persistencia >= 1.0.0",
       "Microsoft.EntityFrameworkCore.design >= 6.0.8"
     ]
@@ -1867,11 +1868,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Consola\\HogarGestor.App.Consola.csproj",
+      "projectUniqueName": "C:\\Hiellow-Team\\hogargestor.app\\hogargestor.app.consola\\HogarGestor.App.Consola.csproj",
       "projectName": "HogarGestor.App.Consola",
-      "projectPath": "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Consola\\HogarGestor.App.Consola.csproj",
+      "projectPath": "C:\\Hiellow-Team\\hogargestor.app\\hogargestor.app.consola\\HogarGestor.App.Consola.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Consola\\obj\\",
+      "outputPath": "C:\\Hiellow-Team\\hogargestor.app\\hogargestor.app.consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1886,6 +1887,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj": {
+              "projectPath": "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj"
+            },
             "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Persistencia\\HogarGestor.App.Persistencia.csproj": {
               "projectPath": "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Persistencia\\HogarGestor.App.Persistencia.csproj"
             }
