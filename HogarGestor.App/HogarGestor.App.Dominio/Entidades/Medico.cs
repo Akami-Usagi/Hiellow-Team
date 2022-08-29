@@ -1,8 +1,15 @@
-namespace HogarGestor.App.Dominio{
-    public class Medico{
-        public int Id {get;set;}
-        public Especialidad EspecialidadMedica {get;set;}
-        public string Rethus {get;set;}
-        public string TarjetaProfesional {get;set;}
+using System.Collections.Generic;
+
+namespace HogarGestor.App.Dominio
+{
+    public class Medico : Persona
+    {
+        public string Rethus { get; set; }
+
+        public string TarjetaProfesional { get; set; }
+
+        public Especialidad Especialidad { get; set; }
+
+        public List<AsignarMedico> AsignarMedicos { get; set; }
     }
 }

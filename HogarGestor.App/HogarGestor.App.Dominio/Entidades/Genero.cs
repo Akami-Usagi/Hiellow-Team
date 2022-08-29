@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace HogarGestor.App.Dominio
 {
-    public class TipoDocumento
+    public class Genero
     {
         public int Id { get; set; }
 

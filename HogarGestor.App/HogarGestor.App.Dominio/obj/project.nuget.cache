@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vLNRwKO6QEGFl+jdS9BJGQTI3E3st9G75jc40XjO0hRIgn30/Ks08vq4M5vDtSfxgvnOn4j7YCkUw67PlBG8qA==",
+  "dgSpecHash": "95fNMkguAw0902pYb/UqsgCZQHlXrNoRDL4B0cUVdypOwePVL4ttNrOxtdlLi2ELKtVzzi5HgCCJuSAQB5zpmg==",
   "success": true,
-  "projectFilePath": "C:\\HiellowTeam\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\rojas\\HogarGestor\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

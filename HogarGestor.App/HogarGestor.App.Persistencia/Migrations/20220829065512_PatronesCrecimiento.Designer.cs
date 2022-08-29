@@ -4,6 +4,7 @@ using HogarGestor.App.Persistencia;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HogarGestor.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20220829065512_PatronesCrecimiento")]
+    partial class PatronesCrecimiento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,15 +32,10 @@ namespace HogarGestor.App.Persistencia.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("JovenId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("MedicoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("JovenId");
 
                     b.HasIndex("MedicoId");
 
@@ -94,9 +91,6 @@ namespace HogarGestor.App.Persistencia.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("JovenId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Medicion")
                         .HasColumnType("int");
 
@@ -104,8 +98,6 @@ namespace HogarGestor.App.Persistencia.Migrations
                         .HasColumnType("real");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("JovenId");
 
                     b.ToTable("PatronesCrecimiento");
                 });
@@ -216,37 +208,6 @@ namespace HogarGestor.App.Persistencia.Migrations
                     b.HasDiscriminator().HasValue("Familiar");
                 });
 
-            modelBuilder.Entity("HogarGestor.App.Dominio.Joven", b =>
-                {
-                    b.HasBaseType("HogarGestor.App.Dominio.Persona");
-
-                    b.Property<string>("Ciudad")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Direccion")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("FamiliarId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("HistoriaId")
-                        .HasColumnType("int");
-
-                    b.Property<float>("Latitud")
-                        .HasColumnType("real");
-
-                    b.Property<float>("longitud")
-                        .HasColumnType("real");
-
-                    b.HasIndex("FamiliarId");
-
-                    b.HasIndex("HistoriaId");
-
-                    b.HasDiscriminator().HasValue("Joven");
-                });
-
             modelBuilder.Entity("HogarGestor.App.Dominio.Medico", b =>
                 {
                     b.HasBaseType("HogarGestor.App.Dominio.Persona");
@@ -267,20 +228,9 @@ namespace HogarGestor.App.Persistencia.Migrations
 
             modelBuilder.Entity("HogarGestor.App.Dominio.AsignarMedico", b =>
                 {
-                    b.HasOne("HogarGestor.App.Dominio.Joven", null)
-                        .WithMany("AsignarMedicos")
-                        .HasForeignKey("JovenId");
-
                     b.HasOne("HogarGestor.App.Dominio.Medico", null)
                         .WithMany("AsignarMedicos")
                         .HasForeignKey("MedicoId");
-                });
-
-            modelBuilder.Entity("HogarGestor.App.Dominio.PatronesCrecimiento", b =>
-                {
-                    b.HasOne("HogarGestor.App.Dominio.Joven", null)
-                        .WithMany("PatronesCrecimiento")
-                        .HasForeignKey("JovenId");
                 });
 
             modelBuilder.Entity("HogarGestor.App.Dominio.Persona", b =>
@@ -313,25 +263,6 @@ namespace HogarGestor.App.Persistencia.Migrations
                     b.Navigation("Historia");
                 });
 
-            modelBuilder.Entity("HogarGestor.App.Dominio.Joven", b =>
-                {
-                    b.HasOne("HogarGestor.App.Dominio.Familiar", "Familiar")
-                        .WithMany()
-                        .HasForeignKey("FamiliarId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HogarGestor.App.Dominio.Historia", "Historia")
-                        .WithMany()
-                        .HasForeignKey("HistoriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Familiar");
-
-                    b.Navigation("Historia");
-                });
-
             modelBuilder.Entity("HogarGestor.App.Dominio.Genero", b =>
                 {
                     b.Navigation("Persona");
@@ -345,13 +276,6 @@ namespace HogarGestor.App.Persistencia.Migrations
             modelBuilder.Entity("HogarGestor.App.Dominio.TipoDocumento", b =>
                 {
                     b.Navigation("Persona");
-                });
-
-            modelBuilder.Entity("HogarGestor.App.Dominio.Joven", b =>
-                {
-                    b.Navigation("AsignarMedicos");
-
-                    b.Navigation("PatronesCrecimiento");
                 });
 
             modelBuilder.Entity("HogarGestor.App.Dominio.Medico", b =>

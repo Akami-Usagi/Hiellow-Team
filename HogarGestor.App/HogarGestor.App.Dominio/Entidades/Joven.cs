@@ -1,15 +1,23 @@
-namespace HogarGestor.App.Dominio{
-    public class Joven{
-        public int Id {get;set;}
-        public string Direccion {get;set;}
-        public float Latitud {get;set;}
-        public float longitud {get;set;}
-        public string Ciudad {get;set;}
-        public DateTime FechaNacimiento {get;set;}
-        public Familiar FamiliarDesignado {get;set;}
-        public Medico Pediatra {get;set;}
-        public Medico Nutricionista {get;set;}
-        public Historia HistoriaJoven {get;set;}
-        
+using System.Collections.Generic;
+
+namespace HogarGestor.App.Dominio
+{
+    public class Joven : Persona
+    {
+        public string Direccion { get; set; }
+
+        public float Latitud { get; set; }
+
+        public float longitud { get; set; }
+
+        public string Ciudad { get; set; }
+
+        public Familiar Familiar { get; set; }
+
+        public Historia Historia { get; set; }
+
+        public List<PatronesCrecimiento> PatronesCrecimiento { get; set; }
+
+        public List<AsignarMedico> AsignarMedicos { get; set; }
     }
 }

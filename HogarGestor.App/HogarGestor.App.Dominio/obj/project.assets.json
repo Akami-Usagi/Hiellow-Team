@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\USUARIO\\.nuget\\packages\\": {}
+    "C:\\Users\\rojas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\rojas\\HogarGestor\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj",
       "projectName": "HogarGestor.App.Dominio",
-      "projectPath": "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj",
-      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\HiellowTeam\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\obj\\",
+      "projectPath": "C:\\Users\\rojas\\HogarGestor\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj",
+      "packagesPath": "C:\\Users\\rojas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rojas\\HogarGestor\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\rojas\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -49,7 +49,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -58,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

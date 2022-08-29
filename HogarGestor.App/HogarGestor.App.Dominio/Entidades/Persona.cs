@@ -1,11 +1,21 @@
-namespace HogarGestor.App.Dominio{
-    public class Persona{
-        public int Id {get;set;}
-        public string Nombre {get;set;}
-        public string Apellidos {get;set;}
-        public string Documento {get;set;}
-        public string NumeroTelefono {get;set;}
-        public Generos Genero {get;set;}
-        public TipoDocumento DocumentoTipo {get;set;}
+using System.Collections.Generic;
+
+namespace HogarGestor.App.Dominio
+{
+    public class Persona
+    {
+        public int Id { get; set; }
+
+        public string Nombre { get; set; }
+
+        public string Apellido { get; set; }
+
+        public string Telefono { get; set; }
+
+        public string Documento { get; set; }
+
+        public TipoDocumento TipoDocumento { get; set; }
+
+        public Genero Genero { get; set; }
     }
 }
