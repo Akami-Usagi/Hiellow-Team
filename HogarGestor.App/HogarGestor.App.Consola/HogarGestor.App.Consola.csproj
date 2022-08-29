@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HogarGestor.App.Persistencia\HogarGestor.App.Persistencia.csproj" />
+    <ProjectReference Include="..\HogarGestor.App.Dominio\HogarGestor.App.Dominio.csproj" />
   </ItemGroup>
 
  
