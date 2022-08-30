@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HogarGestor.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220829065512_PatronesCrecimiento")]
+    [Migration("20220830040219_PatronesCrecimiento")]
     partial class PatronesCrecimiento
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,24 +23,6 @@ namespace HogarGestor.App.Persistencia.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("HogarGestor.App.Dominio.AsignarMedico", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int?>("MedicoId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MedicoId");
-
-                    b.ToTable("AsignarMedicos");
-                });
 
             modelBuilder.Entity("HogarGestor.App.Dominio.Genero", b =>
                 {
@@ -226,13 +208,6 @@ namespace HogarGestor.App.Persistencia.Migrations
                     b.HasDiscriminator().HasValue("Medico");
                 });
 
-            modelBuilder.Entity("HogarGestor.App.Dominio.AsignarMedico", b =>
-                {
-                    b.HasOne("HogarGestor.App.Dominio.Medico", null)
-                        .WithMany("AsignarMedicos")
-                        .HasForeignKey("MedicoId");
-                });
-
             modelBuilder.Entity("HogarGestor.App.Dominio.Persona", b =>
                 {
                     b.HasOne("HogarGestor.App.Dominio.Genero", "Genero")
@@ -276,11 +251,6 @@ namespace HogarGestor.App.Persistencia.Migrations
             modelBuilder.Entity("HogarGestor.App.Dominio.TipoDocumento", b =>
                 {
                     b.Navigation("Persona");
-                });
-
-            modelBuilder.Entity("HogarGestor.App.Dominio.Medico", b =>
-                {
-                    b.Navigation("AsignarMedicos");
                 });
 #pragma warning restore 612, 618
         }

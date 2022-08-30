@@ -22,29 +22,6 @@ namespace HogarGestor.App.Persistencia.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("HogarGestor.App.Dominio.AsignarMedico", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int?>("JovenId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("MedicoId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("JovenId");
-
-                    b.HasIndex("MedicoId");
-
-                    b.ToTable("AsignarMedicos");
-                });
-
             modelBuilder.Entity("HogarGestor.App.Dominio.Genero", b =>
                 {
                     b.Property<int>("Id")
@@ -81,7 +58,12 @@ namespace HogarGestor.App.Persistencia.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("JovenId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("JovenId");
 
                     b.ToTable("Historias");
                 });
@@ -231,18 +213,23 @@ namespace HogarGestor.App.Persistencia.Migrations
                     b.Property<int>("FamiliarId")
                         .HasColumnType("int");
 
-                    b.Property<int>("HistoriaId")
-                        .HasColumnType("int");
-
                     b.Property<float>("Latitud")
                         .HasColumnType("real");
+
+                    b.Property<int>("NutricionistaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PediatraId")
+                        .HasColumnType("int");
 
                     b.Property<float>("longitud")
                         .HasColumnType("real");
 
                     b.HasIndex("FamiliarId");
 
-                    b.HasIndex("HistoriaId");
+                    b.HasIndex("NutricionistaId");
+
+                    b.HasIndex("PediatraId");
 
                     b.HasDiscriminator().HasValue("Joven");
                 });
@@ -265,15 +252,11 @@ namespace HogarGestor.App.Persistencia.Migrations
                     b.HasDiscriminator().HasValue("Medico");
                 });
 
-            modelBuilder.Entity("HogarGestor.App.Dominio.AsignarMedico", b =>
+            modelBuilder.Entity("HogarGestor.App.Dominio.Historia", b =>
                 {
                     b.HasOne("HogarGestor.App.Dominio.Joven", null)
-                        .WithMany("AsignarMedicos")
+                        .WithMany("HistoriaJoven")
                         .HasForeignKey("JovenId");
-
-                    b.HasOne("HogarGestor.App.Dominio.Medico", null)
-                        .WithMany("AsignarMedicos")
-                        .HasForeignKey("MedicoId");
                 });
 
             modelBuilder.Entity("HogarGestor.App.Dominio.PatronesCrecimiento", b =>
@@ -321,15 +304,23 @@ namespace HogarGestor.App.Persistencia.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("HogarGestor.App.Dominio.Historia", "Historia")
+                    b.HasOne("HogarGestor.App.Dominio.Medico", "Nutricionista")
                         .WithMany()
-                        .HasForeignKey("HistoriaId")
+                        .HasForeignKey("NutricionistaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HogarGestor.App.Dominio.Medico", "Pediatra")
+                        .WithMany()
+                        .HasForeignKey("PediatraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Familiar");
 
-                    b.Navigation("Historia");
+                    b.Navigation("Nutricionista");
+
+                    b.Navigation("Pediatra");
                 });
 
             modelBuilder.Entity("HogarGestor.App.Dominio.Genero", b =>
@@ -349,14 +340,9 @@ namespace HogarGestor.App.Persistencia.Migrations
 
             modelBuilder.Entity("HogarGestor.App.Dominio.Joven", b =>
                 {
-                    b.Navigation("AsignarMedicos");
+                    b.Navigation("HistoriaJoven");
 
                     b.Navigation("PatronesCrecimiento");
-                });
-
-            modelBuilder.Entity("HogarGestor.App.Dominio.Medico", b =>
-                {
-                    b.Navigation("AsignarMedicos");
                 });
 #pragma warning restore 612, 618
         }

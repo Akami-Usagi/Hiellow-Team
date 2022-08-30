@@ -10,6 +10,5 @@ namespace HogarGestor.App.Dominio
 
         public Especialidad Especialidad { get; set; }
 
-        public List<AsignarMedico> AsignarMedicos { get; set; }
     }
 }

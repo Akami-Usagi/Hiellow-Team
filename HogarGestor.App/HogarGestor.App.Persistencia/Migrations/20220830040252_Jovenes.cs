@@ -26,16 +26,22 @@ namespace HogarGestor.App.Persistencia.Migrations
                 type: "int",
                 nullable: true);
 
-            migrationBuilder.AddColumn<int>(
-                name: "HistoriaId",
-                table: "Personas",
-                type: "int",
-                nullable: true);
-
             migrationBuilder.AddColumn<float>(
                 name: "Latitud",
                 table: "Personas",
                 type: "real",
+                nullable: true);
+
+            migrationBuilder.AddColumn<int>(
+                name: "NutricionistaId",
+                table: "Personas",
+                type: "int",
+                nullable: true);
+
+            migrationBuilder.AddColumn<int>(
+                name: "PediatraId",
+                table: "Personas",
+                type: "int",
                 nullable: true);
 
             migrationBuilder.AddColumn<float>(
@@ -52,7 +58,7 @@ namespace HogarGestor.App.Persistencia.Migrations
 
             migrationBuilder.AddColumn<int>(
                 name: "JovenId",
-                table: "AsignarMedicos",
+                table: "Historias",
                 type: "int",
                 nullable: true);
 
@@ -62,9 +68,14 @@ namespace HogarGestor.App.Persistencia.Migrations
                 column: "FamiliarId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Personas_HistoriaId",
+                name: "IX_Personas_NutricionistaId",
                 table: "Personas",
-                column: "HistoriaId");
+                column: "NutricionistaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Personas_PediatraId",
+                table: "Personas",
+                column: "PediatraId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PatronesCrecimiento_JovenId",
@@ -72,13 +83,13 @@ namespace HogarGestor.App.Persistencia.Migrations
                 column: "JovenId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AsignarMedicos_JovenId",
-                table: "AsignarMedicos",
+                name: "IX_Historias_JovenId",
+                table: "Historias",
                 column: "JovenId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_AsignarMedicos_Personas_JovenId",
-                table: "AsignarMedicos",
+                name: "FK_Historias_Personas_JovenId",
+                table: "Historias",
                 column: "JovenId",
                 principalTable: "Personas",
                 principalColumn: "Id");
@@ -89,14 +100,6 @@ namespace HogarGestor.App.Persistencia.Migrations
                 column: "JovenId",
                 principalTable: "Personas",
                 principalColumn: "Id");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Personas_Historias_HistoriaId",
-                table: "Personas",
-                column: "HistoriaId",
-                principalTable: "Historias",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Personas_Personas_FamiliarId",
@@ -105,24 +108,44 @@ namespace HogarGestor.App.Persistencia.Migrations
                 principalTable: "Personas",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.NoAction);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Personas_Personas_NutricionistaId",
+                table: "Personas",
+                column: "NutricionistaId",
+                principalTable: "Personas",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.NoAction);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Personas_Personas_PediatraId",
+                table: "Personas",
+                column: "PediatraId",
+                principalTable: "Personas",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.NoAction);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_AsignarMedicos_Personas_JovenId",
-                table: "AsignarMedicos");
+                name: "FK_Historias_Personas_JovenId",
+                table: "Historias");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_PatronesCrecimiento_Personas_JovenId",
                 table: "PatronesCrecimiento");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Personas_Historias_HistoriaId",
+                name: "FK_Personas_Personas_FamiliarId",
                 table: "Personas");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Personas_Personas_FamiliarId",
+                name: "FK_Personas_Personas_NutricionistaId",
+                table: "Personas");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Personas_Personas_PediatraId",
                 table: "Personas");
 
             migrationBuilder.DropIndex(
@@ -130,7 +153,11 @@ namespace HogarGestor.App.Persistencia.Migrations
                 table: "Personas");
 
             migrationBuilder.DropIndex(
-                name: "IX_Personas_HistoriaId",
+                name: "IX_Personas_NutricionistaId",
+                table: "Personas");
+
+            migrationBuilder.DropIndex(
+                name: "IX_Personas_PediatraId",
                 table: "Personas");
 
             migrationBuilder.DropIndex(
@@ -138,8 +165,8 @@ namespace HogarGestor.App.Persistencia.Migrations
                 table: "PatronesCrecimiento");
 
             migrationBuilder.DropIndex(
-                name: "IX_AsignarMedicos_JovenId",
-                table: "AsignarMedicos");
+                name: "IX_Historias_JovenId",
+                table: "Historias");
 
             migrationBuilder.DropColumn(
                 name: "Ciudad",
@@ -154,11 +181,15 @@ namespace HogarGestor.App.Persistencia.Migrations
                 table: "Personas");
 
             migrationBuilder.DropColumn(
-                name: "HistoriaId",
+                name: "Latitud",
                 table: "Personas");
 
             migrationBuilder.DropColumn(
-                name: "Latitud",
+                name: "NutricionistaId",
+                table: "Personas");
+
+            migrationBuilder.DropColumn(
+                name: "PediatraId",
                 table: "Personas");
 
             migrationBuilder.DropColumn(
@@ -171,7 +202,7 @@ namespace HogarGestor.App.Persistencia.Migrations
 
             migrationBuilder.DropColumn(
                 name: "JovenId",
-                table: "AsignarMedicos");
+                table: "Historias");
         }
     }
 }

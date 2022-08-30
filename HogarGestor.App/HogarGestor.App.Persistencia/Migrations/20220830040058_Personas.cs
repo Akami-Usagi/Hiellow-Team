@@ -4,7 +4,7 @@
 
 namespace HogarGestor.App.Persistencia.Migrations
 {
-    public partial class Persona : Migration
+    public partial class Personas : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -72,29 +72,6 @@ namespace HogarGestor.App.Persistencia.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "AsignarMedicos",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MedicoId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AsignarMedicos", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_AsignarMedicos_Personas_MedicoId",
-                        column: x => x.MedicoId,
-                        principalTable: "Personas",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AsignarMedicos_MedicoId",
-                table: "AsignarMedicos",
-                column: "MedicoId");
-
             migrationBuilder.CreateIndex(
                 name: "IX_Personas_GeneroId",
                 table: "Personas",
@@ -108,9 +85,6 @@ namespace HogarGestor.App.Persistencia.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "AsignarMedicos");
-
             migrationBuilder.DropTable(
                 name: "Personas");
 

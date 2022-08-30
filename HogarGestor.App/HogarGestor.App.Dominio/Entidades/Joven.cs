@@ -14,10 +14,12 @@ namespace HogarGestor.App.Dominio
 
         public Familiar Familiar { get; set; }
 
-        public Historia Historia { get; set; }
+        public Medico Pediatra { get; set; }
+
+        public Medico Nutricionista { get; set; }
+
+        public List<Historia> HistoriaJoven { get; set; }
 
         public List<PatronesCrecimiento> PatronesCrecimiento { get; set; }
-
-        public List<AsignarMedico> AsignarMedicos { get; set; }
     }
 }

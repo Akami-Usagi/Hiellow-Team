@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HogarGestor.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220829065100_Persona")]
-    partial class Persona
+    [Migration("20220830040137_Historias")]
+    partial class Historias
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,24 +23,6 @@ namespace HogarGestor.App.Persistencia.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("HogarGestor.App.Dominio.AsignarMedico", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int?>("MedicoId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MedicoId");
-
-                    b.ToTable("AsignarMedicos");
-                });
 
             modelBuilder.Entity("HogarGestor.App.Dominio.Genero", b =>
                 {
@@ -61,6 +43,26 @@ namespace HogarGestor.App.Persistencia.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Generos");
+                });
+
+            modelBuilder.Entity("HogarGestor.App.Dominio.Historia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Diagnostico")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Entorno")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Historias");
                 });
 
             modelBuilder.Entity("HogarGestor.App.Dominio.Persona", b =>
@@ -106,6 +108,31 @@ namespace HogarGestor.App.Persistencia.Migrations
                     b.ToTable("Personas");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("Persona");
+                });
+
+            modelBuilder.Entity("HogarGestor.App.Dominio.SugerenciaCuidado", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaHora")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("HistoriaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HistoriaId");
+
+                    b.ToTable("Sugerencias");
                 });
 
             modelBuilder.Entity("HogarGestor.App.Dominio.TipoDocumento", b =>
@@ -162,13 +189,6 @@ namespace HogarGestor.App.Persistencia.Migrations
                     b.HasDiscriminator().HasValue("Medico");
                 });
 
-            modelBuilder.Entity("HogarGestor.App.Dominio.AsignarMedico", b =>
-                {
-                    b.HasOne("HogarGestor.App.Dominio.Medico", null)
-                        .WithMany("AsignarMedicos")
-                        .HasForeignKey("MedicoId");
-                });
-
             modelBuilder.Entity("HogarGestor.App.Dominio.Persona", b =>
                 {
                     b.HasOne("HogarGestor.App.Dominio.Genero", "Genero")
@@ -188,19 +208,30 @@ namespace HogarGestor.App.Persistencia.Migrations
                     b.Navigation("TipoDocumento");
                 });
 
+            modelBuilder.Entity("HogarGestor.App.Dominio.SugerenciaCuidado", b =>
+                {
+                    b.HasOne("HogarGestor.App.Dominio.Historia", "Historia")
+                        .WithMany("SugerenciaCuidado")
+                        .HasForeignKey("HistoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Historia");
+                });
+
             modelBuilder.Entity("HogarGestor.App.Dominio.Genero", b =>
                 {
                     b.Navigation("Persona");
                 });
 
+            modelBuilder.Entity("HogarGestor.App.Dominio.Historia", b =>
+                {
+                    b.Navigation("SugerenciaCuidado");
+                });
+
             modelBuilder.Entity("HogarGestor.App.Dominio.TipoDocumento", b =>
                 {
                     b.Navigation("Persona");
-                });
-
-            modelBuilder.Entity("HogarGestor.App.Dominio.Medico", b =>
-                {
-                    b.Navigation("AsignarMedicos");
                 });
 #pragma warning restore 612, 618
         }
