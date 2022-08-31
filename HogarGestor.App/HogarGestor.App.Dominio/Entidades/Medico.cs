@@ -9,7 +9,6 @@ namespace HogarGestor.App.Dominio
         public string TarjetaProfesional { get; set; }
 
         public Especialidad Especialidad { get; set; }
-
         
 
     }

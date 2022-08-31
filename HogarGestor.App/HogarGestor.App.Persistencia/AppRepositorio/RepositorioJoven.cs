@@ -1,6 +1,4 @@
-using System;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
 using HogarGestor.App.Dominio;
 
 namespace HogarGestor.App.Persistencia
@@ -16,9 +14,9 @@ namespace HogarGestor.App.Persistencia
 
         public Joven AddJoven(Joven joven)
         {
-            var jovenEncontrado = _appContext.Jovenes.Add(joven);
+            var jovenAdicionado = _appContext.Jovenes.Add(joven);
             _appContext.SaveChanges();
-            return jovenEncontrado;
+            return jovenAdicionado.Entity;
         }
 
         public Joven UpdateJoven(Joven joven)
@@ -39,11 +37,11 @@ namespace HogarGestor.App.Persistencia
                 jovenEncontrado.Ciudad = joven.Ciudad;
                 jovenEncontrado.FechaNacimiento = joven.FechaNacimiento;
                 jovenEncontrado.FamiliarId = joven.FamiliarId;
-                jovenEncontrado.Nutricionista = joven.Nutricionista;
-                jovenEncontrado.Pediatra = joven.Pediatra;
+                jovenEncontrado.NutricionistaId = joven.NutricionistaId;
+                jovenEncontrado.PediatraId = joven.PediatraId;
                 _appContext.SaveChanges();
-                return jovenEncontrado;
             }
+            return jovenEncontrado;
         }
 
         public void DeleteJoven(int idJoven)
@@ -55,7 +53,7 @@ namespace HogarGestor.App.Persistencia
                 return;
             }
             _appContext.Jovenes.Remove (jovenEncontrado);
-            _appContext.SaveChange();
+            _appContext.SaveChanges();
         }
 
         public IEnumerable<Joven> GetAllJovenes()
@@ -69,27 +67,3 @@ namespace HogarGestor.App.Persistencia
         }
     }
 }
-
-/*
-
-public string Direccion { get; set; }
-
-        public float Latitud { get; set; }
-
-        public float longitud { get; set; }
-
-        public string Ciudad { get; set; }
-
-        public DateTime FechaNacimiento { get; set; }
-
-        public Familiar Familiar { get; set; }
-
-        public Medico Pediatra { get; set; }
-
-        public Medico Nutricionista { get; set; }
-
-        public List<Historia> HistoriaJoven { get; set; }
-
-        public List<PatronesCrecimiento> PatronesCrecimiento { get; set; }
-
-*/
