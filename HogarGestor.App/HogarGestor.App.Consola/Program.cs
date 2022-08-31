@@ -10,7 +10,8 @@ namespace HogarGestor.App.Consola
         private static IRepositorioJoven _repoJoven = new RepositorioJoven(new Persistencia.AppContext());
         static void Main(string[] args){
             Console.WriteLine("Hello, World!");
-            AddJoven();
+            //AddJoven();
+            BuscarJoven(1);
 
         }
         
@@ -28,6 +29,11 @@ namespace HogarGestor.App.Consola
 
             };
             _repoJoven.AddJoven(joven);
+        }
+
+        private static void BuscarJoven(int IdJoven){
+            var joven = _repoJoven.GetJoven(IdJoven);
+            Console.WriteLine(joven.Nombre + " " + joven.Apellidos);
         }
 
     }
