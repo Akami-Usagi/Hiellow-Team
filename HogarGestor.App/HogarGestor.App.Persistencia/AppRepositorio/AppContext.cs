@@ -1,8 +1,8 @@
-namespace HogarGestor.App.Persistencia{
-    using Microsoft.EntityFrameworkCore;
-    using HogarGestor.App.Dominio;
-    
+using Microsoft.EntityFrameworkCore;
+using HogarGestor.App.Dominio;
 
+namespace HogarGestor.App.Persistencia{
+    
     public class AppContext : DbContext{
         
         public DbSet<Persona> Personas{get;set;}

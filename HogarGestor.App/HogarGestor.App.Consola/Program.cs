@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using HogarGestor.App.Dominio;
 using HogarGestor.App.Persistencia;
 
