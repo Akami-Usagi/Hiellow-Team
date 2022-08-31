@@ -78,7 +78,7 @@ namespace HogarGestor.App.Persistencia.Migrations
                         column: x => x.HistoriaJovenId,
                         principalTable: "Historias",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Personas_Personas_FamiliarDesignadoId",
                         column: x => x.FamiliarDesignadoId,

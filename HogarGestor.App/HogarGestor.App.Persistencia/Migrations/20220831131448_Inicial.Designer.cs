@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HogarGestor.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220829153700_Inicial")]
+    [Migration("20220831131448_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
