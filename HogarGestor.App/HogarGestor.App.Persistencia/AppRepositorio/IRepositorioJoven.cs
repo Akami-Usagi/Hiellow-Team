@@ -1,12 +1,11 @@
 using System.Collections.Generic;
-using System.Security.AccessControl;
 using HogarGestor.App.Dominio;
 
 namespace HogarGestor.App.Persistencia
 {
     public interface IRepositorioJoven
     {
-        /*IEnumerable<Joven> GetAllJovenes();
+        IEnumerable<Joven> GetAllJovenes();
 
         Joven AddJoven(Joven joven);
 
@@ -14,6 +13,6 @@ namespace HogarGestor.App.Persistencia
 
         void DeleteJoven(int idJoven);
 
-        Joven GetJoven(int idJoven);*/
+        Joven GetJoven(int idJoven);
     }
 }

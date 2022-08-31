@@ -14,7 +14,11 @@ namespace HogarGestor.App.Dominio
 
         public string Documento { get; set; }
 
+        public int TipoDocumentoId { get; set; }
+
         public TipoDocumento TipoDocumento { get; set; }
+
+        public int GeneroId { get; set; }
 
         public Genero Genero { get; set; }
     }

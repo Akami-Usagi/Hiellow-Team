@@ -10,6 +10,8 @@ namespace HogarGestor.App.Dominio
 
         public string Descripcion { get; set; }
 
+        public int HistoriaId { get; set; }
+
         public Historia Historia { get; set; }
     }
 }

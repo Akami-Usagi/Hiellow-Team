@@ -14,4 +14,5 @@ namespace HogarGestor.App.Consola
             Console.WriteLine("Hello, World!");
         }
     }
+
 }

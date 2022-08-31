@@ -10,5 +10,7 @@ namespace HogarGestor.App.Dominio
 
         public Especialidad Especialidad { get; set; }
 
+        
+
     }
 }

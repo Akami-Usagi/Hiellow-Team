@@ -8,15 +8,21 @@ namespace HogarGestor.App.Dominio
 
         public float Latitud { get; set; }
 
-        public float longitud { get; set; }
+        public float Longitud { get; set; }
 
         public string Ciudad { get; set; }
 
-        public DateTime FechaNacimiento {get;set;}
+        public DateTime FechaNacimiento { get; set; }
+
+        public int FamiliarId { get; set; }
 
         public Familiar Familiar { get; set; }
 
+        public int PediatraId { get; set; }
+
         public Medico Pediatra { get; set; }
+
+        public int NutricionistaId { get; set; }
 
         public Medico Nutricionista { get; set; }
 

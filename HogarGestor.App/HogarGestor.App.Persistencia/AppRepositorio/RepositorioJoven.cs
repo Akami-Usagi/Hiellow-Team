@@ -1,38 +1,60 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using HogarGestor.App.Dominio;
 using Microsoft.EntityFrameworkCore;
+using HogarGestor.App.Dominio;
 
 namespace HogarGestor.App.Persistencia
 {
-    /*public class RepositorioJoven : IRepositorioJoven
+    public class RepositorioJoven : IRepositorioJoven
     {
         private readonly AppContext _appContext;
 
         public RepositorioJoven(AppContext appContext)
         {
-            this._appContext = appContext;
+            _appContext = appContext;
         }
 
         public Joven AddJoven(Joven joven)
         {
             var jovenEncontrado = _appContext.Jovenes.Add(joven);
-            _appContext.SaveChange();
-            return pacienteAdicionado;
+            _appContext.SaveChanges();
+            return jovenEncontrado;
+        }
+
+        public Joven UpdateJoven(Joven joven)
+        {
+            var jovenEncontrado =
+                _appContext.Jovenes.FirstOrDefault(j => j.Id == joven.Id);
+            if (jovenEncontrado != null)
+            {
+                jovenEncontrado.Nombre = joven.Nombre;
+                jovenEncontrado.Apellido = joven.Apellido;
+                jovenEncontrado.Telefono = joven.Telefono;
+                jovenEncontrado.Documento = joven.Documento;
+                jovenEncontrado.TipoDocumentoId = joven.TipoDocumentoId;
+                jovenEncontrado.GeneroId = joven.GeneroId;
+                jovenEncontrado.Direccion = joven.Direccion;
+                jovenEncontrado.Latitud = joven.Latitud;
+                jovenEncontrado.Longitud = joven.Longitud;
+                jovenEncontrado.Ciudad = joven.Ciudad;
+                jovenEncontrado.FechaNacimiento = joven.FechaNacimiento;
+                jovenEncontrado.FamiliarId = joven.FamiliarId;
+                jovenEncontrado.Nutricionista = joven.Nutricionista;
+                jovenEncontrado.Pediatra = joven.Pediatra;
+                _appContext.SaveChanges();
+                return jovenEncontrado;
+            }
         }
 
         public void DeleteJoven(int idJoven)
         {
             var jovenEncontrado =
-                _appContext.Jovenes.FirstOrDefault(p => p.id == idJoven);
-
+                _appContext.Jovenes.FirstOrDefault(p => p.Id == idJoven);
             if (jovenEncontrado == null)
             {
                 return;
             }
-
-            _appContext.Jovenes.Remove (pacienteEncontrado);
+            _appContext.Jovenes.Remove (jovenEncontrado);
             _appContext.SaveChange();
         }
 
@@ -45,34 +67,29 @@ namespace HogarGestor.App.Persistencia
         {
             return _appContext.Jovenes.FirstOrDefault(j => j.Id == idJoven);
         }
-
-        public Joven UpdateJoven(Joven joven)
-        {
-            var jovenEncontrado =
-                _appContext.Jovenes.FirstOrDefault(p => p.id == joven.id);
-
-            if (pacienteEncontrado != null)
-            {
-                jovenEncontrado.Nombre = joven.Nombre;
-                jovenEncontrado.Apellidos = joven.Apellidos;
-                jovenEncontrado.telefono = joven.Telefono;
-                jovenEncontrado.Documento = joven.Documento;
-                jovenEncontrado.DocumentoTipo = joven.TipoDocumento;
-                jovenEncontrado.Genero = joven.Genero;
-
-                jovenEncontrado.Direccion = joven.Direccion;
-                jovenEncontrado.Latitud = joven.Latitud;
-                jovenEncontrado.longitud = joven.longitud;
-                jovenEncontrado.Ciudad = joven.Ciudad;
-                jovenEncontrado.FechaNacimiento = joven.FechaNacimiento;
-                jovenEncontrado.FamiliarDesignado = joven.FamiliarDesignado;
-                jovenEncontrado.Nutricionista = joven.Nutricionista;
-                jovenEncontrado.Pediatra = joven.Pediatra;
-                _appContext.SaveChanges();
-                return jovenEncontrado;
-            }
-        }
-    }*/
+    }
 }
 
+/*
 
+public string Direccion { get; set; }
+
+        public float Latitud { get; set; }
+
+        public float longitud { get; set; }
+
+        public string Ciudad { get; set; }
+
+        public DateTime FechaNacimiento { get; set; }
+
+        public Familiar Familiar { get; set; }
+
+        public Medico Pediatra { get; set; }
+
+        public Medico Nutricionista { get; set; }
+
+        public List<Historia> HistoriaJoven { get; set; }
+
+        public List<PatronesCrecimiento> PatronesCrecimiento { get; set; }
+
+*/

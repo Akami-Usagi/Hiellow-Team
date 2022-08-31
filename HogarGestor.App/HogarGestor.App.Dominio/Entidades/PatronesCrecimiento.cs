@@ -7,5 +7,9 @@ namespace HogarGestor.App.Dominio
         public TipoMedicion Medicion { get; set; }
 
         public float Valor { get; set; }
+
+        public Joven JovenId { get; set; }
+
+        public Joven Joven { get; set; }
     }
 }

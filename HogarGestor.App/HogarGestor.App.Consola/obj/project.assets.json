@@ -2005,7 +2005,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "HogarGestor.App.Dominio >= 1.0.0",
       "HogarGestor.App.Persistencia >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.8"
     ]
@@ -2035,9 +2034,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\rojas\\HogarGestor\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj": {
-              "projectPath": "C:\\Users\\rojas\\HogarGestor\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj"
-            },
             "C:\\Users\\rojas\\HogarGestor\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Persistencia\\HogarGestor.App.Persistencia.csproj": {
               "projectPath": "C:\\Users\\rojas\\HogarGestor\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Persistencia\\HogarGestor.App.Persistencia.csproj"
             }

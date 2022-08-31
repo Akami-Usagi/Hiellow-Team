@@ -10,6 +10,11 @@ namespace HogarGestor.App.Dominio
 
         public string Entorno { get; set; }
 
+        public int JovenId { get; set; }
+
+        //no
+        public Joven Joven { get; set; }
+
         public List<SugerenciaCuidado> SugerenciaCuidado { get; set; }
     }
 }
