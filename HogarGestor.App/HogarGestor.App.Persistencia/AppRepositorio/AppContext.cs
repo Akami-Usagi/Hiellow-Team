@@ -5,13 +5,13 @@ namespace HogarGestor.App.Persistencia{
     
     public class AppContext : DbContext{
         
-        public DbSet<Persona> Personas{get;set;}
-        public DbSet<Medico> Medicos{get;set;}
-        public DbSet<Familiar> Familiares{get;set;}
-        public DbSet<Historia> Historias{get;set;}
-        public DbSet<PatronesCrecimiento> PatronesCrecimientoJoven{get;set;}
-        public DbSet<Joven> Jovenes{get;set;}
-        public DbSet<SugerenciaCuidado> SugerenciasCuidado{get;set;}
+        public DbSet<Persona>? Personas{get;set;}
+        public DbSet<Medico>? Medicos{get;set;}
+        public DbSet<Familiar>? Familiares{get;set;}
+        public DbSet<Historia>? Historias{get;set;}
+        public DbSet<PatronesCrecimiento>? PatronesCrecimientoJoven{get;set;}
+        public DbSet<Joven>? Jovenes{get;set;}
+        public DbSet<SugerenciaCuidado>? SugerenciasCuidado{get;set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if (!optionsBuilder.IsConfigured){
