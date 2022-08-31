@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HogarGestor.App.Persistencia
 {
-    public class RepositorioJoven : IRepositorioJoven
+    /*public class RepositorioJoven : IRepositorioJoven
     {
         private readonly AppContext _appContext;
 
@@ -15,35 +15,19 @@ namespace HogarGestor.App.Persistencia
             this._appContext = appContext;
         }
 
-        public IEnumerable<Joven> GetAllPaciente()
+        public Joven AddJoven(Joven joven)
         {
-            return _appContext.Jovenes;
-        }
-
-        public Joven AddPaciente(Joven joven)
-        {
-            var pacienteAdicionado = _appContext.Jovenes.Add(joven);
+            var jovenEncontrado = _appContext.Jovenes.Add(joven);
             _appContext.SaveChange();
             return pacienteAdicionado;
         }
 
-        public Joven UpdatePaciente(Joven joven)
+        public void DeleteJoven(int idJoven)
         {
-            var pacienteEncontrado =
-                _appContext.Jovenes.FirstOrDefault(p => p.id == joven.id);
-
-            if (pacienteEncontrado != null)
-            {
-                
-            }
-        }
-
-        public void DeletePaciente(int idJoven)
-        {
-            var pacienteEncontrado =
+            var jovenEncontrado =
                 _appContext.Jovenes.FirstOrDefault(p => p.id == idJoven);
 
-            if (!pacienteEncontrado)
+            if (jovenEncontrado == null)
             {
                 return;
             }
@@ -52,9 +36,43 @@ namespace HogarGestor.App.Persistencia
             _appContext.SaveChange();
         }
 
-        public Joven GetPaciente(int idJoven)
+        public IEnumerable<Joven> GetAllJovenes()
         {
-            return _appContext.Jovenes.FirstOrDefault(p => p.id == idJoven);
+            return _appContext.Jovenes;
         }
-    }
+
+        public Joven GetJoven(int idJoven)
+        {
+            return _appContext.Jovenes.FirstOrDefault(j => j.Id == idJoven);
+        }
+
+        public Joven UpdateJoven(Joven joven)
+        {
+            var jovenEncontrado =
+                _appContext.Jovenes.FirstOrDefault(p => p.id == joven.id);
+
+            if (pacienteEncontrado != null)
+            {
+                jovenEncontrado.Nombre = joven.Nombre;
+                jovenEncontrado.Apellidos = joven.Apellidos;
+                jovenEncontrado.telefono = joven.Telefono;
+                jovenEncontrado.Documento = joven.Documento;
+                jovenEncontrado.DocumentoTipo = joven.TipoDocumento;
+                jovenEncontrado.Genero = joven.Genero;
+
+                jovenEncontrado.Direccion = joven.Direccion;
+                jovenEncontrado.Latitud = joven.Latitud;
+                jovenEncontrado.longitud = joven.longitud;
+                jovenEncontrado.Ciudad = joven.Ciudad;
+                jovenEncontrado.FechaNacimiento = joven.FechaNacimiento;
+                jovenEncontrado.FamiliarDesignado = joven.FamiliarDesignado;
+                jovenEncontrado.Nutricionista = joven.Nutricionista;
+                jovenEncontrado.Pediatra = joven.Pediatra;
+                _appContext.SaveChanges();
+                return jovenEncontrado;
+            }
+        }
+    }*/
 }
+
+

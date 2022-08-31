@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HogarGestor.App.Persistencia
 {
-    public class AppContext : DbContext
+    public class : DbContext
     {
         public DbSet<Genero> Generos { get; set; }
 
@@ -16,14 +16,14 @@ namespace HogarGestor.App.Persistencia
         public DbSet<Medico> Medicos { get; set; }
 
         //*************************************************************
-        public DbSet<SugerenciaCuidado> Sugerencias { get; set; }
+        //public DbSet<SugerenciaCuidado> Sugerencias { get; set; }
 
-        public DbSet<Historia> Historias { get; set; }
+        //public DbSet<Historia> Historias { get; set; }
 
         //************************************************************
-        public DbSet<PatronesCrecimiento> PatronesCrecimiento { get; set; }
+        //public DbSet<PatronesCrecimiento> PatronesCrecimiento { get; set; }
         //************************************************************
-        public DbSet<Joven> Jovenes { get; set; }
+        //public DbSet<Joven> Jovenes { get; set; }
         //public DbSet<MedicoPaciente> MedicoPaciente { get; set; }
         //*************************************************************
         //************************************************************
@@ -34,7 +34,7 @@ namespace HogarGestor.App.Persistencia
         {
             if (!optionsBuilder.IsConfigured)
                 optionsBuilder
-                    .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = HogarGestorData27;Trusted_Connection=True;");
+                    .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = HogarGestorData28;Trusted_Connection=True;");
             /// CAMBIAR EL DATA SOURCE AL NOMBRE DEL SERVIDOR INSTALADO EN CADA PC. EL MIO QUEDO CON ESE NOMBRE ENTONCES
             /// DEBEN CAMBIARLO AL NOMBRE DEL SERVIDOR DE CADA UNO, LOS DEMAS DATOS ESTAN BIEN Y FUNCIONALES.
         }

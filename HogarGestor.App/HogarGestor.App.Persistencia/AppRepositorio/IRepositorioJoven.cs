@@ -1,18 +1,19 @@
 using System.Collections.Generic;
+using System.Security.AccessControl;
 using HogarGestor.App.Dominio;
 
 namespace HogarGestor.App.Persistencia
 {
     public interface IRepositorioJoven
     {
-        IEnumerable<Joven> GetAllPaciente();
+        /*IEnumerable<Joven> GetAllJovenes();
 
-        Joven AddPaciente(Joven joven);
+        Joven AddJoven(Joven joven);
 
-        Joven UpdatePaciente(Joven joven);
+        Joven UpdateJoven(Joven joven);
 
-        void DeletePaciente(int idJoven);
+        void DeleteJoven(int idJoven);
 
-        Joven GetPaciente(int idJoven);
+        Joven GetJoven(int idJoven);*/
     }
 }

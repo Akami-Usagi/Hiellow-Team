@@ -12,6 +12,8 @@ namespace HogarGestor.App.Dominio
 
         public string Ciudad { get; set; }
 
+        public DateTime FechaNacimiento {get;set;}
+
         public Familiar Familiar { get; set; }
 
         public Medico Pediatra { get; set; }

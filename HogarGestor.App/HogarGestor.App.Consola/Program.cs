@@ -7,11 +7,10 @@ namespace HogarGestor.App.Consola
 {
     public class Program
     {
-        
+        //private static IRepositorioJoven _repoJoven = new RepositorioJoven(new Persistencia.AppContext());
 
         public static void Main(string[] args)
         {
-
             Console.WriteLine("Hello, World!");
         }
     }
