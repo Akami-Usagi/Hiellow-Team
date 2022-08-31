@@ -26,8 +26,8 @@ namespace HogarGestor.App.Dominio
 
         public Medico? Nutricionista { get; set; }
 
-        public List<Historia> HistoriaJoven { get; set; }
+        public List<Historia>? HistoriaJoven { get; set; }
 
-        public List<PatronesCrecimiento> PatronesCrecimientoJoven { get; set; }
+        public List<PatronesCrecimiento>? PatronesCrecimientoJoven { get; set; }
     }
 }
