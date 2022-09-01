@@ -1,0 +1,15 @@
+﻿@page
+@model HogarGestor.App.FrontEnd.Pages.ListaClasesModel
+@{
+}
+<h1>
+    Lista de Clases
+</h1>
+<table class="table">
+    @foreach (var Clase in Model.ListaClases)
+    {
+        <tr>
+            <td>@Clase</td>
+        </tr>
+    }
+</table>
