@@ -1,7 +1,10 @@
+using HogarGestor.App.Persistencia;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<IRepositorioSaludos, RepositorioSaludosMemoria>();
 
 var app = builder.Build();
 
