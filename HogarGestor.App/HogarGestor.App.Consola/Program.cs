@@ -17,10 +17,14 @@ namespace HogarGestor.App.Consola
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-
+            //var joven = _repoJoven.GetJoven(3);
+            //Console.WriteLine(joven.Nombre + " " + joven.Apellido);
+           
             //AddFamiliar();
             //AddJoven();
-            BuscarJoven(2);
+            //BuscarJoven(2);
+
+            DeleteJoven(4);
         }
 
         private static void AddFamiliar()
@@ -33,7 +37,7 @@ namespace HogarGestor.App.Consola
                     Documento = "11456789",
                     TipoDocumentoId = 1,
                     GeneroId = 2,
-                    Parentesco = "Tia",
+                    Parentesco = "Mama",
                     Correo = "diana@gmail.com"
                 };
             _repoFamiliar.AddFamiliar (familiar);
@@ -43,8 +47,8 @@ namespace HogarGestor.App.Consola
         {
             var joven =
                 new Joven {
-                    Nombre = "Dilan Matias",
-                    Apellido = "Rojas Lopez",
+                    Nombre = "Sandra",
+                    Apellido = "Vargas",
                     Telefono = "323456891",
                     Documento = "123456789",
                     TipoDocumentoId = 2,
@@ -52,16 +56,23 @@ namespace HogarGestor.App.Consola
                     Latitud = 5.07F,
                     Longitud = -75.687F,
                     Ciudad = "Cali",
-                    FamiliarId = 1,
                     FechaNacimiento = new DateTime(2014, 05, 07)
                 };
             _repoJoven.AddJoven (joven);
         }
 
-        private static void BuscarJoven(int IdJoven)
+        public static void UpdateJoven(Joven joven)
         {
-            var joven = _repoJoven.GetJoven(IdJoven);
-            Console.WriteLine(joven.Nombre + " " + joven.Apellido);
+            
         }
+
+        private static void DeleteJoven(int idJoven)
+        {
+
+            _repoJoven.DeleteJoven(idJoven);
+
+        }
+
+        
     }
 }

@@ -6,9 +6,9 @@ namespace HogarGestor.App.Dominio
     {
         public int Id { get; set; }
 
-        public int Diagnostico { get; set; }
+        public int? Diagnostico { get; set; }
 
-        public string Entorno { get; set; }
+        public string? Entorno { get; set; }
 
         public List<SugerenciaCuidado> SugerenciaCuidado { get; set; }
     }

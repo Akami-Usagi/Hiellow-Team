@@ -14,5 +14,6 @@ namespace HogarGestor.App.Persistencia
         void DeleteJoven(int idJoven);
 
         Joven GetJoven(int idJoven);
+
     }
 }
