@@ -1,7 +1,7 @@
 using System.Linq;
 using HogarGestor.App.Dominio;
 
-namespace HogarGestor.App.Persistencia.AppRepositorio
+namespace HogarGestor.App.Persistencia
 {
-    public class RepositorioHistoria : IRepositorioHistoria { }
+    public class RepositorioHistoria { }
 }
