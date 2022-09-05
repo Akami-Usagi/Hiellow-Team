@@ -17,6 +17,7 @@ namespace HogarGestor.App.Consola
         // Programa Principal
         static void Main(string[] args)
         {
+            Console.WriteLine("");
             Console.WriteLine("Bienvenido a HogarGestor.App");
             Console.WriteLine("");
             Console.WriteLine("Seleccione El Tipo de Persona que desea Consultar");
@@ -84,6 +85,36 @@ namespace HogarGestor.App.Consola
 
             }
 
+            if (TipoPersona == "3"){
+                Console.WriteLine("Gestion de Familiares");
+                Console.WriteLine("");
+                Console.WriteLine("Ingrese 1 para agregar un Familiar.  - Ingrese 2 Para Buscar en la base de datos");
+                Console.WriteLine("Ingrese 3 para eliminar un Familiar.  - Ingrese 4 Editar un Familiar");
+                Console.WriteLine("Ingrese 5 para lista completa de Familiares registrados");
+                string Option = Console.ReadLine();
+                if (Option == "1")
+                {
+                    AddFamiliar();
+                }
+                else if (Option == "2")
+                {
+                    BuscarFamiliar();
+                }
+                else if (Option == "3")
+                {
+                    EliminarFamiliar();
+                }
+                else if (Option == "4")
+                {
+                    ActualizarFamiliar();
+                }
+                else if (Option == "5")
+                {
+                    ListaFamiliares();
+                }
+
+            }
+
         }
 
         // FUNCIONES DE JOVENES
@@ -145,12 +176,17 @@ namespace HogarGestor.App.Consola
             Console.WriteLine("Ingrese El Numero De Documento a Buscar: ");
             string? DocumentoJoven = Console.ReadLine();
             var joven = _repoJoven.GetJoven(DocumentoJoven);
-            Console.WriteLine("");
-            Console.WriteLine("Datos Del Joven Encontrados! ");
-            Console.WriteLine("");
-            Console.WriteLine("Nombre Completo: " + joven.Nombre + " " + joven.Apellidos);
-            Console.WriteLine("Documento: " + joven.Documento);
-            Console.WriteLine("Numero de Telefono: " + joven.NumeroTelefono);
+            if (joven != null){
+                Console.WriteLine("");
+                Console.WriteLine("Datos Del Joven Encontrados! ");
+                Console.WriteLine("");
+                Console.WriteLine("Nombre Completo: " + joven.Nombre + " " + joven.Apellidos);
+                Console.WriteLine("Documento: " + joven.Documento);
+                Console.WriteLine("Numero de Telefono: " + joven.NumeroTelefono);
+            }
+            else{
+                Console.WriteLine("Datos Del Medico No Encontrados, Prueba buscar en otra categoría");
+            }
         }
 
         private static void EliminarJoven()
@@ -318,12 +354,17 @@ namespace HogarGestor.App.Consola
             Console.WriteLine("Ingrese El Numero De Documento a Buscar: ");
             string? DocumentoMedico = Console.ReadLine();
             var medico = _repoMedico.GetMedico(DocumentoMedico);
-            Console.WriteLine("");
-            Console.WriteLine("Datos Del Medico Encontrados! ");
-            Console.WriteLine("");
-            Console.WriteLine("Nombre Completo: " + medico.Nombre + " " + medico.Apellidos);
-            Console.WriteLine("Documento: " + medico.Documento);
-            Console.WriteLine("Numero de Telefono: " + medico.NumeroTelefono);
+            if (medico != null){
+                Console.WriteLine("");
+                Console.WriteLine("Datos Del Medico Encontrados! ");
+                Console.WriteLine("");
+                Console.WriteLine("Nombre Completo: " + medico.Nombre + " " + medico.Apellidos);
+                Console.WriteLine("Documento: " + medico.Documento);
+                Console.WriteLine("Numero de Telefono: " + medico.NumeroTelefono);
+            }
+            else{
+                Console.WriteLine("Datos Del Medico No Encontrados, Prueba buscar en otra categoría");
+            }
         }
 
         private static void EliminarMedico()
@@ -345,7 +386,7 @@ namespace HogarGestor.App.Consola
             {
                 _repoMedico.DeleteMedico(medico.Documento);
                 Console.WriteLine("");
-                Console.WriteLine("DATOS DEL JOVEN ELIMINADOS");
+                Console.WriteLine("DATOS DEL MEDICO ELIMINADOS");
             }
             else if (Seleccion == "2")
             {
@@ -430,6 +471,173 @@ namespace HogarGestor.App.Consola
             foreach (var medico in Lista)
             {
                 Console.WriteLine("Nombre: " + medico.Nombre + " " + medico.Apellidos + " Documento: " + medico.Documento + " Tarjeta Profesional: " + medico.TarjetaProfesional);
+            }
+        }
+
+
+        // FUNCIONES FAMILIAR
+
+        private static void AddFamiliar()
+        {
+            Console.WriteLine("Se Va Agregar Un Nuevo Familiar Al Sistema: ");
+            Console.WriteLine("");
+            Console.WriteLine("Ingrese Su Nombre: ");
+            string? NombreFamiliar = Console.ReadLine();
+            Console.WriteLine("Ingrese Sus Apellidos: ");
+            string? ApellidosFamiliar = Console.ReadLine();
+            Console.WriteLine("Ingrese Su Numero De Telefono: ");
+            string? TelefonoFamiliar = Console.ReadLine();
+            Console.WriteLine("Ingrese Su Numero De Documento: ");
+            string? DocumentoFamiliar = Console.ReadLine();
+            Console.WriteLine("Digite el Numero Segun Su Genero: 1-Masculino  2-Femenino  3-Intersexual");
+            string? SelectGenero = Console.ReadLine();
+
+            Generos? generoEscojido = null;
+            if (SelectGenero == "1")
+            {
+                generoEscojido = Generos.Masculino;
+            }
+            else if (SelectGenero == "2")
+            {
+                generoEscojido = Generos.Femenino;
+            }
+            else if (SelectGenero == "3")
+            {
+                generoEscojido = Generos.Intersexual;
+            }
+
+            Console.WriteLine("Ingrese el Parentesco con el Joven: ");
+            string ParentescoFamiliar = Console.ReadLine();
+            Console.WriteLine("Ingrese su Correo Electronico: ");    
+            string CorreoFamiliar = Console.ReadLine();        
+
+            var familiar = new Familiar
+            {
+                Nombre = NombreFamiliar,
+                Apellidos = ApellidosFamiliar,
+                NumeroTelefono = TelefonoFamiliar,
+                Documento = DocumentoFamiliar,
+                Genero = generoEscojido,
+                Parentesco = ParentescoFamiliar,
+                CorreoElectronico = CorreoFamiliar,
+
+
+            };
+            _repoFamiliar.AddFamiliar(familiar);
+            Console.WriteLine("");
+            Console.WriteLine("Datos Del Familiar Agregados Satisfactoriamente!");
+        }
+
+        private static void BuscarFamiliar()
+        {
+            Console.WriteLine("Ingrese El Numero De Documento a Buscar: ");
+            string? DocumentoFamiliar = Console.ReadLine();
+            var familiar = _repoFamiliar.GetFamiliar(DocumentoFamiliar);
+            if (familiar != null){
+                Console.WriteLine("");
+                Console.WriteLine("Datos Del Familiar Encontrados! ");
+                Console.WriteLine("");
+                Console.WriteLine("Nombre Completo: " + familiar.Nombre + " " + familiar.Apellidos);
+                Console.WriteLine("Documento: " + familiar.Documento);
+                Console.WriteLine("Numero de Telefono: " + familiar.NumeroTelefono);
+                Console.WriteLine("Correo Electronico: " + familiar.CorreoElectronico);
+            }
+            else{
+                Console.WriteLine("Datos Del Familiar No Encontrados, Prueba buscar en otra categoría");
+            }
+        }
+
+        private static void EliminarFamiliar()
+        {
+            Console.WriteLine("Ingrese El Numero De Documento del Familiar a Eliminar: ");
+            string? DocumentoFamiliar = Console.ReadLine();
+            var familiar = _repoFamiliar.GetFamiliar(DocumentoFamiliar);
+            Console.WriteLine("");
+            Console.WriteLine("Datos Del Familiar Encontrados! ");
+            Console.WriteLine("");
+            Console.WriteLine("Nombre Completo: " + familiar.Nombre + " " + familiar.Apellidos);
+            Console.WriteLine("Documento: " + familiar.Documento);
+            Console.WriteLine("");
+            Console.WriteLine("DESEA ELIMINAR EL MEDICO ENCONTRADO?");
+            Console.WriteLine("");
+            Console.WriteLine("Oprima 1 Para ELIMINAR  -  Oprima 2 Para CANCELAR");
+            string Seleccion = Console.ReadLine();
+            if (Seleccion == "1")
+            {
+                _repoFamiliar.DeleteFamiliar(familiar.Documento);
+                Console.WriteLine("");
+                Console.WriteLine("DATOS DEL FAMILIAR ELIMINADOS");
+            }
+            else if (Seleccion == "2")
+            {
+                Console.WriteLine("");
+                Console.WriteLine("OPERACION CANCELADA");
+            }
+        }
+
+        private static void ActualizarFamiliar()
+        {
+            Console.WriteLine("Ingrese El Numero De Documento del Familiar a Editar: ");
+            string? DocumentoFamiliar = Console.ReadLine();
+            var FamiliarViejo = _repoFamiliar.GetFamiliar(DocumentoFamiliar);
+            Console.WriteLine("Se van a actualizar los datos del Familiar " + FamiliarViejo.Nombre + " " + FamiliarViejo.Apellidos);
+
+
+
+            Console.WriteLine("Ingrese Su Nuevo Nombre: ");
+            string? NombreFamiliar = Console.ReadLine();
+            Console.WriteLine("Ingrese Sus Nuevos Apellidos: ");
+            string? ApellidosFamiliar = Console.ReadLine();
+            Console.WriteLine("Ingrese Su Nuevo Numero De Telefono: ");
+            string? TelefonoFamiliar = Console.ReadLine();
+            Console.WriteLine("Digite el Numero Segun Su Genero: 1-Masculino  2-Femenino  3-Intersexual");
+            string? SelectGenero = Console.ReadLine();
+
+            Generos? generoEscojido = null;
+            if (SelectGenero == "1")
+            {
+                generoEscojido = Generos.Masculino;
+            }
+            else if (SelectGenero == "2")
+            {
+                generoEscojido = Generos.Femenino;
+            }
+            else if (SelectGenero == "3")
+            {
+                generoEscojido = Generos.Intersexual;
+            }
+
+            Console.WriteLine("Ingrese el Parentesco con el Joven: ");
+            string ParentescoFamiliar = Console.ReadLine();
+            Console.WriteLine("Ingrese su Correo Electronico: ");    
+            string CorreoFamiliar = Console.ReadLine();        
+
+            var familiarNuevo = new Familiar
+            {
+                Nombre = NombreFamiliar,
+                Apellidos = ApellidosFamiliar,
+                NumeroTelefono = TelefonoFamiliar,
+                Documento = FamiliarViejo.Documento,
+                Genero = generoEscojido,
+                Parentesco = ParentescoFamiliar,
+                CorreoElectronico = CorreoFamiliar,
+
+
+            };
+
+            
+            _repoFamiliar.UpdateFamiliar(familiarNuevo);
+            Console.WriteLine("Datos del Familiar Actualizados!");
+        }
+
+        public static void ListaFamiliares()
+        {
+            List<Familiar> Lista = _repoFamiliar.GetAllFamiliares().ToList();
+            Console.WriteLine("Lista De Familiares en la Base de Datos: ");
+            Console.WriteLine("");
+            foreach (var familiar in Lista)
+            {
+                Console.WriteLine("Nombre: " + familiar.Nombre + " " + familiar.Apellidos + " Documento: " + familiar.Documento + " Correo Electronico: " + familiar.CorreoElectronico);
             }
         }
 
