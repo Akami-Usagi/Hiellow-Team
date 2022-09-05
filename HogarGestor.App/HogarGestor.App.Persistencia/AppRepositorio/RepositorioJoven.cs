@@ -44,11 +44,10 @@ namespace HogarGestor.App.Persistencia{
 
         public Joven UpdateJoven(Joven joven)
         {
-            var jovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == joven.Id);
+            var jovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Documento == joven.Documento);
             if (jovenEncontrado != null){
                 jovenEncontrado.Nombre = joven.Nombre;
                 jovenEncontrado.Apellidos = joven.Apellidos;
-                jovenEncontrado.Documento = joven.Documento;
                 jovenEncontrado.NumeroTelefono = joven.NumeroTelefono;
                 jovenEncontrado.Genero = joven.Genero;
                 jovenEncontrado.DocumentoTipo = joven.DocumentoTipo;
