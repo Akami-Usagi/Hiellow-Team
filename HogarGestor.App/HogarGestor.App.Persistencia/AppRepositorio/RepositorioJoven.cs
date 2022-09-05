@@ -65,5 +65,32 @@ namespace HogarGestor.App.Persistencia{
             }
             return jovenEncontrado;
         }
+
+        public Joven AsignFamiliar(string DocumentoFamiliar, string DocumentoJoven)
+        {
+            var familiar = _appContext.Familiares.FirstOrDefault(f => f.Documento == DocumentoFamiliar);
+            var joven = _appContext.Jovenes.FirstOrDefault(j => j.Documento == DocumentoJoven);
+            joven.FamiliarDesignado = familiar;
+            _appContext.SaveChanges();
+            return joven;
+
+        }
+
+        public Joven AsignNutricionista(string DocumentoMedico, Especialidad especialidad, string DocumentoJoven)
+        {
+            var nutricionista = _appContext.Medicos.FirstOrDefault(m => m.Documento == DocumentoMedico && m.EspecialidadMedica == Especialidad.Nutricion);
+            var joven = _appContext.Jovenes.FirstOrDefault(j => j.Documento == DocumentoJoven);
+            joven.Nutricionista = nutricionista;
+            _appContext.SaveChanges();
+            return joven;
+        }
+
+        public Joven AsignPediatra(string DocumentoMedico, Especialidad especialidad, string DocumentoJoven){
+             var pediatra = _appContext.Medicos.FirstOrDefault(m => m.Documento == DocumentoMedico && m.EspecialidadMedica == Especialidad.Pediatria);
+            var joven = _appContext.Jovenes.FirstOrDefault(j => j.Documento == DocumentoJoven);
+            joven.Pediatra = pediatra;
+            _appContext.SaveChanges();
+            return joven;
+        }
     }
 }
