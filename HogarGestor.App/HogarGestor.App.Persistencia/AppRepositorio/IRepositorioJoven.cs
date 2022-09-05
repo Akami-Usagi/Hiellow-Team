@@ -8,7 +8,7 @@ namespace HogarGestor.App.Persistencia{
         IEnumerable<Joven> GetAllJovenes();
         Joven AddJoven(Joven joven);
         Joven UpdateJoven(Joven joven);
-        void DeleteJoven(int IdJoven);
-        Joven GetJoven(int IdJoven);
+        void DeleteJoven(string DocumentoJoven);
+        Joven GetJoven(string DocumentoJoven);
     }
 }

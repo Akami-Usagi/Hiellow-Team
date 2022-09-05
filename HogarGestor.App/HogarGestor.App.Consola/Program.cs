@@ -11,7 +11,7 @@ namespace HogarGestor.App.Consola
         static void Main(string[] args){
             Console.WriteLine("Hello, World!");
             //AddJoven();
-            BuscarJoven(1);
+            BuscarJoven("1115066671");
 
         }
         
@@ -31,8 +31,8 @@ namespace HogarGestor.App.Consola
             _repoJoven.AddJoven(joven);
         }
 
-        private static void BuscarJoven(int IdJoven){
-            var joven = _repoJoven.GetJoven(IdJoven);
+        private static void BuscarJoven(string DocumentoJoven){
+            var joven = _repoJoven.GetJoven(DocumentoJoven);
             Console.WriteLine(joven.Nombre + " " + joven.Apellidos);
         }
 

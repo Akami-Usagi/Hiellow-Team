@@ -22,9 +22,9 @@ namespace HogarGestor.App.Persistencia{
             return jovenAdicionado.Entity;
         }
 
-        public void DeleteJoven(int IdJoven)
+        public void DeleteJoven(string DocumentoJoven)
         {
-            var jovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
+            var jovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Documento == DocumentoJoven);
             if (jovenEncontrado == null){
                 return;
             }
@@ -37,9 +37,9 @@ namespace HogarGestor.App.Persistencia{
             return _appContext.Jovenes;
         }
 
-        public Joven GetJoven(int IdJoven)
+        public Joven GetJoven(string DocumentoJoven)
         {
-            return _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
+            return _appContext.Jovenes.FirstOrDefault(j => j.Documento == DocumentoJoven);
         }
 
         public Joven UpdateJoven(Joven joven)
