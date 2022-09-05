@@ -54,7 +54,7 @@ namespace HogarGestor.App.Persistencia{
                 jovenEncontrado.DocumentoTipo = joven.DocumentoTipo;
                 jovenEncontrado.Direccion = joven.Direccion;
                 jovenEncontrado.Latitud = joven.Latitud;
-                jovenEncontrado.longitud = joven.longitud;
+                jovenEncontrado.Longitud = joven.Longitud;
                 jovenEncontrado.Ciudad = joven.Ciudad;
                 jovenEncontrado.FechaNacimiento = joven.FechaNacimiento;
                 jovenEncontrado.FamiliarDesignado = joven.FamiliarDesignado;

@@ -4,7 +4,7 @@ using HogarGestor.App.Persistencia;
 
 namespace HogarGestor.App.Consola
 {
-    class program
+    class Program
     {
 
         private static IRepositorioJoven _repoJoven = new RepositorioJoven(new Persistencia.AppContext());
@@ -23,7 +23,7 @@ namespace HogarGestor.App.Consola
                 Documento = "1115066671",
                 Genero = Generos.Masculino,
                 Latitud =  5.07F,
-                longitud = -75.687F,
+                Longitud = -75.687F,
                 Ciudad = "Buga",
                 FechaNacimiento = new DateTime(1987,06,07)
 

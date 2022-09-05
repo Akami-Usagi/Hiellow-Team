@@ -3,7 +3,7 @@ namespace HogarGestor.App.Dominio{
         
         public string? Direccion {get;set;}
         public float? Latitud {get;set;}
-        public float? longitud {get;set;}
+        public float? Longitud {get;set;}
         public string? Ciudad {get;set;}
         public DateTime? FechaNacimiento {get;set;}
         public Familiar? FamiliarDesignado {get;set;}
