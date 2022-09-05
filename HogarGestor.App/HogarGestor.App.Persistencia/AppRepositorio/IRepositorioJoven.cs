@@ -11,7 +11,7 @@ namespace HogarGestor.App.Persistencia{
         void DeleteJoven(string DocumentoJoven);
         Joven GetJoven(string DocumentoJoven);
         Joven AsignFamiliar(string DocumentoFamiliar, string DocumentoJoven);
-        Joven AsignNutricionista(string DocumentoMedico, Especialidad especialidad, string DocumentoJoven);
-        Joven AsignPediatra(string DocumentoMedico, Especialidad especialidad, string DocumentoJoven);
+        Joven AsignNutricionista(string DocumentoMedico, string DocumentoJoven);
+        Joven AsignPediatra(string DocumentoMedico, string DocumentoJoven);
     }
 }

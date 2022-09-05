@@ -1868,11 +1868,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Consola\\HogarGestor.App.Consola.csproj",
+      "projectUniqueName": "C:\\Hiellow-Team\\hogargestor.app\\hogargestor.app.consola\\HogarGestor.App.Consola.csproj",
       "projectName": "HogarGestor.App.Consola",
-      "projectPath": "C:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Consola\\HogarGestor.App.Consola.csproj",
+      "projectPath": "C:\\Hiellow-Team\\hogargestor.app\\hogargestor.app.consola\\HogarGestor.App.Consola.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Consola\\obj\\",
+      "outputPath": "C:\\Hiellow-Team\\hogargestor.app\\hogargestor.app.consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1890,8 +1890,8 @@
             "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj": {
               "projectPath": "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Dominio\\HogarGestor.App.Dominio.csproj"
             },
-            "C:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Persistencia\\HogarGestor.App.Persistencia.csproj": {
-              "projectPath": "C:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Persistencia\\HogarGestor.App.Persistencia.csproj"
+            "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Persistencia\\HogarGestor.App.Persistencia.csproj": {
+              "projectPath": "C:\\Hiellow-Team\\hogargestor.app\\HogarGestor.App.Persistencia\\HogarGestor.App.Persistencia.csproj"
             }
           }
         }

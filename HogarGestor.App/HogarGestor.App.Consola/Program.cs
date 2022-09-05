@@ -17,7 +17,7 @@ namespace HogarGestor.App.Consola
         // Programa Principal
         static void Main(string[] args)
         {
-            Console.WriteLine("");
+            Console.Clear();
             Console.WriteLine("Bienvenido a HogarGestor.App");
             Console.WriteLine("");
             Console.WriteLine("Seleccione El Tipo de Persona que desea Consultar");
@@ -31,6 +31,7 @@ namespace HogarGestor.App.Consola
                 Console.WriteLine("Ingrese 1 para agregar un joven.  - Ingrese 2 Para Buscar en la base de datos");
                 Console.WriteLine("Ingrese 3 para eliminar un joven.  - Ingrese 4 Editar un Joven");
                 Console.WriteLine("Ingrese 5 para lista completa de Jovenes registrados");
+                Console.WriteLine("Ingrese 6 para Asignar Un Familiar - 7 Para un Nutricionista - 8 Para Un Pediatra");
                 string Option = Console.ReadLine();
                 if (Option == "1")
                 {
@@ -51,6 +52,18 @@ namespace HogarGestor.App.Consola
                 else if (Option == "5")
                 {
                     ListaJovenes();
+                }
+                else if (Option == "6")
+                {
+                    AsignarFamiliar();
+                }
+                else if (Option == "7")
+                {
+                    AsignarNutricionista();
+                }
+                else if (Option == "8")
+                {
+                    AsignarPediatra();
                 }
 
             }
@@ -278,6 +291,36 @@ namespace HogarGestor.App.Consola
             {
                 Console.WriteLine("Nombre: " + joven.Nombre + " " + joven.Apellidos + " Documento: " + joven.Documento);
             }
+        }
+
+        public static void AsignarFamiliar(){
+            Console.WriteLine("Ingrese el Documento del Joven");
+            string DocumentoJoven = Console.ReadLine();
+            Console.WriteLine("Ingrese el Documento del Familiar");
+            string DocumentoFamiliar = Console.ReadLine();
+            var joven = _repoJoven.AsignFamiliar(DocumentoFamiliar, DocumentoJoven);
+            Console.WriteLine("Se a Asignado El Familiar " + joven.FamiliarDesignado.Nombre + " " + joven.FamiliarDesignado.Apellidos + " al Joven " + joven.Nombre + " " + joven.Apellidos);
+
+        }
+
+        public static void AsignarNutricionista(){
+            Console.WriteLine("Ingrese el Documento del Joven");
+            string DocumentoJoven = Console.ReadLine();
+            Console.WriteLine("Ingrese el Documento del Medico Nutricionista");
+            string DocumentoNutricionista = Console.ReadLine();
+            var joven = _repoJoven.AsignNutricionista(DocumentoNutricionista, DocumentoJoven);
+            Console.WriteLine("Se a Asignado El Medico " + joven.Nutricionista.Nombre + " " + joven.Nutricionista.Apellidos + " Con Especialidad Medica de " + joven.Pediatra.EspecialidadMedica + " al Joven " + joven.Nombre + " " + joven.Apellidos);
+
+        }
+
+        public static void AsignarPediatra(){
+            Console.WriteLine("Ingrese el Documento del Joven");
+            string DocumentoJoven = Console.ReadLine();
+            Console.WriteLine("Ingrese el Documento del Medico Pediatra");
+            string DocumentoPediatra = Console.ReadLine();
+            var joven = _repoJoven.AsignPediatra(DocumentoPediatra, DocumentoJoven);
+            Console.WriteLine("Se a Asignado El Medico " + joven.Pediatra.Nombre + " " + joven.Pediatra.Apellidos + " Con Especialidad Medica de " + joven.Pediatra.EspecialidadMedica + " al Joven " + joven.Nombre + " " + joven.Apellidos);
+
         }
 
 
