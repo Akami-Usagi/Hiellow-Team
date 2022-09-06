@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks.Dataflow;
 using HogarGestor.App.Dominio;
 using HogarGestor.App.Persistencia;
 using HogarGestor.App.Persistencia.AppRepositorio;
@@ -18,7 +19,7 @@ namespace HogarGestor.App.Consola
         static void Main(string[] args)
         {
             Console.Clear();
-            Console.WriteLine("Bienvenido a HogarGestor.App");
+            Console.WriteLine("------------- Bienvenido a HogarGestor.App ------------");
             Console.WriteLine("");
             Console.WriteLine("Seleccione El Tipo de Persona que desea Consultar");
             Console.WriteLine("");
@@ -158,8 +159,10 @@ namespace HogarGestor.App.Consola
             {
                 generoEscojido = Generos.Intersexual;
             }
-            Console.WriteLine("Ingrese El Nombre De Su Ciudad: ");
+            Console.WriteLine("Ingrese Su Ciudad: ");
             string? CiudadJoven = Console.ReadLine();
+            Console.WriteLine("Ingrese Su Direccion: ");
+            string? DireccionJoven = Console.ReadLine();
             Console.WriteLine("Ingrese Su Año De Nacimiento: ");
             int Año = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Ingrese Su Mes De Nacimiento: ");
@@ -174,8 +177,7 @@ namespace HogarGestor.App.Consola
                 NumeroTelefono = TelefonoJoven,
                 Documento = DocumentoJoven,
                 Genero = generoEscojido,
-                Latitud = 5.07F,
-                Longitud = -75.687F,
+                Direccion = DireccionJoven,
                 Ciudad = CiudadJoven,
                 FechaNacimiento = new DateTime(Año, Mes, Dia)
 
@@ -196,6 +198,7 @@ namespace HogarGestor.App.Consola
                 Console.WriteLine("Nombre Completo: " + joven.Nombre + " " + joven.Apellidos);
                 Console.WriteLine("Documento: " + joven.Documento);
                 Console.WriteLine("Numero de Telefono: " + joven.NumeroTelefono);
+                Console.WriteLine("Direccion: " + joven.Direccion);
             }
             else{
                 Console.WriteLine("Datos Del Medico No Encontrados, Prueba buscar en otra categoría");
@@ -260,8 +263,10 @@ namespace HogarGestor.App.Consola
             {
                 generoEscojido = Generos.Intersexual;
             }
-            Console.WriteLine("Ingrese El Nombre De Su nueva Ciudad: ");
+            Console.WriteLine("Ingrese Su nueva Ciudad: ");
             string? CiudadJoven = Console.ReadLine();
+            Console.WriteLine("Ingrese Su Nueva Direccion: ");
+            string? DireccionJoven = Console.ReadLine();
 
 
             var jovenNuevo = new Joven
@@ -271,8 +276,7 @@ namespace HogarGestor.App.Consola
                 NumeroTelefono = TelefonoJoven,
                 Documento = jovenViejo.Documento,
                 Genero = generoEscojido,
-                Latitud = 5.07F,
-                Longitud = -75.687F,
+                Direccion = DireccionJoven,
                 Ciudad = CiudadJoven,
                 FechaNacimiento = jovenViejo.FechaNacimiento
 
