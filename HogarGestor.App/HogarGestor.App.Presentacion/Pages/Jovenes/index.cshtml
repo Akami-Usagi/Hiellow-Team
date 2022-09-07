@@ -2,6 +2,16 @@
 @model HogarGestor.App.Presentacion.Pages_Jovenes.indexModel
 @{
 }
+
+<form method="get">
+    <div class="form-group">
+        <p>
+            Paciente: <input type="text" name="GetFilter" asp-for="GetFilter"/>
+            <input type="submit" value="Filtrar"/>
+        </p>
+    </div>
+</form>
+
 <h1>Lista De Jovenes</h1>
 <table class="table table-bordered">
     <thead>
@@ -10,6 +20,8 @@
             <th scope="col">Apellidos</th>
             <th scope="col">Telefono</th>
             <th scope="col">Genero</th>
+            <th scope="col">Opciones <a asp-page="./Create" title="Agregar Joven">
+            <span class="material-icons">add</span></a></th>
         </tr>
     </thead>
     @foreach (var joven in Model.Jovenes)
@@ -21,10 +33,17 @@
                 <td>@joven.NumeroTelefono</td>
                 <td>@joven.Genero</td>
                 <td>
-                    <span class="material-icons">delete</span>
-                    <span class="material-icons">search</span>
-                    <span class="material-icons">mode_edit</span>
-                    <span class="material-icons">insert_emoticon</span>
+                    <a asp-page = ".\Delete" asp-route-id = "@joven.Id" title="Borrar">
+                        <span class="material-icons">delete</span>
+                    </a>
+                    <a asp-page = ".\Details" asp-route-id = "@joven.Id" title="Buscar">
+                        <span class="material-icons">search</span>
+                    </a>
+                    <a asp-page = ".\Edit" asp-route-id = "@joven.Id" title="Editar">
+                        <span class="material-icons">mode_edit</span>
+                    </a>
+                    
+                    
                 </td>
             </tr>
         </tbody>

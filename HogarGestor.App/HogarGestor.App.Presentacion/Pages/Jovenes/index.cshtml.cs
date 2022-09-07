@@ -11,12 +11,15 @@ namespace HogarGestor.App.Presentacion.Pages_Jovenes{
 
         private readonly IRepositorioJovenMemoria _RepoJovenMemoria;
         public IEnumerable<Joven> Jovenes {get;set;}
+        [BindProperty(SupportsGet = true)]
+        public string GetFilter {get;set;}
         public indexModel(IRepositorioJovenMemoria _RepoJovenMemoria){
             this._RepoJovenMemoria = _RepoJovenMemoria;
         }
 
-        public void OnGet(){
-            Jovenes = _RepoJovenMemoria.GetAll();
+        public void OnGet(string GetFilter){
+            //Jovenes = _RepoJovenMemoria.GetAll();
+            Jovenes = _RepoJovenMemoria.GetFiltro(GetFilter);
         }
     }
 }

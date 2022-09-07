@@ -23,6 +23,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/Jovenes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSm92ZW5lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/Jovenes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSm92ZW5lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/Jovenes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSm92ZW5lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/Jovenes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSm92ZW5lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/Jovenes/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSm92ZW5lc1xpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -12,6 +12,7 @@ namespace HogarGestor.App.Persistencia{
         Joven Update(Joven joven);
         void Delete(string DocumentoJoven);
         Joven Get(string DocumentoJoven);
+        IEnumerable<Joven> GetFiltro(string filtro);
         
     }
 }

@@ -76,5 +76,16 @@ namespace HogarGestor.App.Persistencia{
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Joven> GetFiltro(string filtro=null)
+        {
+            var jovenes = this.GetAll();
+            if (jovenes != null){
+                if (!String.IsNullOrEmpty(filtro)){
+                    jovenes = jovenes.Where(j => j.Nombre.Contains(filtro));
+                }
+            }
+            return jovenes;
+        }
     }
 }
