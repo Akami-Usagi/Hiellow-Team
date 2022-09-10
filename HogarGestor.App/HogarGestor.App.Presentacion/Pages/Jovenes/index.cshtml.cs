@@ -18,7 +18,6 @@ namespace HogarGestor.App.Presentacion.Pages_Jovenes{
         }
 
         public void OnGet(string GetFilter){
-            //Jovenes = _RepoJovenMemoria.GetAll();
             Jovenes = _RepoJovenMemoria.GetFiltro(GetFilter);
         }
     }

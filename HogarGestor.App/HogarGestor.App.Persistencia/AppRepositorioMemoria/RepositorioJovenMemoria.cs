@@ -14,6 +14,7 @@ namespace HogarGestor.App.Persistencia{
         public RepositorioJovenMemoria(){
             Jovenes = new List<Joven>(){
                 new Joven{
+                    Id = 1,
                     Nombre = "Camilo",
                     Apellidos = "Arango",
                     Documento = "1115066671",
@@ -26,6 +27,7 @@ namespace HogarGestor.App.Persistencia{
                     
                 },
                 new Joven{
+                    Id = 2,
                     Nombre = "Paola",
                     Apellidos = "Blandon",
                     Documento = "38878362",
@@ -37,6 +39,7 @@ namespace HogarGestor.App.Persistencia{
                     FechaNacimiento = new DateTime(1975,12,12)
                     
                 },new Joven{
+                    Id = 3,
                     Nombre = "Akemi",
                     Apellidos = "Arango",
                     Documento = "1112406770",
@@ -54,7 +57,9 @@ namespace HogarGestor.App.Persistencia{
 
         public Joven Add(Joven joven)
         {
-            throw new NotImplementedException();
+            joven.Id = Jovenes.Max(j => j.Id)+1;
+            Jovenes.Add(joven);
+            return joven;
         }
 
         public void Delete(int IdJoven)

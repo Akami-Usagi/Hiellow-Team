@@ -2,3 +2,45 @@
 @model HogarGestor.App.Presentacion.Pages_Jovenes.CreateModel
 @{
 }
+<form method="post">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input asp-for="joven.Nombre" placeholder="Ingrese El Nombre del Joven" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input asp-for="joven.Apellidos" placeholder="Ingrese Los Apellidos del Joven" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Telefono</label>
+        <input asp-for="joven.NumeroTelefono" placeholder="Ingrese Telefono del Joven" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Documento</label>
+        <input asp-for="joven.Documento" placeholder="Ingrese El Documento del Joven" class="form-control">
+    </div>
+    <label>Genero</label>
+    <div class="form-group">
+        <select asp-for="joven.Genero"  class="form-control">
+        <option selected>Genero...</option>
+        <option value="0">Masculino</option>
+        <option value="1">Femenino</option>
+        <option value="2">Intersexual</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Ciudad</label>
+        <input asp-for="joven.Ciudad" placeholder="Ingrese La Ciudad del Joven" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Direccion</label>
+        <input asp-for="joven.Direccion" placeholder="Ingrese La Direccion del Joven" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Fecha de Nacimiento</label>
+        <input asp-for="joven.FechaNacimiento" placeholder="Ingrese La Fecha de Nacimiento del Joven" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary" asp-page-handler="Save">Crear</button>
+
+</form>
