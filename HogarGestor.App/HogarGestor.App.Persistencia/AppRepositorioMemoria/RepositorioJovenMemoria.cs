@@ -57,12 +57,12 @@ namespace HogarGestor.App.Persistencia{
             throw new NotImplementedException();
         }
 
-        public void Delete(string DocumentoJoven)
+        public void Delete(int IdJoven)
         {
             throw new NotImplementedException();
         }
 
-        public Joven Get(string DocumentoJoven)
+        public Joven Get(int IdJoven)
         {
             throw new NotImplementedException();
         }
