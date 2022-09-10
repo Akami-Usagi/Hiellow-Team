@@ -63,7 +63,13 @@ namespace HogarGestor.App.Persistencia
 
         public IEnumerable<Medico> GetFiltro(string filtro)
         {
-            throw new NotImplementedException();
+            var Medicos = this.GetAll();
+            if (Medicos != null){
+                if (!String.IsNullOrEmpty(filtro)){
+                    Medicos = Medicos.Where(j => j.Nombre.Contains(filtro));
+                }
+            }
+            return Medicos;
         }
 
         public Medico Update(Medico medico)
