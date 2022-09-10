@@ -16318,6 +16318,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Presentacion\\Pages\\Medicos\\Delete.cshtml",
+      "TargetPath": "Pages\\Medicos\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Presentacion\\Pages\\Medicos\\Index.cshtml",
       "TargetPath": "Pages\\Medicos\\Index.cshtml",
       "FileKind": "mvc"
@@ -16325,6 +16330,11 @@
     {
       "FilePath": "c:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Presentacion\\Pages\\Familiares\\Create.cshtml",
       "TargetPath": "Pages\\Familiares\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Presentacion\\Pages\\Familiares\\Delete.cshtml",
+      "TargetPath": "Pages\\Familiares\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
