@@ -7,21 +7,22 @@ using HogarGestor.App.Dominio;
 using HogarGestor.App.Persistencia;
 namespace HogarGestor.App.Presentacion.Pages_Medicos
 {
-    public class CreateModel : PageModel
+    public class DetailsModel : PageModel
     {
         private readonly IRepositorioMedicoMemoria _RepoMedicoMemoria;
-        [BindProperty]
         public Medico medico {get;set;}
-        public CreateModel(IRepositorioMedicoMemoria _RepoMedicoMemoria){
+        public DetailsModel(IRepositorioMedicoMemoria _RepoMedicoMemoria){
             this._RepoMedicoMemoria = _RepoMedicoMemoria;
         }
-        public void OnGet()
+        public IActionResult OnGet(int Id)
         {
-        }
-
-        public IActionResult OnPostSave(){
-            medico = _RepoMedicoMemoria.Add(medico);
-            return RedirectToPage("Index");
+            medico = _RepoMedicoMemoria.Get(Id);
+            if (medico == null){
+                return RedirectToPage(",/NotFound");
+            }
+            else {
+                return Page();
+            }
         }
     }
 }

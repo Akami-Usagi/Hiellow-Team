@@ -2,6 +2,9 @@
 @model HogarGestor.App.Presentacion.Pages_Jovenes.CreateModel
 @{
 }
+
+<h1>Crear Nuevo Joven</h1>
+
 <form method="post">
     <div class="form-group">
         <label>Nombre</label>
@@ -41,6 +44,7 @@
         <input asp-for="joven.FechaNacimiento" placeholder="Ingrese La Fecha de Nacimiento del Joven" class="form-control">
     </div>
 
+    <br>
     <button type="submit" class="btn btn-primary" asp-page-handler="Save">Crear</button>
 
 </form>

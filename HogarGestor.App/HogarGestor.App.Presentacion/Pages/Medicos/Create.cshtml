@@ -2,3 +2,53 @@
 @model HogarGestor.App.Presentacion.Pages_Medicos.CreateModel
 @{
 }
+<h1>Crear Nuevo Medico</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input asp-for="medico.Nombre" placeholder="Ingrese El Nombre del Medico" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input asp-for="medico.Apellidos" placeholder="Ingrese Los Apellidos del Medico" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Telefono</label>
+        <input asp-for="medico.NumeroTelefono" placeholder="Ingrese Telefono del Medico" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Documento</label>
+        <input asp-for="medico.Documento" placeholder="Ingrese El Documento del Medico" class="form-control">
+    </div>
+    <label>Genero</label>
+    <div class="form-group">
+        <select asp-for="medico.Genero"  class="form-control">
+        <option selected>Genero...</option>
+        <option value="0">Masculino</option>
+        <option value="1">Femenino</option>
+        <option value="2">Intersexual</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Tarjeta Profesional</label>
+        <input asp-for="medico.TarjetaProfesional" placeholder="Ingrese La Tarjeta Profesional del Medico" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Registro Rethus</label>
+        <input asp-for="medico.Rethus" placeholder="Ingrese El Registro Rethus del Medico" class="form-control">
+    </div>
+    
+    <label>Especialidad</label>
+    <div class="form-group">
+        <select asp-for="medico.EspecialidadMedica"  class="form-control">
+        <option selected>Especialidad...</option>
+        <option value="0">Pediatria</option>
+        <option value="1">Nutricion</option>
+        </select>
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-primary" asp-page-handler="Save">Crear</button>
+
+</form>

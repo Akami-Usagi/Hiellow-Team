@@ -1,0 +1,24 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Pages_Familiares.DetailsModel
+@{
+}
+<h1>Detalles</h1>
+<div>
+    <h4>Medico</h4>
+    <dl class="row">
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.familiar.Nombre</dd>
+        <dt class="col-sm-2">Apellidos</dt>
+        <dd class="col-sm-10">@Model.familiar.Apellidos</dd>
+        <dt class="col-sm-2">Documento</dt>
+        <dd class="col-sm-10">@Model.familiar.Documento</dd>
+        <dt class="col-sm-2">Parentesco</dt>
+        <dd class="col-sm-10">@Model.familiar.Parentesco</dd>
+        <dt class="col-sm-2">Genero</dt>
+        <dd class="col-sm-10">@Model.familiar.Genero</dd>
+        <dt class="col-sm-2">Telefono</dt>
+        <dd class="col-sm-10">@Model.familiar.NumeroTelefono</dd>
+        <dt class="col-sm-2">Correo Electronico</dt>
+        <dd class="col-sm-10">@Model.familiar.CorreoElectronico</dd>
+    </dl>
+</div>

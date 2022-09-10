@@ -27,6 +27,7 @@ namespace HospiEnCasa.App.Presentacion
         {
             services.AddSingleton<IRepositorioJovenMemoria,RepositorioJovenMemoria>();
             services.AddSingleton<IRepositorioMedicoMemoria,RepositorioMedicoMemoria>();
+            services.AddSingleton<IRepositorioFamiliarMemoria,RepositorioFamiliarMemoria>();
             services.AddRazorPages();
         }
 
