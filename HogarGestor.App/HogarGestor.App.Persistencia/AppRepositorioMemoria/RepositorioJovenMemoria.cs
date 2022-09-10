@@ -69,7 +69,7 @@ namespace HogarGestor.App.Persistencia{
 
         public Joven Get(int IdJoven)
         {
-            throw new NotImplementedException();
+            return Jovenes.SingleOrDefault(j => j.Id == IdJoven);
         }
 
         public IEnumerable<Joven> GetAll()
