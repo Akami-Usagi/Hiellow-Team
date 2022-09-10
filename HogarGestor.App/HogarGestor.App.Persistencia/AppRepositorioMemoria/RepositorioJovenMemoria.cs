@@ -64,7 +64,8 @@ namespace HogarGestor.App.Persistencia{
 
         public void Delete(int IdJoven)
         {
-            throw new NotImplementedException();
+            Joven joven = Jovenes.SingleOrDefault(j => j.Id == IdJoven);
+            Jovenes.Remove(joven);
         }
 
         public Joven Get(int IdJoven)
