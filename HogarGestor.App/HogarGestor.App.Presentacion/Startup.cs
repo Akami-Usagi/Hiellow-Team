@@ -28,6 +28,8 @@ namespace HogarGestor.App.Presentacion
             services.AddSingleton<IRepositorioJovenMemoria,RepositorioJovenMemoria>();
             services.AddSingleton<IRepositorioMedicoMemoria,RepositorioMedicoMemoria>();
             services.AddSingleton<IRepositorioFamiliarMemoria,RepositorioFamiliarMemoria>();
+            services.AddScoped<IRepositorioJoven,RepositorioJoven>();
+            services.AddDbContext<Persistencia.AppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("HogarGestor")));
             services.AddRazorPages();
         }
 

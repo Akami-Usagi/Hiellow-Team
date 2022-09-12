@@ -16393,6 +16393,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Presentacion\\Pages\\BDJovenes\\Index.cshtml",
+      "TargetPath": "Pages\\BDJovenes\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Presentacion\\Pages\\Jovenes\\Delete.cshtml",
       "TargetPath": "Pages\\Jovenes\\Delete.cshtml",
       "FileKind": "mvc"

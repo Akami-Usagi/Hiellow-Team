@@ -61,3 +61,5 @@ C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\re
 C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\HogarGestor.App.Presentacion.pdb
 C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\HogarGestor.App.Presentacion.genruntimeconfig.cache
 C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\ref\HogarGestor.App.Presentacion.dll
+C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\bin\Debug\net6.0\Humanizer.dll
+C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

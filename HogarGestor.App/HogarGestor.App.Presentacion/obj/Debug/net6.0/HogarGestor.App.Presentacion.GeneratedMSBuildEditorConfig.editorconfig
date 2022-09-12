@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDJovenes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

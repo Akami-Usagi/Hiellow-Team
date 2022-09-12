@@ -1,0 +1,45 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Pages_BDJovenes.IndexModel
+@{
+}
+
+<h1>Lista De Jovenes</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Opciones <a asp-page="./Create" title="Agregar Joven">
+            <span class="material-icons">add</span></a></th>
+        </tr>
+    </thead>
+    @foreach (var joven in Model.Jovenes)
+    {
+        <tbody>
+            <tr>
+                <td>@joven.Nombre</td>
+                <td>@joven.Apellidos</td>
+                <td>@joven.NumeroTelefono</td>
+                <td>@joven.Genero</td>
+                <td>
+                    <a asp-page = ".\Delete" asp-route-id = "@joven.Id" title="Borrar">
+                        <span class="material-icons">delete</span>
+                    </a>
+                    <a asp-page = ".\Details" asp-route-id = "@joven.Id" title="Buscar">
+                        <span class="material-icons">search</span>
+                    </a>
+                    <a asp-page = ".\Edit" asp-route-id = "@joven.Id" title="Editar">
+                        <span class="material-icons">mode_edit</span>
+                    </a>
+                    <a asp-page = ".\ToAssignMedico" asp-route-id = "@joven.Id" title="Asignar Medico">
+                        <span class="material-icons">medical_services</span>
+                    </a>
+                    
+                    
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>

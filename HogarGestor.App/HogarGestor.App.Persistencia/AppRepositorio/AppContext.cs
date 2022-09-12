@@ -13,6 +13,12 @@ namespace HogarGestor.App.Persistencia{
         public DbSet<Joven>? Jovenes{get;set;}
         public DbSet<SugerenciaCuidado>? SugerenciasCuidado{get;set;}
 
+        public AppContext (DbContextOptions<AppContext> options)
+            : base(options)
+        {
+        }
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
             if (!optionsBuilder.IsConfigured){
                 optionsBuilder.UseSqlServer("data source=LocalHost;Initial Catalog=HogarGestor;Trusted_Connection=True;");
