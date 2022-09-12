@@ -13,6 +13,7 @@ namespace HogarGestor.App.Presentacion.Pages_Jovenes
     {
         private readonly IRepositorioJovenMemoria _RepoJovenMemoria;
         public Joven joven {get;set;}
+        public Medico pediatra{get;set;}
         public DetailsModel(IRepositorioJovenMemoria _RepoJovenMemoria){
             this._RepoJovenMemoria = _RepoJovenMemoria;
         }
@@ -20,9 +21,15 @@ namespace HogarGestor.App.Presentacion.Pages_Jovenes
         {
             joven = _RepoJovenMemoria.Get(Id);
             if (joven == null){
-                return RedirectToPage(",/NotFound");
+                return RedirectToPage("./NotFound");
             }
             else {
+                if(joven.Pediatra == null){
+                    pediatra = new Medico{
+                        Nombre = "SIN ASIGNAR"
+                    };
+                    joven.Pediatra = pediatra;
+                }
                 return Page();
             }
         }

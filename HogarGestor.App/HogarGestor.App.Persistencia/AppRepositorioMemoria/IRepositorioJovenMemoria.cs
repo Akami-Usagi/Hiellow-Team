@@ -13,6 +13,8 @@ namespace HogarGestor.App.Persistencia{
         void Delete(int IdJoven);
         Joven Get(int IdJoven);
         IEnumerable<Joven> GetFiltro(string filtro);
+        Medico ToAssignMedicoPediatra(int IdJoven, Medico pediatra);
+        Medico ToAssignMedicoNutricionista(int IdJoven, Medico Nutricionista);
         
     }
 }

@@ -19,13 +19,18 @@ namespace HogarGestor.App.Presentacion.Pages_Jovenes
         public ActionResult OnGet(int Id)
         {
             joven = _RepoJovenMemoria.Get(Id);
-            if (joven == null){
-                return RedirectToPage(",/NotFound");
+            if(joven == null){
+                return RedirectToPage("./NotFound");
             }
-            else {
+            return Page();
+        }
+
+        public IActionResult OnPostDelete(){
+            joven = _RepoJovenMemoria.Get(joven.Id);
+            
                 _RepoJovenMemoria.Delete(joven.Id);
                 return RedirectToPage("index");
-            }
+            
         }
     }
 }
