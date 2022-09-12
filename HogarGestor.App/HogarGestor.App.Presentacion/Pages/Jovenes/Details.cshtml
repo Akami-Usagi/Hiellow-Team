@@ -21,6 +21,6 @@
         <dt class="col-sm-2">Direccion</dt>
         <dd class="col-sm-10">@Model.joven.Direccion</dd>
         <dt class="col-sm-2">Pediatra</dt>
-        <dd class="col-sm-10">@Model.joven.Pediatra.Nombre</dd>
+        <dd class="col-sm-10">@(Model.joven.Pediatra.Nombre + " " + Model.joven.Pediatra.Apellidos)</dd>
     </dl>
 </div>

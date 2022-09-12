@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using HogarGestor.App.Dominio;
 using HogarGestor.App.Persistencia;
 
@@ -37,10 +38,11 @@ namespace HogarGestor.App.Presentacion.Pages_Jovenes
                 return Page();
             }
         }
-        public IActionResult OnPostAssing(int IdMedico){
+        
+        public IActionResult OnPostToAssign(int IdMedico){
             medico = _RepoMedicoMemoria.Get(IdMedico);
             medico = _RepoJovenMemoria.ToAssignMedicoPediatra(joven.Id, medico);
-            return RedirectToPage("./index");
+            return RedirectToPage("index");
         }
     }
 }

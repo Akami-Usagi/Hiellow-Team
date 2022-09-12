@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace HospiEnCasa.App.Presentacion
+namespace HogarGestor.App.Presentacion
 {
     public class Program
     {

@@ -11,7 +11,7 @@ using Microsoft.Extensions.Hosting;
 using HogarGestor.App.Persistencia;
 using Microsoft.EntityFrameworkCore;
 
-namespace HospiEnCasa.App.Presentacion
+namespace HogarGestor.App.Presentacion
 {
     public class Startup
     {

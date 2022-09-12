@@ -96,8 +96,8 @@ namespace HogarGestor.App.Persistencia{
                 JovenEncontrado.Ciudad = joven.Ciudad;
                 JovenEncontrado.FechaNacimiento = joven.FechaNacimiento;
                 JovenEncontrado.FamiliarDesignado = joven.FamiliarDesignado;
-                JovenEncontrado.Nutricionista = joven.Nutricionista;
-                JovenEncontrado.Pediatra = joven.Pediatra;
+                JovenEncontrado.Nutricionista = JovenEncontrado.Nutricionista;
+                JovenEncontrado.Pediatra = JovenEncontrado.Pediatra;
                 JovenEncontrado.HistoriaJoven = joven.HistoriaJoven;
 
             }
