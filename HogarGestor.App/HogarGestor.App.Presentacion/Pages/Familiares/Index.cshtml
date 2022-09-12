@@ -1,0 +1,53 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Page_Familiares.IndexModel
+@{
+}
+
+<p>
+    <a asp-page="./Create">Create New</a>
+</p>
+
+<form asp-action="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Documento:  <input type="text" name="GetFilter" asp-for="GetFilter"/>
+                        <input type="submit" value="Filtrar" class="btn btn-default" /> |
+                        <a asp-action="./Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Parentesco</th>
+            <th scope="col">Correo Electronico</th>
+            <th scope="col">Opciones</th>
+            
+        </tr>
+    </thead>
+    @foreach (var familiar in Model.Familiares)
+    {
+        <tbody>
+            <tr>
+                <td>@familiar.Nombre</td>
+                <td>@familiar.Apellido</td>
+                <td>@familiar.Documento</td>
+                <td>@familiar.GeneroId</td>
+                <td>@familiar.Parentesco</td>
+                <td>@familiar.Correo</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@familiar.Id"><span class="material-icons">edit</span></a>
+                    <a asp-page="./Delete" asp-route-id="@familiar.Id"><span class="material-icons">delete</span></a>
+                    <a asp-page="./Details" asp-route-id="@familiar.Id"><span class="material-icons">description</span></a>
+                    
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>

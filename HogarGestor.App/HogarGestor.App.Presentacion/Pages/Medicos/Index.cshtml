@@ -1,16 +1,11 @@
 ﻿@page
-@model HogarGestor.App.Presentacion.Page_Jovenes.IndexModel
+@model HogarGestor.App.Presentacion.Pages_Medicos.IndexModel
 @{
 }
-
-
-
-<h2>Index</h2>
 
 <p>
     <a asp-page="./Create">Create New</a>
 </p>
-
 
 <form asp-action="./Index" method="get">
     <div class="form-actions no-color">
@@ -22,32 +17,32 @@
     </div>
 </form>
 
-
 <table class="table table-bordered">
     <thead>
         <tr>
             <th scope="col">Nombre</th>
             <th scope="col">Apellidos</th>
-            <th scope="col">Telefono</th>
             <th scope="col">Documento</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Rethus</th>
             <th scope="col">Genero</th>
-            <th scope="col">Opciones</th>
             
         </tr>
     </thead>
-    @foreach (var joven in Model.Jovenes)
+    @foreach (var medico in Model.Medicos)
     {
         <tbody>
             <tr>
-                <td>@joven.Nombre</td>
-                <td>@joven.Apellido</td>
-                <td>@joven.Telefono</td>
-                <td>@joven.Documento</td>
-                <td>@joven.GeneroId</td>
+                <td>@medico.Nombre</td>
+                <td>@medico.Apellido</td>
+                <td>@medico.Documento</td>
+                <td>@medico.Especialidad</td>
+                <td>@medico.Rethus</td>
+                <td>@medico.GeneroId</td>
                 <td>
-                    <a asp-page="./EditarJoven" asp-route-id="@joven.Id"><span class="material-icons">edit</span></a>
-                    <a asp-page="./Delete" asp-route-id="@joven.Id"><span class="material-icons">delete</span></a>
-                    <a asp-page="./Details" asp-route-id="@joven.Id"><span class="material-icons">description</span></a>
+                    <a asp-page="./Edit" asp-route-id="@medico.Id"><span class="material-icons">edit</span></a>
+                    <a asp-page="./Delete" asp-route-id="@medico.Id"><span class="material-icons">delete</span></a>
+                    <a asp-page="./Details" asp-route-id="@medico.Id"><span class="material-icons">description</span></a>
                     
                 </td>
             </tr>

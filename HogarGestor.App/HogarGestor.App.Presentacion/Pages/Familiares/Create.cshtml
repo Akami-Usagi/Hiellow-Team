@@ -1,0 +1,53 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Pages_Familiares.CreateModel
+@{
+}
+
+<h1>Crear Nuevo Familiar</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input asp-for="familiar.Nombre" placeholder="Ingrese El Nombre del Familiar" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input asp-for="familiar.Apellido" placeholder="Ingrese Los Apellidos del Familiar" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Telefono</label>
+        <input asp-for="familiar.Telefono" placeholder="Ingrese Telefono del Familiar" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Documento</label>
+        <input asp-for="familiar.Documento" placeholder="Ingrese El Documento del Familiar" class="form-control">
+    </div>
+    <label>Genero</label>
+    <div class="form-group">
+        <select asp-for="familiar.GeneroId"  class="form-control">
+        <option selected>Genero...</option>
+        <option value="0">Masculino</option>
+        <option value="1">Femenino</option>
+        <option value="2">Intersexual</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Parentesco</label>
+        <input asp-for="familiar.Parentesco" placeholder="Ingrese El Parentesco Con El Joven" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Correo Electronico</label>
+        <input asp-for="familiar.Correo" placeholder="Ingrese El Correo Electronico del Familiar" class="form-control">
+    </div>
+    
+   
+
+   <div class="form-group">
+    <label></label>
+   </div>
+    <button type="submit" class="btn btn-primary" asp-page-handler="Save">Crear</button>
+</form>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>

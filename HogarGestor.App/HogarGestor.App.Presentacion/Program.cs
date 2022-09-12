@@ -2,6 +2,8 @@ using HogarGestor.App.Persistencia;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<IRepositorioJovenMemoria,RepositorioJovenMemoria>();
+builder.Services.AddSingleton<IRepositorioFamiliarMemoria,RepositorioFamiliarMemoria>();
+builder.Services.AddSingleton<IRepositorioMedicoMemoria,RepositorioMedicoMemoria>();
 // Add services to the container.
 builder.Services.AddRazorPages();
 

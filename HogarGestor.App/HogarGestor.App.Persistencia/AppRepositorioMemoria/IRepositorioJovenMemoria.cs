@@ -13,8 +13,10 @@ namespace HogarGestor.App.Persistencia
 
         Joven Update(Joven joven);
 
-        void Delete(string DocumentoJoven);
+        void Delete(int jovenId);
 
-        Joven Get(string DocumentoJoven);
+        Joven Get(int jovenId);
+
+        IEnumerable<Joven> GetFilter(string filtro);
     }
 }
