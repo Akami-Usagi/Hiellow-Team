@@ -21,9 +21,9 @@ namespace HogarGestor.App.Persistencia.AppRepositorio
             return FamiliarAdicionado.Entity;
         }
 
-        public void DeleteFamiliar(string DocumentoFamiliar)
+        public void DeleteFamiliar(int IdFamiliar)
         {
-            var FamiliarEncontrado = _appContext.Familiares.FirstOrDefault(f => f.Documento == DocumentoFamiliar);
+            var FamiliarEncontrado = _appContext.Familiares.FirstOrDefault(f => f.Id == IdFamiliar);
             if(FamiliarEncontrado == null){
                 return;
             }
@@ -36,9 +36,9 @@ namespace HogarGestor.App.Persistencia.AppRepositorio
             return _appContext.Familiares;
         }
 
-        public Familiar GetFamiliar(string DocumentoFamiliar)
+        public Familiar GetFamiliar(int IdFamiliar)
         {
-            var FamiliarEncontrado = _appContext.Familiares.FirstOrDefault(f => f.Documento == DocumentoFamiliar);
+            var FamiliarEncontrado = _appContext.Familiares.FirstOrDefault(f => f.Id == IdFamiliar);
             return FamiliarEncontrado;
         }
 

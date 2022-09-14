@@ -29,7 +29,7 @@ namespace HogarGestor.App.Presentacion.Pages_BDJovenes
         }
         public IActionResult OnGet(int id)
         {
-            Medicos = _RepoMedico.GetAllPediatras(Especialidad.Pediatria);
+            Medicos = _RepoMedico.GetAllNutricionistas(Especialidad.Nutricion);
             joven = _RepoJoven.GetJoven(id);
             if(joven == null){
                 return RedirectToPage("./NotFound");

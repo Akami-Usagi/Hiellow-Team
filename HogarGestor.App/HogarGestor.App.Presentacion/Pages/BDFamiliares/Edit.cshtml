@@ -1,0 +1,46 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Pages_BDFamiliares.EditModel
+@{
+}
+<h1>Editar Datos del Familiar</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input asp-for="familiar.Nombre" placeholder="Ingrese El Nombre del Familiar" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input asp-for="familiar.Apellidos" placeholder="Ingrese Los Apellidos del Familiar" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Telefono</label>
+        <input asp-for="familiar.NumeroTelefono" placeholder="Ingrese Telefono del Familiar" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Documento</label>
+        <input asp-for="familiar.Documento" placeholder="Ingrese El Documento del Familiar" class="form-control">
+    </div>
+    <label>Genero</label>
+    <div class="form-group">
+        <select asp-for="familiar.Genero"  class="form-control">
+        <option selected>Genero...</option>
+        <option value="0">Masculino</option>
+        <option value="1">Femenino</option>
+        <option value="2">Intersexual</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Parentesco</label>
+        <input asp-for="familiar.Parentesco" placeholder="Ingrese El Parentesco Con El Joven" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Correo Electronico</label>
+        <input asp-for="familiar.CorreoElectronico" placeholder="Ingrese El Correo Electronico del Familiar" class="form-control">
+    </div>
+    
+    <br>
+
+    <button type="submit" class="btn btn-primary" asp-page-handler="Edit">Actualizar Datos</button>
+
+</form>

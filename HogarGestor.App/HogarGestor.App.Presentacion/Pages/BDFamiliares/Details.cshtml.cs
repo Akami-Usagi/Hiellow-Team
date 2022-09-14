@@ -5,19 +5,20 @@ using System;
 using System.Linq;
 using HogarGestor.App.Dominio;
 using HogarGestor.App.Persistencia;
-namespace HogarGestor.App.Presentacion.Pages_BDMedicos
+
+namespace HogarGestor.App.Presentacion.Pages_BDFamiliares
 {
     public class DetailsModel : PageModel
     {
-        private readonly IRepositorioMedico _RepoMedico;
-        public Medico medico {get;set;}
-        public DetailsModel(IRepositorioMedico _RepoMedico){
-            this._RepoMedico = _RepoMedico;
+        private readonly IRepositorioFamiliar _RepoFamiliar;
+        public Familiar familiar {get;set;}
+        public DetailsModel(IRepositorioFamiliar _RepoFamiliar){
+            this._RepoFamiliar = _RepoFamiliar;
         }
         public IActionResult OnGet(int Id)
         {
-            medico = _RepoMedico.GetMedico(Id);
-            if (medico == null){
+            familiar = _RepoFamiliar.GetFamiliar(Id);
+            if (familiar == null){
                 return RedirectToPage(",/NotFound");
             }
             else {
@@ -25,4 +26,5 @@ namespace HogarGestor.App.Presentacion.Pages_BDMedicos
             }
         }
     }
+
 }

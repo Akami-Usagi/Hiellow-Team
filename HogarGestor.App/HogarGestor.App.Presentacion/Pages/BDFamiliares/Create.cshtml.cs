@@ -5,23 +5,27 @@ using System;
 using System.Linq;
 using HogarGestor.App.Dominio;
 using HogarGestor.App.Persistencia;
-namespace HogarGestor.App.Presentacion.Pages_BDMedicos
+
+
+namespace HogarGestor.App.Presentacion.Pages_BDFamiliares
 {
     public class CreateModel : PageModel
     {
-        private readonly IRepositorioMedico _RepoMedico;
+
+        private readonly IRepositorioFamiliar _RepoFamiliar;
         [BindProperty]
-        public Medico medico {get;set;}
-        public CreateModel(IRepositorioMedico _RepoMedico){
-            this._RepoMedico = _RepoMedico;
+        public Familiar familiar {get;set;}
+        public CreateModel(IRepositorioFamiliar _RepoFamiliar){
+            this._RepoFamiliar = _RepoFamiliar;
         }
         public void OnGet()
         {
         }
 
         public IActionResult OnPostSave(){
-            medico = _RepoMedico.AddMedico(medico);
+            familiar = _RepoFamiliar.AddFamiliar(familiar);
             return RedirectToPage("Index");
         }
     }
+
 }

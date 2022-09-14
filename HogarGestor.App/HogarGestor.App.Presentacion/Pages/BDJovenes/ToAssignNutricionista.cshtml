@@ -2,3 +2,35 @@
 @model HogarGestor.App.Presentacion.Pages_BDJovenes.ToAssignNutricionistaModel
 @{
 }
+<form method="post">
+    <input type="hidden" asp-for="@Model.joven.Id">
+    <h1>Asignacion de Medicos</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Especialidad</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        @foreach(var medico in Model.Medicos)
+        {
+            <tbody>
+                <tr>
+                    <td>@medico.Nombre</td>
+                    <td>@medico.Apellidos</td>
+                    <td>@medico.NumeroTelefono</td>
+                    <td>@medico.Genero</td>
+                    <td>@medico.EspecialidadMedica</td>
+                    <td>
+                        <input type="checkbox" name="IdMedico" value="@medico.Id">
+                    </td>
+                </tr>
+            </tbody>    
+        }
+    </table>
+    <button type="submit" class="btn btn-primary" asp-page-handler="ToAssign">Asignar Medico</button>
+</form>

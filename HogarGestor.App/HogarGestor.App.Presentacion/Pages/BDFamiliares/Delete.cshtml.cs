@@ -6,20 +6,21 @@ using System.Linq;
 using HogarGestor.App.Dominio;
 using HogarGestor.App.Persistencia;
 
-namespace HogarGestor.App.Presentacion.Pages_BDMedicos
+
+namespace HogarGestor.App.Presentacion.Pages_BDFamiliares
 {
     public class DeleteModel : PageModel
     {
-        private readonly IRepositorioMedico _RepoMedico;
+        private readonly IRepositorioFamiliar _RepoFamiliar;
         [BindProperty]
-        public Medico medico {get;set;}
-        public DeleteModel(IRepositorioMedico _RepoMedico){
-            this._RepoMedico = _RepoMedico;
+        public Familiar familiar {get;set;}
+        public DeleteModel(IRepositorioFamiliar _RepoFamiliar){
+            this._RepoFamiliar = _RepoFamiliar;
         }
         public IActionResult OnGet(int Id)
         {
-            medico = _RepoMedico.GetMedico(Id);
-            if(medico == null){
+            familiar = _RepoFamiliar.GetFamiliar(Id);
+            if(familiar == null){
                 return RedirectToPage("./NotFound");
             }
             else{
@@ -29,8 +30,8 @@ namespace HogarGestor.App.Presentacion.Pages_BDMedicos
         }
 
         public IActionResult OnPostDelete(){
-            _RepoMedico.DeleteMedico(medico.Id);
-            return RedirectToPage("Index");            
+            _RepoFamiliar.DeleteFamiliar(familiar.Id);
+            return RedirectToPage("index");            
         }
     }
 }

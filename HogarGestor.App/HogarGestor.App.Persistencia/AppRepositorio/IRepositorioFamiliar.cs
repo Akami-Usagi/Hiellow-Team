@@ -11,7 +11,7 @@ namespace HogarGestor.App.Persistencia
         IEnumerable<Familiar> GetAllFamiliares();
         Familiar AddFamiliar(Familiar familiar);
         Familiar UpdateFamiliar(Familiar familiar);
-        void DeleteFamiliar(string DocumentoFamiliar);
-        Familiar GetFamiliar(string DocumentoFamiliar);
+        void DeleteFamiliar(int IdFamiliar);
+        Familiar GetFamiliar(int IdFamiliar);
     }
 }

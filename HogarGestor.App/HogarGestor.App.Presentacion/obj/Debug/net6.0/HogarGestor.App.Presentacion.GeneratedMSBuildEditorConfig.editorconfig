@@ -15,6 +15,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDFamiliares/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDFamiliares/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDFamiliares/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDFamiliares/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDFamiliares/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
