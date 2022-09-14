@@ -22,9 +22,9 @@ namespace HogarGestor.App.Persistencia{
             return jovenAdicionado.Entity;
         }
 
-        public void DeleteJoven(string DocumentoJoven)
+        public void DeleteJoven(int IdJoven)
         {
-            var jovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Documento == DocumentoJoven);
+            var jovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
             if (jovenEncontrado == null){
                 return;
             }
@@ -37,9 +37,9 @@ namespace HogarGestor.App.Persistencia{
             return _appContext.Jovenes;
         }
 
-        public Joven GetJoven(string DocumentoJoven)
+        public Joven GetJoven(int IdJoven)
         {
-            return _appContext.Jovenes.FirstOrDefault(j => j.Documento == DocumentoJoven);
+            return _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
         }
 
         public Joven UpdateJoven(Joven joven)
@@ -66,31 +66,40 @@ namespace HogarGestor.App.Persistencia{
             return jovenEncontrado;
         }
 
-        public Joven AsignFamiliar(string DocumentoFamiliar, string DocumentoJoven)
+        
+
+        public Medico ToAsignNutricionista(int IdJoven, Medico nutricionista)
         {
-            var familiar = _appContext.Familiares.FirstOrDefault(f => f.Documento == DocumentoFamiliar);
-            var joven = _appContext.Jovenes.FirstOrDefault(j => j.Documento == DocumentoJoven);
-            joven.FamiliarDesignado = familiar;
-            _appContext.SaveChanges();
-            return joven;
-
+            var JovenEncontrado = _appContext.Jovenes.SingleOrDefault(j => j.Id == IdJoven);
+            if(JovenEncontrado!=null){
+                JovenEncontrado.Nutricionista = nutricionista;
+                _appContext.SaveChanges();
+                return nutricionista;
+            }
+            return null;
         }
 
-        public Joven AsignNutricionista(string DocumentoMedico, string DocumentoJoven)
+        public Medico ToAsignPediatra(int IdJoven, Medico pediatra){
+            var JovenEncontrado = _appContext.Jovenes.SingleOrDefault(j => j.Id == IdJoven);
+            if(JovenEncontrado!=null){
+                JovenEncontrado.Pediatra = pediatra;
+                _appContext.SaveChanges();
+                return pediatra;
+            }
+            return null;
+        }
+
+        public IEnumerable<Joven> GetFiltro(string filtro=null)
         {
-            var nutricionista = _appContext.Medicos.FirstOrDefault(m => m.Documento == DocumentoMedico);
-            var joven = _appContext.Jovenes.FirstOrDefault(j => j.Documento == DocumentoJoven);
-            joven.Nutricionista = nutricionista;
-            _appContext.SaveChanges();
-            return joven;
+            var jovenes = this.GetAllJovenes();
+            if (jovenes != null){
+                if (!String.IsNullOrEmpty(filtro)){
+                    jovenes = jovenes.Where(j => j.Nombre.Contains(filtro));
+                }
+            }
+            return jovenes;
         }
 
-        public Joven AsignPediatra(string DocumentoMedico, string DocumentoJoven){
-             var pediatra = _appContext.Medicos.FirstOrDefault(m => m.Documento == DocumentoMedico);
-            var joven = _appContext.Jovenes.FirstOrDefault(j => j.Documento == DocumentoJoven);
-            joven.Pediatra = pediatra;
-            _appContext.SaveChanges();
-            return joven;
-        }
+        
     }
 }

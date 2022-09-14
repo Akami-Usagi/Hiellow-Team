@@ -15,8 +15,56 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDFamiliares/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDJovenes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDJovenes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDJovenes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDJovenes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDJovenes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDJovenes/ToAssignNutricionista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXFRvQXNzaWduTnV0cmljaW9uaXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDJovenes/ToAssignPediatra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXFRvQXNzaWduUGVkaWF0cmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDMedicos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRNZWRpY29zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDMedicos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRNZWRpY29zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDMedicos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRNZWRpY29zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDMedicos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRNZWRpY29zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/BDMedicos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRNZWRpY29zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Hiellow-Team/hogargestor.app/hogargestor.app.presentacion/Pages/Error.cshtml]

@@ -2,7 +2,6 @@
 @model HogarGestor.App.Presentacion.Pages_BDJovenes.IndexModel
 @{
 }
-
 <h1>Lista De Jovenes</h1>
 <table class="table table-bordered">
     <thead>
@@ -27,14 +26,17 @@
                     <a asp-page = ".\Delete" asp-route-id = "@joven.Id" title="Borrar">
                         <span class="material-icons">delete</span>
                     </a>
-                    <a asp-page = ".\Details" asp-route-id = "@joven.Id" title="Buscar">
-                        <span class="material-icons">search</span>
+                    <a asp-page = ".\Details" asp-route-id = "@joven.Id" title="Ver Detalles">
+                        <span class="material-icons">description</span>
                     </a>
                     <a asp-page = ".\Edit" asp-route-id = "@joven.Id" title="Editar">
                         <span class="material-icons">mode_edit</span>
                     </a>
-                    <a asp-page = ".\ToAssignMedico" asp-route-id = "@joven.Id" title="Asignar Medico">
+                    <a asp-page = ".\ToAssignPediatra" asp-route-id = "@joven.Id" title="Asignar Pediatra">
                         <span class="material-icons">medical_services</span>
+                    </a>
+                    <a asp-page = ".\ToAssignNutricionista" asp-route-id = "@joven.Id" title="Asignar Nutricionista">
+                        <span class="material-icons">restaurant</span>
                     </a>
                     
                     

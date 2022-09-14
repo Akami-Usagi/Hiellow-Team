@@ -11,7 +11,9 @@ namespace HogarGestor.App.Persistencia
         IEnumerable<Medico> GetAllMedicos();
         Medico AddMedico(Medico medico);
         Medico UpdateMedico(Medico medico);
-        void DeleteMedico(string DocumentoMedico);
-        Medico GetMedico(string DocumentoMedico);
+        void DeleteMedico(int IdMedico);
+        Medico GetMedico(int IdMedico);
+        IEnumerable<Medico> GetAllPediatras(Especialidad especialidad);
+        IEnumerable<Medico> GetAllNutricionistas(Especialidad especialidad);
     }
 }

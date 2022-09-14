@@ -1,0 +1,46 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Pages_BDFamiliares.IndexModel
+@{
+}
+<h1>Lista De Familiares</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Parentesco</th>
+            <th scope="col">Correo Electronico</th>
+            <th scope="col">Opciones <a asp-page="./Create" title="Agregar Medico">
+            <span class="material-icons">add</span></a></th>
+        </tr>
+    </thead>
+    @foreach (var familiar in Model.Familiares)
+    {
+        <tbody>
+            <tr>
+                <td>@familiar.Nombre</td>
+                <td>@familiar.Apellidos</td>
+                <td>@familiar.Documento</td>
+                <td>@familiar.Genero</td>
+                <td>@familiar.Parentesco</td>
+                <td>@familiar.CorreoElectronico</td>
+                
+                <td>
+                    <a asp-page = ".\Delete" asp-route-id = "@familiar.Id" title="Borrar">
+                        <span class="material-icons">delete</span>
+                    </a>
+                    <a asp-page = ".\Details" asp-route-id = "@familiar.Id" title="Buscar">
+                        <span class="material-icons">search</span>
+                    </a>
+                    <a asp-page = ".\Edit" asp-route-id = "@familiar.Id" title="Editar">
+                        <span class="material-icons">mode_edit</span>
+                    </a>
+                    
+                    
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>

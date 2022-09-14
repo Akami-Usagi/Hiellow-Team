@@ -8,10 +8,11 @@ namespace HogarGestor.App.Persistencia{
         IEnumerable<Joven> GetAllJovenes();
         Joven AddJoven(Joven joven);
         Joven UpdateJoven(Joven joven);
-        void DeleteJoven(string DocumentoJoven);
-        Joven GetJoven(string DocumentoJoven);
-        Joven AsignFamiliar(string DocumentoFamiliar, string DocumentoJoven);
-        Joven AsignNutricionista(string DocumentoMedico, string DocumentoJoven);
-        Joven AsignPediatra(string DocumentoMedico, string DocumentoJoven);
+        void DeleteJoven(int IdJoven);
+        Joven GetJoven(int IdJoven);
+        //Joven ToAsignFamiliar(int IdJoven, Familiar familiar);
+        Medico ToAsignNutricionista(int IdJoven, Medico nutricionista);
+        Medico ToAsignPediatra(int IdJoven, Medico pediatra);
+        IEnumerable<Joven> GetFiltro(string filtro);
     }
 }

@@ -21,9 +21,9 @@ namespace HogarGestor.App.Persistencia
             return MedicoAdicionado.Entity;
         }
 
-        public void DeleteMedico(string DocumentoMedico)
+        public void DeleteMedico(int IdMedico)
         {
-            var MedicoEncontrado = _appContext.Medicos.FirstOrDefault(m => m.Documento == DocumentoMedico);
+            var MedicoEncontrado = _appContext.Medicos.FirstOrDefault(m => m.Id == IdMedico);
             if (MedicoEncontrado == null){
                 return;
             }
@@ -36,15 +36,15 @@ namespace HogarGestor.App.Persistencia
             return _appContext.Medicos;
         }
 
-        public Medico GetMedico(string DocumentoMedico)
+        public Medico GetMedico(int IdMedico)
         {
-            var MedicoEncontrado = _appContext.Medicos.FirstOrDefault(m => m.Documento == DocumentoMedico);
+            var MedicoEncontrado = _appContext.Medicos.FirstOrDefault(m => m.Id == IdMedico);
             return MedicoEncontrado;
         }
 
         public Medico UpdateMedico(Medico medico)
         {
-            var MedicoEncontrado = _appContext.Medicos.FirstOrDefault(m => m.Documento == medico.Documento);
+            var MedicoEncontrado = _appContext.Medicos.FirstOrDefault(m => m.Id == medico.Id);
             if (MedicoEncontrado != null){
                 MedicoEncontrado.Nombre = medico.Nombre;
                 MedicoEncontrado.Apellidos = medico.Apellidos;
@@ -60,6 +60,18 @@ namespace HogarGestor.App.Persistencia
             }
             return MedicoEncontrado;
 
+        }
+
+        public IEnumerable<Medico> GetAllNutricionistas(Especialidad especialidad)
+        {
+            var nutricionistas = _appContext.Medicos.Where(m => m.EspecialidadMedica == especialidad);
+            return nutricionistas;
+        }
+
+        public IEnumerable<Medico> GetAllPediatras(Especialidad especialidad)
+        {
+            var pediatras = _appContext.Medicos.Where(m => m.EspecialidadMedica == especialidad);
+            return pediatras;
         }
     }
 }

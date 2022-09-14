@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using HogarGestor.App.Persistencia;
 using Microsoft.EntityFrameworkCore;
+using HogarGestor.App.Persistencia.AppRepositorio;
 
 namespace HogarGestor.App.Presentacion
 {
@@ -29,6 +30,8 @@ namespace HogarGestor.App.Presentacion
             services.AddSingleton<IRepositorioMedicoMemoria,RepositorioMedicoMemoria>();
             services.AddSingleton<IRepositorioFamiliarMemoria,RepositorioFamiliarMemoria>();
             services.AddScoped<IRepositorioJoven,RepositorioJoven>();
+            services.AddScoped<IRepositorioMedico, RepositorioMedico>();
+            services.AddScoped<IRepositorioFamiliar, RepositorioFamiliar>();
             services.AddDbContext<Persistencia.AppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("HogarGestor")));
             services.AddRazorPages();
         }
