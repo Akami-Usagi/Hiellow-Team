@@ -30,6 +30,11 @@ namespace HogarGestor.App.Persistencia
         //*************************************************************
         //************************************************************
         //public DbSet<MedicoPaciente> MedicoPacientes { get; set; }
+
+        public AppContext (DbContextOptions<AppContext> options)
+            : base(options)
+        {
+        }
         protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder
         )

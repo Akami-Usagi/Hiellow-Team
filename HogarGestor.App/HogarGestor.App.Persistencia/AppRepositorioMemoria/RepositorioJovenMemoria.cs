@@ -66,6 +66,9 @@ namespace HogarGestor.App.Persistencia
         public void Delete(int jovenId)
         {
             Joven joven = Jovenes.SingleOrDefault(j => j.Id == jovenId);
+            if(joven==null){
+                return;
+            }
             Jovenes.Remove(joven);
         }
 
@@ -81,7 +84,25 @@ namespace HogarGestor.App.Persistencia
 
         public Joven Update(Joven joven)
         {
-            throw new NotImplementedException();
+            var jovenEncontrado = Jovenes.SingleOrDefault(j=>j.Id == joven.Id);
+            if(jovenEncontrado!=null){
+                jovenEncontrado.Nombre = joven.Nombre;
+                jovenEncontrado.Apellido = joven.Apellido;
+                jovenEncontrado.Telefono = joven.Telefono;
+                jovenEncontrado.Documento = joven.Documento;
+                jovenEncontrado.TipoDocumentoId = joven.TipoDocumentoId;
+                jovenEncontrado.GeneroId = joven.GeneroId;
+                jovenEncontrado.Direccion = joven.Direccion;
+                //jovenEncontrado.Latitud = joven.Latitud;
+                //jovenEncontrado.Longitud = joven.Longitud;
+                jovenEncontrado.Ciudad = joven.Ciudad;
+                jovenEncontrado.FechaNacimiento = joven.FechaNacimiento;
+                jovenEncontrado.FamiliarId = joven.FamiliarId;
+                jovenEncontrado.NutricionistaId = joven.NutricionistaId;
+                jovenEncontrado.PediatraId = joven.PediatraId;
+            }
+
+           return jovenEncontrado;
         }
 
         public IEnumerable<Joven> GetFilter(string filtro = null)
@@ -96,6 +117,26 @@ namespace HogarGestor.App.Persistencia
             }
 
             return Jovenes;
+        }
+
+          public Medico ToAssignMedicoPediatra(int IdJoven, Medico Pediatra)
+        {
+            var JovenEncontrado = Jovenes.SingleOrDefault(j => j.Id == IdJoven);
+            if(JovenEncontrado!=null){
+                JovenEncontrado.Pediatra = Pediatra;
+                return Pediatra;
+            }
+            return null;
+        }
+
+        public Medico ToAssignMedicoNutricionista(int IdJoven, Medico Nutricionista)
+        {
+            var JovenEncontrado = Jovenes.SingleOrDefault(j => j.Id == IdJoven);
+            if(JovenEncontrado!=null){
+                JovenEncontrado.Nutricionista = Nutricionista;
+                return Nutricionista;
+            }
+            return null;
         }
     }
 }

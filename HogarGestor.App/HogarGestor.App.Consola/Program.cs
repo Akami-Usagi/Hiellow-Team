@@ -24,11 +24,11 @@ namespace HogarGestor.App.Consola
 
             //AddFamiliar();
             //AddMedico();
-            //AddJoven();
+            AddJoven();
 
             //GetJoven(6);
             //GetJoven(2);
-            Delete(12);
+            //Delete(12);
             //GetAllJoven();
         }
 
