@@ -1,0 +1,38 @@
+﻿@page
+@model HogarHestor.App.Presentacion.Pages_BDJovenes.ToAssignFamiliarModel
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="@Model.joven.Id">
+    <h1>Asignacion de Familiar</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Correo Electronico</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        @foreach(var familiar in Model.Familiares)
+        {
+            <tbody>
+                <tr>
+                    <td>@familiar.Nombre</td>
+                    <td>@familiar.Apellidos</td>
+                    <td>@familiar.NumeroTelefono</td>
+                    <td>@familiar.Genero</td>
+                    <td>@familiar.Documento</td>
+                    <td>@familiar.CorreoElectronico</td>
+                    <td>
+                        <input type="checkbox" name="IdFamiliar" value="@familiar.Id">
+                    </td>
+                </tr>
+            </tbody>    
+        }
+    </table>
+    <button type="submit" class="btn btn-primary" asp-page-handler="ToAssign">Asignar Familiar</button>
+</form>

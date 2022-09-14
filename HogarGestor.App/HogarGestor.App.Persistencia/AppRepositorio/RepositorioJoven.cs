@@ -68,9 +68,9 @@ namespace HogarGestor.App.Persistencia{
 
         
 
-        public Medico ToAsignNutricionista(int IdJoven, Medico nutricionista)
+        public Medico ToAssignNutricionista(int IdJoven, Medico nutricionista)
         {
-            var JovenEncontrado = _appContext.Jovenes.SingleOrDefault(j => j.Id == IdJoven);
+            var JovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
             if(JovenEncontrado!=null){
                 JovenEncontrado.Nutricionista = nutricionista;
                 _appContext.SaveChanges();
@@ -79,8 +79,8 @@ namespace HogarGestor.App.Persistencia{
             return null;
         }
 
-        public Medico ToAsignPediatra(int IdJoven, Medico pediatra){
-            var JovenEncontrado = _appContext.Jovenes.SingleOrDefault(j => j.Id == IdJoven);
+        public Medico ToAssignPediatra(int IdJoven, Medico pediatra){
+            var JovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
             if(JovenEncontrado!=null){
                 JovenEncontrado.Pediatra = pediatra;
                 _appContext.SaveChanges();
@@ -100,6 +100,15 @@ namespace HogarGestor.App.Persistencia{
             return jovenes;
         }
 
-        
+        public Familiar ToAssignFamiliar(int IdJoven, Familiar familiar)
+        {
+            var JovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
+            if(JovenEncontrado!=null){
+                JovenEncontrado.FamiliarDesignado = familiar;
+                _appContext.SaveChanges();
+                return familiar;
+            }
+            return null;
+        }
     }
 }

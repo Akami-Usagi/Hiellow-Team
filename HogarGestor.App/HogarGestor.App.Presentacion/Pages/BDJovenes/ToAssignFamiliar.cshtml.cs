@@ -7,29 +7,28 @@ using System.Threading.Tasks;
 using HogarGestor.App.Dominio;
 using HogarGestor.App.Persistencia;
 
-
-namespace HogarGestor.App.Presentacion.Pages_BDJovenes
+namespace HogarHestor.App.Presentacion.Pages_BDJovenes
 {
-    public class ToAssignNutricionistaModel : PageModel
+    public class ToAssignFamiliarModel : PageModel
     {
-        private readonly IRepositorioMedico _RepoMedico;
+        private readonly IRepositorioFamiliar _RepoFamiliar;
         private readonly IRepositorioJoven _RepoJoven;
-        public IEnumerable<Medico> Medicos {get;set;}
+        public IEnumerable<Familiar> Familiares {get;set;}
         [BindProperty(SupportsGet = true)]
         public string GetFilter {get;set;}
         [BindProperty]
-        public int IdMedico {get;set;}
+        public int IdFamiliar {get;set;}
         [BindProperty]
-        public Medico medico {get;set;}
+        public Familiar familiar {get;set;}
         [BindProperty]
         public Joven joven {get;set;}
-        public ToAssignNutricionistaModel(IRepositorioMedico _RepoMedico, IRepositorioJoven _RepoJoven){
-            this._RepoMedico = _RepoMedico;
+        public ToAssignFamiliarModel(IRepositorioFamiliar _RepoFamiliar, IRepositorioJoven _RepoJoven){
+            this._RepoFamiliar = _RepoFamiliar;
             this._RepoJoven = _RepoJoven;
         }
         public IActionResult OnGet(int id)
         {
-            Medicos = _RepoMedico.GetAllNutricionistas(Especialidad.Nutricion);
+            Familiares = _RepoFamiliar.GetAllFamiliares();
             joven = _RepoJoven.GetJoven(id);
             if(joven == null){
                 return RedirectToPage("./NotFound");
@@ -39,9 +38,9 @@ namespace HogarGestor.App.Presentacion.Pages_BDJovenes
             }
         }
         
-        public IActionResult OnPostToAssign(int IdMedico){
-            medico = _RepoMedico.GetMedico(IdMedico);
-            medico = _RepoJoven.ToAssignNutricionista(joven.Id, medico);
+        public IActionResult OnPostToAssign(int IdFamiliar){
+            familiar = _RepoFamiliar.GetFamiliar(IdFamiliar);
+            familiar = _RepoJoven.ToAssignFamiliar(joven.Id, familiar);
             return RedirectToPage("index");
         }
     }

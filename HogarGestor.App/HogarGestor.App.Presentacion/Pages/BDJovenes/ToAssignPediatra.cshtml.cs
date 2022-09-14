@@ -29,7 +29,7 @@ namespace HogarGestor.App.Presentacion.Pages_BDJovenes
         }
         public IActionResult OnGet(int id)
         {
-            Medicos = _RepoMedico.GetAllPediatras(Especialidad.Pediatria);
+            Medicos = _RepoMedico.GetAllMedicos();
             joven = _RepoJoven.GetJoven(id);
             if(joven == null){
                 return RedirectToPage("./NotFound");
@@ -41,7 +41,7 @@ namespace HogarGestor.App.Presentacion.Pages_BDJovenes
         
         public IActionResult OnPostToAssign(int IdMedico){
             medico = _RepoMedico.GetMedico(IdMedico);
-            medico = _RepoJoven.ToAsignPediatra(joven.Id, medico);
+            medico = _RepoJoven.ToAssignPediatra(joven.Id, medico);
             return RedirectToPage("index");
         }
     }

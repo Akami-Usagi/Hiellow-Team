@@ -10,9 +10,9 @@ namespace HogarGestor.App.Persistencia{
         Joven UpdateJoven(Joven joven);
         void DeleteJoven(int IdJoven);
         Joven GetJoven(int IdJoven);
-        //Joven ToAsignFamiliar(int IdJoven, Familiar familiar);
-        Medico ToAsignNutricionista(int IdJoven, Medico nutricionista);
-        Medico ToAsignPediatra(int IdJoven, Medico pediatra);
+        Familiar ToAssignFamiliar(int IdJoven, Familiar familiar);
+        Medico ToAssignNutricionista(int IdJoven, Medico nutricionista);
+        Medico ToAssignPediatra(int IdJoven, Medico pediatra);
         IEnumerable<Joven> GetFiltro(string filtro);
     }
 }
