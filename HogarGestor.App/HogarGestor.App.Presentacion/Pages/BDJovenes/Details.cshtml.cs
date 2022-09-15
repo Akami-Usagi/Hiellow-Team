@@ -14,6 +14,8 @@ namespace HogarGestor.App.Presentacion.Pages_BDJovenes
         private readonly IRepositorioJoven _RepoJoven;
         public Joven joven {get;set;}
         public Medico pediatra{get;set;}
+        public Medico nutricionista{get;set;}
+        public Familiar familiar{get;set;}
         public DetailsModel(IRepositorioJoven _RepoJoven){
             this._RepoJoven = _RepoJoven;
         }
@@ -29,6 +31,18 @@ namespace HogarGestor.App.Presentacion.Pages_BDJovenes
                         Nombre = "SIN ASIGNAR"
                     };
                     joven.Pediatra = pediatra;
+                }
+                if(joven.Nutricionista == null){
+                    nutricionista = new Medico{
+                        Nombre = "SIN ASIGNAR"
+                    };
+                    joven.Nutricionista = nutricionista;
+                }
+                if(joven.FamiliarDesignado == null){
+                    familiar = new Familiar{
+                        Nombre = "SIN ASIGNAR"
+                    };
+                    joven.FamiliarDesignado = familiar;
                 }
                 return Page();
             }
