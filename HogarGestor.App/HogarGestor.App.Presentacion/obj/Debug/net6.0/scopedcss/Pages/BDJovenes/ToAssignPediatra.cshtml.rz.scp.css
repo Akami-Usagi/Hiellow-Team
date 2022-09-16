@@ -1,0 +1,24 @@
+table[b-mc2w4n7e18] {
+  color: rgb(150, 150, 150);
+  border-collapse:collapse;
+  border:solid rgb(150, 150, 150) 1px;
+  border-radius:10px;
+}
+  
+  tbody[b-mc2w4n7e18] {
+    padding: 1.3em 3em;
+    color: rgb(155, 155, 155);
+    background-color: rgba(255, 255, 255, 0.411);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+  }
+
+  tbody:hover[b-mc2w4n7e18] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }

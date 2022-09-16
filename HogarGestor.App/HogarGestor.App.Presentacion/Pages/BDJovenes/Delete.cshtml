@@ -4,11 +4,10 @@
 }
 
 <h1>Seguro que desea eliminar el siguiente Joven?</h1>
+<br>
 <div>
-    <h4>Joven</h4>
+    
     <dl class="row">
-        <dt class="col-sm-2">Id</dt>
-        <dd class="col-sm-10">@Model.joven.Id</dd>
         <dt class="col-sm-2">Nombre</dt>
         <dd class="col-sm-10">@Model.joven.Nombre</dd>
         <dt class="col-sm-2">Apellidos</dt>
@@ -29,6 +28,6 @@
 
 <form method="post">
     <input type="hidden" asp-for="joven.Id">
-    <button type="submit" class="btn btn-primary" asp-page-handler="Delete">Eliminar Joven</button>
-    <a asp-page="./index">Back to List</a>
+    <button type="submit" class="btn btn-secondary btn-lg" asp-page-handler="Delete">Eliminar Joven</button>
+    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Cancelar</a>
 </form>

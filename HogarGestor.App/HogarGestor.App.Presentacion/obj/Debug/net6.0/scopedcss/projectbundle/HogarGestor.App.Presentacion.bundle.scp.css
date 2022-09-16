@@ -1,3 +1,676 @@
+/* _content/HogarGestor.App.Presentacion/Pages/BDFamiliares/Create.cshtml.rz.scp.css */
+/* From uiverse.io */
+button[b-n9pss45a80] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover[b-n9pss45a80] {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active[b-n9pss45a80] {
+    transform: translateY(-1px);
+  }
+
+  .form-group[b-n9pss45a80] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.349);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  .form-group:hover[b-n9pss45a80] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .form-control[b-n9pss45a80] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.171);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDFamiliares/Delete.cshtml.rz.scp.css */
+dd[b-pjiigovknm] {
+    padding: 1.3em 3em;
+    
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.397);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  dd:hover[b-pjiigovknm] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDFamiliares/Details.cshtml.rz.scp.css */
+dd[b-2lpx8qoupi] {
+    padding: 1.3em 3em;
+    
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.404);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  dd:hover[b-2lpx8qoupi] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDFamiliares/Edit.cshtml.rz.scp.css */
+button[b-2h2dyiyhfd] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover[b-2h2dyiyhfd] {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active[b-2h2dyiyhfd] {
+    transform: translateY(-1px);
+  }
+
+  .form-group[b-2h2dyiyhfd] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.418);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  .form-group:hover[b-2h2dyiyhfd] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .form-control[b-2h2dyiyhfd] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.247);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDFamiliares/Index.cshtml.rz.scp.css */
+table[b-zyzlzoxxp0] {
+    color: rgb(150, 150, 150);
+    border-collapse:collapse;
+    border:solid rgb(150, 150, 150) 1px;
+    border-radius:10px;
+  }
+    
+    tbody[b-zyzlzoxxp0] {
+      padding: 1.3em 3em;
+      color: rgb(155, 155, 155);
+      background-color: rgba(255, 255, 255, 0.411);
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      outline: none;
+    }
+  
+    tbody:hover[b-zyzlzoxxp0] {
+      background-color: #2e2e2e;
+      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+      color: #fff;
+      transform: translateY(-7px);
+    }
+  
+/* _content/HogarGestor.App.Presentacion/Pages/BDJovenes/Create.cshtml.rz.scp.css */
+/* From uiverse.io */
+button[b-jfoenhtao5] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover[b-jfoenhtao5] {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active[b-jfoenhtao5] {
+    transform: translateY(-1px);
+  }
+
+  .form-group[b-jfoenhtao5] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.349);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  .form-group:hover[b-jfoenhtao5] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .form-control[b-jfoenhtao5] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.171);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDJovenes/Delete.cshtml.rz.scp.css */
+dd[b-55twja3yiy] {
+    padding: 1.3em 3em;
+    
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.397);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  dd:hover[b-55twja3yiy] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDJovenes/Details.cshtml.rz.scp.css */
+dd[b-srmoj7obpu] {
+    padding: 1.3em 3em;
+    
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.404);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  dd:hover[b-srmoj7obpu] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDJovenes/Edit.cshtml.rz.scp.css */
+button[b-a6tqh8mghl] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover[b-a6tqh8mghl] {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active[b-a6tqh8mghl] {
+    transform: translateY(-1px);
+  }
+
+  .form-group[b-a6tqh8mghl] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.418);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  .form-group:hover[b-a6tqh8mghl] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .form-control[b-a6tqh8mghl] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.247);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDJovenes/Index.cshtml.rz.scp.css */
+table[b-xk3fspdeu0] {
+  color: rgb(150, 150, 150);
+  border-collapse:collapse;
+  border:solid rgb(150, 150, 150) 1px;
+  border-radius:10px;
+}
+  
+  tbody[b-xk3fspdeu0] {
+    padding: 1.3em 3em;
+    color: rgb(155, 155, 155);
+    background-color: rgba(255, 255, 255, 0.411);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+  }
+
+  tbody:hover[b-xk3fspdeu0] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+
+
+/* _content/HogarGestor.App.Presentacion/Pages/BDJovenes/ToAssignFamiliar.cshtml.rz.scp.css */
+table[b-afbnw1jl5t] {
+  color: rgb(150, 150, 150);
+  border-collapse:collapse;
+  border:solid rgb(150, 150, 150) 1px;
+  border-radius:10px;
+}
+  
+  tbody[b-afbnw1jl5t] {
+    padding: 1.3em 3em;
+    color: rgb(155, 155, 155);
+    background-color: rgba(255, 255, 255, 0.411);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+  }
+
+  tbody:hover[b-afbnw1jl5t] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDJovenes/ToAssignNutricionista.cshtml.rz.scp.css */
+table[b-k2yseyt5xf] {
+  color: rgb(150, 150, 150);
+  border-collapse:collapse;
+  border:solid rgb(150, 150, 150) 1px;
+  border-radius:10px;
+}
+  
+  tbody[b-k2yseyt5xf] {
+    padding: 1.3em 3em;
+    color: rgb(155, 155, 155);
+    background-color: rgba(255, 255, 255, 0.411);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+  }
+
+  tbody:hover[b-k2yseyt5xf] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDJovenes/ToAssignPediatra.cshtml.rz.scp.css */
+table[b-mc2w4n7e18] {
+  color: rgb(150, 150, 150);
+  border-collapse:collapse;
+  border:solid rgb(150, 150, 150) 1px;
+  border-radius:10px;
+}
+  
+  tbody[b-mc2w4n7e18] {
+    padding: 1.3em 3em;
+    color: rgb(155, 155, 155);
+    background-color: rgba(255, 255, 255, 0.411);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+  }
+
+  tbody:hover[b-mc2w4n7e18] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDMedicos/Create.cshtml.rz.scp.css */
+/* From uiverse.io */
+button[b-33brmcpkim] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover[b-33brmcpkim] {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active[b-33brmcpkim] {
+    transform: translateY(-1px);
+  }
+
+  .form-group[b-33brmcpkim] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.349);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  .form-group:hover[b-33brmcpkim] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .form-control[b-33brmcpkim] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.171);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDMedicos/Delete.cshtml.rz.scp.css */
+dd[b-v2ec5fvjb2] {
+    padding: 1.3em 3em;
+    
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.397);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  dd:hover[b-v2ec5fvjb2] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDMedicos/Details.cshtml.rz.scp.css */
+dd[b-r3kalmoxhe] {
+    padding: 1.3em 3em;
+    
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.404);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  dd:hover[b-r3kalmoxhe] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDMedicos/Edit.cshtml.rz.scp.css */
+button[b-u8vcb8mfno] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover[b-u8vcb8mfno] {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active[b-u8vcb8mfno] {
+    transform: translateY(-1px);
+  }
+
+  .form-group[b-u8vcb8mfno] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.418);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  .form-group:hover[b-u8vcb8mfno] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .form-control[b-u8vcb8mfno] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.247);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+/* _content/HogarGestor.App.Presentacion/Pages/BDMedicos/Index.cshtml.rz.scp.css */
+table[b-s2zk6dgmn6] {
+  color: rgb(150, 150, 150);
+  border-collapse:collapse;
+  border:solid rgb(150, 150, 150) 1px;
+  border-radius:10px;
+}
+  
+  tbody[b-s2zk6dgmn6] {
+    padding: 1.3em 3em;
+    color: rgb(155, 155, 155);
+    background-color: rgba(255, 255, 255, 0.411);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    outline: none;
+  }
+
+  tbody:hover[b-s2zk6dgmn6] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
 /* _content/HogarGestor.App.Presentacion/Pages/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
@@ -47,3 +720,4 @@ button.accept-policy[b-yyn0xb4jhb] {
   white-space: nowrap;
   line-height: 60px;
 }
+

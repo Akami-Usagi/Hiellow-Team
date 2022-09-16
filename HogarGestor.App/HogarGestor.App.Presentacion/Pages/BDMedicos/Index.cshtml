@@ -13,7 +13,7 @@
             <th scope="col">Rethus</th>
             <th scope="col">Genero</th>
             <th scope="col">Opciones <a asp-page="./Create" title="Agregar Medico">
-            <span class="material-icons">add</span></a></th>
+            <span class="material-icons" style="color: rgb(150, 150, 150);">account_circle</span></a></th>
         </tr>
     </thead>
     @foreach (var medico in Model.Medicos)
@@ -27,14 +27,14 @@
                 <td>@medico.Rethus</td>
                 <td>@medico.Genero</td>
                 <td>
-                    <a asp-page = ".\Delete" asp-route-id = "@medico.Id" title="Borrar">
-                        <span class="material-icons">delete</span>
+                    <a asp-page = ".\Delete" asp-route-id = "@medico.Id" title="Borrar" style="text-decoration: none">
+                        <span class="material-icons" style="color: white; text-decoration-line: none">delete</span>
                     </a>
-                    <a asp-page = ".\Details" asp-route-id = "@medico.Id" title="Buscar">
-                        <span class="material-icons">description</span>
+                    <a asp-page = ".\Details" asp-route-id = "@medico.Id" title="Buscar" style="text-decoration: none">
+                        <span class="material-icons" style="color: white; text-decoration-line: none">description</span>
                     </a>
-                    <a asp-page = ".\Edit" asp-route-id = "@medico.Id" title="Editar">
-                        <span class="material-icons">mode_edit</span>
+                    <a asp-page = ".\Edit" asp-route-id = "@medico.Id" title="Editar" style="text-decoration: none">
+                        <span class="material-icons" style="color: white; text-decoration-line: none">mode_edit</span>
                     </a>
                     
                     

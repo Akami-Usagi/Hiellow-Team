@@ -4,7 +4,7 @@
 }
 
 <h1>Editar informacion del Medico</h1>
-
+<br>
 <form method="post">
 
     <input type="hidden" asp-for="medico.Id">
@@ -13,20 +13,25 @@
         <label>Nombre</label>
         <input asp-for="medico.Nombre" placeholder="Ingrese El Nombre del Medico" class="form-control">
     </div>
+    <br>
     <div class="form-group">
         <label>Apellidos</label>
         <input asp-for="medico.Apellidos" placeholder="Ingrese Los Apellidos del Medico" class="form-control">
     </div>
+    <br>
     <div class="form-group">
         <label>Telefono</label>
         <input asp-for="medico.NumeroTelefono" placeholder="Ingrese Telefono del Medico" class="form-control">
     </div>
+    <br>
     <div class="form-group">
         <label>Documento</label>
         <input asp-for="medico.Documento" placeholder="Ingrese El Documento del Medico" class="form-control">
     </div>
-    <label>Genero</label>
+    <br>
+    
     <div class="form-group">
+        <label>Genero</label>
         <select asp-for="medico.Genero"  class="form-control">
         <option selected>Genero...</option>
         <option value="0">Masculino</option>
@@ -34,16 +39,20 @@
         <option value="2">Intersexual</option>
         </select>
     </div>
+    <br>
     <div class="form-group">
         <label>Tarjeta Profesional</label>
         <input asp-for="medico.TarjetaProfesional" placeholder="Tarjeta Profesional del Medico" class="form-control">
     </div>
+    <br>
     <div class="form-group">
         <label>Registro Rethus</label>
         <input asp-for="medico.Rethus" placeholder="Ingrese El Registro Rethus del Medico" class="form-control">
     </div>
-    <label>Especialidad</label>
+    <br>
+    
     <div class="form-group">
+        <label>Especialidad</label>
         <select asp-for="medico.EspecialidadMedica"  class="form-control">
         <option selected>Especialidad...</option>
         <option value="0">@HogarGestor.App.Dominio.Especialidad.Pediatria</option>
@@ -52,6 +61,8 @@
     </div>
 
     <br>
-    <button type="submit" class="btn btn-primary" asp-page-handler="Edit">Actualizar Datos</button>
-    
+    <div>
+    <button type="submit" class="btn btn-secondary btn-lg" asp-page-handler="Edit">Actualizar Datos</button>
+    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Cancelar</a>
+    </div>
 </form>
