@@ -1,0 +1,66 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_BDMedicos.EditModel
+@{
+}
+
+<h1>Editar informacion del Medico</h1>
+<br>
+<form method="post">
+
+    <input type="hidden" asp-for="medico.Id">
+    
+    <div class="form-group">
+        <label>Nombre</label>
+        <input asp-for="medico.Nombre" placeholder="Ingrese El Nombre del Medico" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input asp-for="medico.Apellido" placeholder="Ingrese Los Apellidos del Medico" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Telefono</label>
+        <input asp-for="medico.Telefono" placeholder="Ingrese Telefono del Medico" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Documento</label>
+        <input asp-for="medico.Documento" placeholder="Ingrese El Documento del Medico" class="form-control">
+    </div>
+    <br>
+    
+    <div class="form-group">
+        <label  class="control-label">Genero</label>
+        <select asp-for="medico.GeneroId" class="form-control" asp-items="Model.Options">
+            <option value="">-- Selecione un Genero --</option>
+        </select>
+    </div>
+
+    <br>
+    <div class="form-group">
+        <label>Tarjeta Profesional</label>
+        <input asp-for="medico.TarjetaProfesional" placeholder="Tarjeta Profesional del Medico" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Registro Rethus</label>
+        <input asp-for="medico.Rethus" placeholder="Ingrese El Registro Rethus del Medico" class="form-control">
+    </div>
+    <br>
+    
+    <div class="form-group">
+        <label>Especialidad</label>
+        <select asp-for="medico.Especialidad"  class="form-control">
+        <option selected>Especialidad...</option>
+        <option value="0">@HogarGestor.App.Dominio.Especialidad.Pediatria</option>
+        <option value="1">@HogarGestor.App.Dominio.Especialidad.Nutricion</option>
+        </select>
+    </div>
+
+    <br>
+    <div>
+    <button type="submit" class="btn btn-secondary btn-lg" asp-page-handler="Edit">Actualizar Datos</button>
+    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Cancelar</a>
+    </div>
+</form>

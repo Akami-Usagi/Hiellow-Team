@@ -61,5 +61,16 @@ namespace HogarGestor.App.Persistencia
                 .Familiares
                 .FirstOrDefault(f => f.Id == idFamiliar);
         }
+
+        public IEnumerable<Familiar> GetFilter(string filtro=null)
+        {
+            var familiares = this.GetAllFamiliar();
+            if (familiares != null){
+                if (!String.IsNullOrEmpty(filtro)){
+                    familiares = familiares.Where(f => f.Documento.Contains(filtro));
+                }
+            }
+            return familiares;
+        }
     }
 }

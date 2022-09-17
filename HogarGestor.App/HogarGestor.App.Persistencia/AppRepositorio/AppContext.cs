@@ -42,8 +42,7 @@ namespace HogarGestor.App.Persistencia
             if (!optionsBuilder.IsConfigured)
                 optionsBuilder
                     .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = HogarGestorData32;Trusted_Connection=True;");
-            /// CAMBIAR EL DATA SOURCE AL NOMBRE DEL SERVIDOR INSTALADO EN CADA PC. EL MIO QUEDO CON ESE NOMBRE ENTONCES
-            /// DEBEN CAMBIARLO AL NOMBRE DEL SERVIDOR DE CADA UNO, LOS DEMAS DATOS ESTAN BIEN Y FUNCIONALES.
+           
         }
     }
 }

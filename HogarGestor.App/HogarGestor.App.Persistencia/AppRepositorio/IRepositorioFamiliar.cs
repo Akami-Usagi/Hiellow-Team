@@ -14,5 +14,7 @@ namespace HogarGestor.App.Persistencia
         void DeleteFamiliar(int idFamiliar);
 
         Familiar GetFamiliar(int idFamiliar);
+
+        IEnumerable<Familiar> GetFilter(string filtro);
     }
 }

@@ -1,4 +1,3 @@
-
 using System.Linq;
 using HogarGestor.App.Dominio;
 
@@ -60,6 +59,36 @@ namespace HogarGestor.App.Persistencia
         public Medico GetMedico(int idMedico)
         {
             return _appContext.Medicos.FirstOrDefault(m => m.Id == idMedico);
+        }
+
+        public IEnumerable<Medico>
+        GetAllNutricionistas(Especialidad especialidad)
+        {
+            var nutricionistas =
+                _appContext
+                    .Medicos
+                    .Where(m => m.Especialidad == especialidad);
+            return nutricionistas;
+        }
+
+        public IEnumerable<Medico> GetAllPediatras(Especialidad especialidad)
+        {
+            var pediatras =
+                _appContext
+                    .Medicos
+                    .Where(m => m.Especialidad == especialidad);
+            return pediatras;
+        }
+
+         public IEnumerable<Medico> GetFilter(string filtro=null)
+        {
+            var familiares = this.GetAllMedico();
+            if (familiares != null){
+                if (!String.IsNullOrEmpty(filtro)){
+                    familiares = familiares.Where(f => f.Documento.Contains(filtro));
+                }
+            }
+            return familiares;
         }
     }
 }

@@ -15,5 +15,12 @@ namespace HogarGestor.App.Persistencia
 
         Joven GetJoven(int idJoven);
 
+        Familiar ToAssignFamiliar(int IdJoven, Familiar familiar);
+
+        Medico ToAssignNutricionista(int IdJoven, Medico nutricionista);
+
+        Medico ToAssignPediatra(int IdJoven, Medico pediatra);
+
+        IEnumerable<Joven> GetFilter(string filtro);
     }
 }

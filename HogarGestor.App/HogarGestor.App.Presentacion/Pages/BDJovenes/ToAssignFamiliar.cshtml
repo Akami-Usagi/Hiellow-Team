@@ -1,0 +1,42 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_BDJovenes.ToAssignFamiliarModel
+@{
+}
+
+<form method="post">
+    <input type="hidden" asp-for="@Model.joven.Id">
+    <h1>Asignacion de Familiar</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Correo Electronico</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        @foreach(var familiar in Model.Familiares)
+        {
+            <tbody>
+                <tr>
+                    <td>@familiar.Nombre</td>
+                    <td>@familiar.Apellido</td>
+                    <td>@familiar.Telefono</td>
+                    <td>@familiar.Genero</td>
+                    <td>@familiar.Documento</td>
+                    <td>@familiar.Correo</td>
+                    <td>
+                        <input type="checkbox" name="IdFamiliar" value="@familiar.Id">
+                    </td>
+                </tr>
+            </tbody>    
+        }
+    </table>
+    <div>
+    <button type="submit" class="btn btn-secondary btn-lg" asp-page-handler="ToAssign">Asignar Familiar</button>
+    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Cancelar</a>
+    </div>
+</form>

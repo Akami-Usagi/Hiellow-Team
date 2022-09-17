@@ -1,0 +1,59 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_BDJovenes.EditModel
+@{
+}
+
+<form method="post">
+ <input type="hidden" asp-for="joven.Id">
+  <div class="form-group">
+    <label>Nombre</label>
+    <input asp-for="joven.Nombre" placeholder="Ingrese El Nombre del Joven" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label>Apellidos</label>
+    <input asp-for="joven.Apellido" placeholder="Ingrese Los Apellidos del Joven" class="form-control">
+  </div>
+
+  <div class="form-group">
+        <label>Telefono</label>
+        <input asp-for="joven.Telefono" placeholder="Ingrese Telefono del Joven" class="form-control">
+   </div>
+
+   <div class="form-group">
+        <label>Documento</label>
+        <input asp-for="joven.Documento" placeholder="Ingrese El Documento del Joven" class="form-control">
+    </div>
+
+    
+    <div class="form-group">
+        <label  class="control-label">Genero</label>
+        <select asp-for="joven.GeneroId" class="form-control" asp-items="Model.Options">
+            <option value="">-- Selecione un Genero --</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Ciudad</label>
+        <input asp-for="joven.Ciudad" placeholder="Ingrese La Ciudad del Joven" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Direccion</label>
+        <input asp-for="joven.Direccion" placeholder="Ingrese La Direccion del Joven" class="form-control">
+    </div>
+
+     <div class="form-group">
+        <label>Fecha de Nacimiento</label>
+        <input asp-for="joven.FechaNacimiento" placeholder="Ingrese La Fecha de Nacimiento del Joven" class="form-control">
+    </div>
+
+  <div class="form-group">
+    <label></label>
+  </div>
+  <button type="submit" class="btn btn-primary" asp-page-handler="Edit">Actualizar Datos</button>
+</form>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>

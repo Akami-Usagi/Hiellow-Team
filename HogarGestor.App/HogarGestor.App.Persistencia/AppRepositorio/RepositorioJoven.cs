@@ -65,5 +65,47 @@ namespace HogarGestor.App.Persistencia
         {
             return _appContext.Jovenes.FirstOrDefault(j => j.Id == idJoven);
         }
+    public Medico ToAssignNutricionista(int IdJoven, Medico nutricionista)
+        {
+            var JovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
+            if(JovenEncontrado!=null){
+                JovenEncontrado.Nutricionista = nutricionista;
+                _appContext.SaveChanges();
+                return nutricionista;
+            }
+            return null;
+        }
+
+        public Medico ToAssignPediatra(int IdJoven, Medico pediatra){
+            var JovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
+            if(JovenEncontrado!=null){
+                JovenEncontrado.Pediatra = pediatra;
+                _appContext.SaveChanges();
+                return pediatra;
+            }
+            return null;
+        }
+
+        public IEnumerable<Joven> GetFilter(string filtro=null)
+        {
+            var jovenes = this.GetAllJovenes();
+            if (jovenes != null){
+                if (!String.IsNullOrEmpty(filtro)){
+                    jovenes = jovenes.Where(j => j.Documento.Contains(filtro));
+                }
+            }
+            return jovenes;
+        }
+
+        public Familiar ToAssignFamiliar(int IdJoven, Familiar familiar)
+        {
+            var JovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
+            if(JovenEncontrado!=null){
+                JovenEncontrado.Familiar = familiar;
+                _appContext.SaveChanges();
+                return familiar;
+            }
+            return null;
+        }
     }
 }

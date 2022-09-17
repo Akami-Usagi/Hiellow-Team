@@ -1,0 +1,31 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_BDFamiliares.DeleteModel
+@{
+}
+<h1>Seguro que desea eliminar el siguiente Familiar?</h1>
+<br>
+<div>
+    
+    <dl class="row">
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.familiar.Nombre</dd>
+        <dt class="col-sm-2">Apellidos</dt>
+        <dd class="col-sm-10">@Model.familiar.Apellido</dd>
+        <dt class="col-sm-2">Documento</dt>
+        <dd class="col-sm-10">@Model.familiar.Documento</dd>
+        <dt class="col-sm-2">Parentesco</dt>
+        <dd class="col-sm-10">@Model.familiar.Parentesco</dd>
+        <dt class="col-sm-2">Genero</dt>
+        <dd class="col-sm-10">@Model.familiar.GeneroId</dd>
+        <dt class="col-sm-2">Telefono</dt>
+        <dd class="col-sm-10">@Model.familiar.Telefono</dd>
+        <dt class="col-sm-2">Correo Electronico</dt>
+        <dd class="col-sm-10">@Model.familiar.Correo</dd>
+    </dl>
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="familiar.Id">
+    <button type="submit" class="btn btn-secondary btn-lg" asp-page-handler="Delete">Eliminar Familiar</button>
+    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Cancelar</a>
+</form>

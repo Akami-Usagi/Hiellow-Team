@@ -1,0 +1,55 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_BDFamiliares.EditModel
+@{
+}
+
+<form method="post">
+<input type="hidden" asp-for="familiar.Id">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input asp-for="familiar.Nombre" placeholder="Ingrese El Nombre del Familiar" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input asp-for="familiar.Apellido" placeholder="Ingrese Los Apellidos del Familiar" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Telefono</label>
+        <input asp-for="familiar.Telefono" placeholder="Ingrese Telefono del Familiar" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Documento</label>
+        <input asp-for="familiar.Documento" placeholder="Ingrese El Documento del Familiar" class="form-control">
+    </div>
+    <br>
+    
+    <div class="form-group">
+        <label  class="control-label">Genero</label>
+        <select asp-for="familiar.GeneroId" class="form-control" asp-items="Model.Options">
+            <option value="">-- Selecione un Genero --</option>
+        </select>
+    </div>
+
+    <br>
+    <div class="form-group">
+        <label>Parentesco</label>
+        <input asp-for="familiar.Parentesco" placeholder="Ingrese El Parentesco Con El Joven" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Correo Electronico</label>
+        <input asp-for="familiar.Correo" placeholder="Ingrese El Correo Electronico del Familiar" class="form-control">
+    </div>
+    
+    <div class="form-group">
+    <label></label>
+  </div>
+  <button type="submit" class="btn btn-primary" asp-page-handler="Edit">Actualizar Datos</button>
+</form>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -3,16 +3,32 @@
 @{
 }
 
-<h1>Lista De Jovenes</h1>
+<h2>Index</h2>
+
+<p>
+    <a asp-page="./Create">Create New</a>
+</p>
+
+
+<form asp-action="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Documento:  <input type="text" name="GetFilter" asp-for="GetFilter"/>
+                        <input type="submit" value="Filtrar" class="btn btn-default" /> |
+                        <a asp-action="./Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
+
 <table class="table table-bordered">
     <thead>
         <tr>
             <th scope="col">Nombre</th>
             <th scope="col">Apellidos</th>
             <th scope="col">Telefono</th>
+            <th scope="col">Documento</th>
             <th scope="col">Genero</th>
-            <th scope="col">Opciones <a asp-page="./Create" title="Agregar Joven">
-            <span class="material-icons">add</span></a></th>
+            <th scope="col">Opciones</th>
         </tr>
     </thead>
     @foreach (var joven in Model.Jovenes)
@@ -22,24 +38,26 @@
                 <td>@joven.Nombre</td>
                 <td>@joven.Apellido</td>
                 <td>@joven.Telefono</td>
+                <td>@joven.Documento</td>
                 <td>@joven.GeneroId</td>
                 <td>
-                    <a asp-page = ".\Delete" asp-route-id = "@joven.Id" title="Borrar">
-                        <span class="material-icons">delete</span>
+                    <a asp-page="./Edit" asp-route-id="@joven.Id"><span class="material-icons">edit</span></a>
+                    <a asp-page="./Delete" asp-route-id="@joven.Id"><span class="material-icons">delete</span></a>
+                    <a asp-page="./Details" asp-route-id="@joven.Id"><span class="material-icons">description</span></a>
+
+                    <a asp-page = "./ToAssignNutricionista" asp-route-id = "@joven.Id" title="Asignar Nutricionista" style="text-decoration: none">
+                        <span class="material-icons">restaurant</span>
                     </a>
-                    <a asp-page = ".\Details" asp-route-id = "@joven.Id" title="Buscar">
-                        <span class="material-icons">search</span>
+
+                    <a asp-page = "./ToAssignFamiliar" asp-route-id = "@joven.Id" title="Asignar Familiar" style="text-decoration: none">
+                        <span class="material-icons">diversity_1</span>
                     </a>
-                    <a asp-page = ".\Edit" asp-route-id = "@joven.Id" title="Editar">
-                        <span class="material-icons">mode_edit</span>
-                    </a>
-                    <a asp-page = ".\ToAssignMedico" asp-route-id = "@joven.Id" title="Asignar Medico">
-                        <span class="material-icons">medical_services</span>
-                    </a>
-                    
-                    
                 </td>
             </tr>
         </tbody>
     }
+
+    <span class="material-icons-outlined">
+medication
+</span>
 </table>

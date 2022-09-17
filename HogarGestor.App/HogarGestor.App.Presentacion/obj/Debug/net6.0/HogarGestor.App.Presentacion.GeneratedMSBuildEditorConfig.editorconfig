@@ -15,8 +15,76 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\rojas\HogarGestor\Hiellow-Team\HogarGestor.App\HogarGestor.App.Presentacion
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDFamiliares/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDFamiliares/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDFamiliares/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDFamiliares/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDFamiliares/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDJovenes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDJovenes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDJovenes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDJovenes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDJovenes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDJovenes/ToAssignFamiliar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXFRvQXNzaWduRmFtaWxpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDJovenes/ToAssignNutricionista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXFRvQXNzaWduTnV0cmljaW9uaXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDJovenes/ToAssignPediatra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXFRvQXNzaWduUGVkaWF0cmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDMedicos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRNZWRpY29zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDMedicos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRNZWRpY29zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDMedicos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRNZWRpY29zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDMedicos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRNZWRpY29zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDMedicos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRNZWRpY29zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/Error.cshtml]

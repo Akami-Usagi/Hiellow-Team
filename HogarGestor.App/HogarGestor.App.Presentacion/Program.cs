@@ -19,6 +19,9 @@ builder.Services.AddSingleton<IRepositorioFamiliarMemoria,RepositorioFamiliarMem
 builder.Services.AddSingleton<IRepositorioMedicoMemoria,RepositorioMedicoMemoria>();
 
 builder.Services.AddScoped<IRepositorioJoven,RepositorioJoven>();
+builder.Services.AddScoped<IRepositorioMedico,RepositorioMedico>();
+builder.Services.AddScoped<IRepositorioGenero,RepositorioGenero>();
+builder.Services.AddScoped<IRepositorioFamiliar,RepositorioFamiliar>();
 
 var ConnectionStrings = builder.Configuration.GetConnectionString("HogarGestor");
 builder.Services.AddDbContext<HogarGestor.App.Persistencia.AppContext>(options => options.UseSqlServer(ConnectionStrings));

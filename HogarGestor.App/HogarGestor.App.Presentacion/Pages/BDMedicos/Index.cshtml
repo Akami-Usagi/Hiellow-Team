@@ -1,0 +1,56 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_BDMedicos.IndexModel
+@{
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="./Create">Create New</a>
+</p>
+
+<form asp-action="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Documento:  <input type="text" name="GetFilter" asp-for="GetFilter"/>
+                        <input type="submit" value="Filtrar" class="btn btn-default" /> |
+                        <a asp-action="./Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Rethus</th>
+            <th scope="col">Genero</th>
+             <th scope="col">Opciones</th>
+            
+        </tr>
+    </thead>
+    @foreach (var medico in Model.Medicos)
+    {
+        <tbody>
+            <tr>
+                <td>@medico.Nombre</td>
+                <td>@medico.Apellido</td>
+                <td>@medico.Documento</td>
+                <td>@medico.Especialidad</td>
+                <td>@medico.Rethus</td>
+                <td>@medico.GeneroId</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@medico.Id"><span class="material-icons">edit</span></a>
+                    <a asp-page="./Delete" asp-route-id="@medico.Id"><span class="material-icons">delete</span></a>
+                    <a asp-page="./Details" asp-route-id="@medico.Id"><span class="material-icons">description</span></a>
+                    
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>
+
