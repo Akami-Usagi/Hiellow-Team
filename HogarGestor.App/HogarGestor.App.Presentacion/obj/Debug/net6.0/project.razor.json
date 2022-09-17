@@ -16428,6 +16428,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Presentacion\\Pages\\BDMedicos\\JovenesAsignados.cshtml",
+      "TargetPath": "Pages\\BDMedicos\\JovenesAsignados.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Hiellow-Team\\HogarGestor.App\\HogarGestor.App.Presentacion\\Pages\\Jovenes\\Edit.cshtml",
       "TargetPath": "Pages\\Jovenes\\Edit.cshtml",
       "FileKind": "mvc"

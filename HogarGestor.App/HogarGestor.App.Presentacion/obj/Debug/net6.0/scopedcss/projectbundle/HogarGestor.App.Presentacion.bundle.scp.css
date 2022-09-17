@@ -671,6 +671,32 @@ table[b-s2zk6dgmn6] {
     color: #fff;
     transform: translateY(-7px);
   }
+/* _content/HogarGestor.App.Presentacion/Pages/BDMedicos/JovenesAsignados.cshtml.rz.scp.css */
+table[b-ngs5f5f5os] {
+    color: rgb(150, 150, 150);
+    border-collapse:collapse;
+    border:solid rgb(150, 150, 150) 1px;
+    border-radius:10px;
+  }
+    
+    tbody[b-ngs5f5f5os] {
+      padding: 1.3em 3em;
+      color: rgb(155, 155, 155);
+      background-color: rgba(255, 255, 255, 0.411);
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      outline: none;
+    }
+  
+    tbody:hover[b-ngs5f5f5os] {
+      background-color: #2e2e2e;
+      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+      color: #fff;
+      transform: translateY(-7px);
+    }
+  
 /* _content/HogarGestor.App.Presentacion/Pages/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

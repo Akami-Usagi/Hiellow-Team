@@ -13,7 +13,7 @@
             <th scope="col">Rethus</th>
             <th scope="col">Genero</th>
             <th scope="col">Opciones <a asp-page="./Create" title="Agregar Medico">
-            <span class="material-icons" style="color: rgb(150, 150, 150);">account_circle</span></a></th>
+            <span class="material-icons" style="color: rgb(150, 150, 150);">group_add</span></a></th>
         </tr>
     </thead>
     @foreach (var medico in Model.Medicos)
@@ -35,6 +35,9 @@
                     </a>
                     <a asp-page = ".\Edit" asp-route-id = "@medico.Id" title="Editar" style="text-decoration: none">
                         <span class="material-icons" style="color: white; text-decoration-line: none">mode_edit</span>
+                    </a>
+                    <a asp-page = ".\JovenesAsignados" asp-route-id = "@medico.Id" title="Jovenes Asignados" style="text-decoration: none">
+                        <span class="material-icons" style="color: white; text-decoration-line: none">contact_page</span>
                     </a>
                     
                     

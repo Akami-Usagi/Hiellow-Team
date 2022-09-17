@@ -5,6 +5,7 @@ using System;
 using System.Linq;
 using HogarGestor.App.Dominio;
 using HogarGestor.App.Persistencia;
+
 namespace HogarGestor.App.Presentacion.Pages_BDMedicos
 {
     public class IndexModel : PageModel

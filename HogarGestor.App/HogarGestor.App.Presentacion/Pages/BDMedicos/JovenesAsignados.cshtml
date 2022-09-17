@@ -1,0 +1,41 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Pages_BDMedicos.JovenesAsignadosModel
+@{
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Patron de Crecimiento</th>
+        </tr>
+    </thead>
+    @foreach (var joven in Model.Jovenes)
+    {
+        <tbody>
+        
+            <tr>
+                
+                <td>@joven.Nombre</td>
+                <td>@joven.Apellidos</td>
+                <td>@joven.NumeroTelefono</td>
+                <td>@joven.Genero</td>
+                <td>
+                         
+                    <a asp-page = ".\ListaPatrones" asp-route-id = "@joven.Id" title="Ver Detalles" style="text-decoration: none">
+                        <span class="material-icons" style="color: white; text-decoration-line: none">  description  </span>
+                    </a>
+                                             
+                </td>
+                
+            </tr>
+        
+        </tbody>
+    }
+</table>
+<div>
+    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Regresar</a>
+</div>

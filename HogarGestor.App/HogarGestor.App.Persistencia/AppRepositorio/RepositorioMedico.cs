@@ -73,5 +73,15 @@ namespace HogarGestor.App.Persistencia
             var pediatras = _appContext.Medicos.Where(m => m.EspecialidadMedica == especialidad);
             return pediatras;
         }
+
+        public IEnumerable<Joven> JovenesAsignadosPediatra(int IdMedico)
+        {
+            return _appContext.Jovenes.Where(j => j.Pediatra.Id == IdMedico).ToList();
+        }
+
+        public IEnumerable<Joven> JovenesAsignadosNutricionista(int IdMedico)
+        {
+            return _appContext.Jovenes.Where(j => j.Nutricionista.Id == IdMedico).ToList();
+        }
     }
 }

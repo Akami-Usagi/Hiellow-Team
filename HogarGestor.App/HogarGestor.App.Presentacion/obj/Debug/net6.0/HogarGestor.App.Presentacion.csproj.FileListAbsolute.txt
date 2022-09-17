@@ -81,3 +81,4 @@ C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\sc
 C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\scopedcss\Pages\BDFamiliares\Delete.cshtml.rz.scp.css
 C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\scopedcss\Pages\BDFamiliares\Details.cshtml.rz.scp.css
 C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\scopedcss\Pages\BDFamiliares\Edit.cshtml.rz.scp.css
+C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\scopedcss\Pages\BDMedicos\JovenesAsignados.cshtml.rz.scp.css
