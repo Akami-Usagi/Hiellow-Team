@@ -1,0 +1,40 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_BDJovenes.ToAssignPediatrasModel
+@{
+}
+
+<form method="post">
+    <input type="hidden" asp-for="@Model.joven.Id">
+    <h1>Asignacion de Medicos</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Especialidad</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        @foreach(var medico in Model.Medicos)
+        {
+            <tbody>
+                <tr>
+                    <td>@medico.Nombre</td>
+                    <td>@medico.Apellido</td>
+                    <td>@medico.Telefono</td>
+                    <td>@medico.GeneroId</td>
+                    <td>@medico.Especialidad</td>
+                    <td>
+                        <input type="checkbox" name="IdMedico" value="@medico.Id">
+                    </td>
+                </tr>
+            </tbody>    
+        }
+    </table>
+    <div>
+    <button type="submit" class="btn btn-secondary btn-lg" asp-page-handler="ToAssign">Asignar Medico</button>
+    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Cancelar</a>
+    </div>
+</form>

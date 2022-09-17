@@ -44,6 +44,10 @@
                     <a asp-page="./Edit" asp-route-id="@joven.Id"><span class="material-icons">edit</span></a>
                     <a asp-page="./Delete" asp-route-id="@joven.Id"><span class="material-icons">delete</span></a>
                     <a asp-page="./Details" asp-route-id="@joven.Id"><span class="material-icons">description</span></a>
+                    
+                    <a asp-page = "./ToAssignPediatras" asp-route-id = "@joven.Id" title="Asignar Pediatra" style="text-decoration: none">
+                        <span class="material-icons">medical_services</span>
+                    </a>
 
                     <a asp-page = "./ToAssignNutricionista" asp-route-id = "@joven.Id" title="Asignar Nutricionista" style="text-decoration: none">
                         <span class="material-icons">restaurant</span>
