@@ -26,23 +26,32 @@ namespace HogarGestor.App.Presentacion.Pages_BDJovenes
                 return RedirectToPage("./NotFound");
             }
             else {
-                if(joven.Pediatra == null){
+                if(_RepoJoven.ConsultarPediatra(Id) == null){
                     pediatra = new Medico{
                         Nombre = "SIN ASIGNAR"
                     };
                     joven.Pediatra = pediatra;
                 }
-                if(joven.Nutricionista == null){
+                else{
+                    joven.Pediatra=_RepoJoven.ConsultarPediatra(Id);
+                }
+                if(_RepoJoven.ConsultarNutricionista(Id) == null){
                     nutricionista = new Medico{
                         Nombre = "SIN ASIGNAR"
                     };
                     joven.Nutricionista = nutricionista;
                 }
-                if(joven.FamiliarDesignado == null){
+                else{
+                    joven.Nutricionista = _RepoJoven.ConsultarNutricionista(Id);
+                }
+                if(_RepoJoven.ConsultarFamiliar(Id) == null){
                     familiar = new Familiar{
                         Nombre = "SIN ASIGNAR"
                     };
                     joven.FamiliarDesignado = familiar;
+                }
+                else{
+                    joven.FamiliarDesignado = _RepoJoven.ConsultarFamiliar(Id);
                 }
                 return Page();
             }

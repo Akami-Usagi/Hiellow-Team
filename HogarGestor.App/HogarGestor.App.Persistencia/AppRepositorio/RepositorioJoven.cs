@@ -110,5 +110,25 @@ namespace HogarGestor.App.Persistencia{
             }
             return null;
         }
+
+        public Medico ConsultarPediatra(int IdJoven)
+        {
+            var joven = _appContext.Jovenes.Where(j => j.Id == IdJoven).Include(j=> j.Pediatra).FirstOrDefault();
+            return joven.Pediatra;
+        }
+
+        public Medico ConsultarNutricionista(int IdJoven)
+        {
+            var joven = _appContext.Jovenes.Where(j => j.Id == IdJoven).Include(j=> j.Nutricionista).FirstOrDefault();
+            return joven.Nutricionista;
+        }
+
+        public Familiar ConsultarFamiliar(int IdJoven)
+        {
+            var joven = _appContext.Jovenes.Where(j => j.Id == IdJoven).Include(j=> j.FamiliarDesignado).FirstOrDefault();
+            return joven.FamiliarDesignado;
+        }
+
+        
     }
 }
