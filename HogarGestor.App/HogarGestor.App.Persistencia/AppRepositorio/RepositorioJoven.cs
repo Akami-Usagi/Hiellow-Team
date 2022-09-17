@@ -1,6 +1,6 @@
 using System.Linq;
 using HogarGestor.App.Dominio;
-
+using Microsoft.EntityFrameworkCore;
 namespace HogarGestor.App.Persistencia
 {
     public class RepositorioJoven : IRepositorioJoven
@@ -65,10 +65,13 @@ namespace HogarGestor.App.Persistencia
         {
             return _appContext.Jovenes.FirstOrDefault(j => j.Id == idJoven);
         }
-    public Medico ToAssignNutricionista(int IdJoven, Medico nutricionista)
+
+        public Medico ToAssignNutricionista(int IdJoven, Medico nutricionista)
         {
-            var JovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
-            if(JovenEncontrado!=null){
+            var JovenEncontrado =
+                _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
+            if (JovenEncontrado != null)
+            {
                 JovenEncontrado.Nutricionista = nutricionista;
                 _appContext.SaveChanges();
                 return nutricionista;
@@ -76,9 +79,12 @@ namespace HogarGestor.App.Persistencia
             return null;
         }
 
-        public Medico ToAssignPediatra(int IdJoven, Medico pediatra){
-            var JovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
-            if(JovenEncontrado!=null){
+        public Medico ToAssignPediatra(int IdJoven, Medico pediatra)
+        {
+            var JovenEncontrado =
+                _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
+            if (JovenEncontrado != null)
+            {
                 JovenEncontrado.Pediatra = pediatra;
                 _appContext.SaveChanges();
                 return pediatra;
@@ -86,11 +92,13 @@ namespace HogarGestor.App.Persistencia
             return null;
         }
 
-        public IEnumerable<Joven> GetFilter(string filtro=null)
+        public IEnumerable<Joven> GetFilter(string filtro = null)
         {
             var jovenes = this.GetAllJovenes();
-            if (jovenes != null){
-                if (!String.IsNullOrEmpty(filtro)){
+            if (jovenes != null)
+            {
+                if (!String.IsNullOrEmpty(filtro))
+                {
                     jovenes = jovenes.Where(j => j.Documento.Contains(filtro));
                 }
             }
@@ -99,13 +107,37 @@ namespace HogarGestor.App.Persistencia
 
         public Familiar ToAssignFamiliar(int IdJoven, Familiar familiar)
         {
-            var JovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
-            if(JovenEncontrado!=null){
+            var JovenEncontrado =
+                _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
+            if (JovenEncontrado != null)
+            {
                 JovenEncontrado.Familiar = familiar;
                 _appContext.SaveChanges();
                 return familiar;
             }
             return null;
+        }
+
+        public Medico ConsultarMedicoNutricionista(int idJoven)
+        {
+            var joven =
+                _appContext
+                    .Jovenes
+                    .Where(p => p.Id == idJoven)
+                    .Include(p => p.Nutricionista)
+                    .FirstOrDefault();
+            return joven.Nutricionista;
+        }
+
+
+        public Medico ConsultarMedicoPediatra(int idJoven){
+                var joven =
+                _appContext
+                    .Jovenes
+                    .Where(p => p.Id == idJoven)
+                    .Include(p => p.Pediatra)
+                    .FirstOrDefault();
+            return joven.Pediatra;
         }
     }
 }

@@ -27,23 +27,22 @@ namespace HospiEnCasa.App.Presentacion.Pages_BDJovenes
                 return RedirectToPage("./NotFound");
             }
             else {
-                if(joven.Pediatra == null){
-                    pediatra = new Medico{
-                        Nombre = "SIN ASIGNAR"
-                    };
-                    joven.Pediatra = pediatra;
-                }
-                if(joven.Nutricionista == null){
+                if(_RepoJoven.ConsultarMedicoNutricionista(Id)==null){
                     nutricionista = new Medico{
                         Nombre = "SIN ASIGNAR"
                     };
                     joven.Nutricionista = nutricionista;
+                }else{
+                    joven.Nutricionista = _RepoJoven.ConsultarMedicoNutricionista(Id);
                 }
-                if(joven.Familiar == null){
-                    familiar = new Familiar{
+
+                if(_RepoJoven.ConsultarMedicoPediatra(Id)==null){
+                    pediatra = new Medico{
                         Nombre = "SIN ASIGNAR"
                     };
-                    joven.Familiar = familiar;
+                    joven.Pediatra = pediatra;
+                }else{
+                    joven.Pediatra = _RepoJoven.ConsultarMedicoPediatra(Id);
                 }
                 return Page();
             }

@@ -22,5 +22,8 @@ namespace HogarGestor.App.Persistencia
         Medico ToAssignPediatra(int IdJoven, Medico pediatra);
 
         IEnumerable<Joven> GetFilter(string filtro);
+
+        Medico ConsultarMedicoNutricionista(int idJoven);
+        Medico ConsultarMedicoPediatra(int idJoven);
     }
 }
