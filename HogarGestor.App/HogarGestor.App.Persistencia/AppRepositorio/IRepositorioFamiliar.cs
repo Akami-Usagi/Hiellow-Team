@@ -16,5 +16,7 @@ namespace HogarGestor.App.Persistencia
         Familiar GetFamiliar(int idFamiliar);
 
         IEnumerable<Familiar> GetFilter(string filtro);
+
+        IEnumerable<Joven> JovenesAsignadosFamiliar(int IdFamiliar);
     }
 }

@@ -90,5 +90,15 @@ namespace HogarGestor.App.Persistencia
             }
             return familiares;
         }
+
+        public IEnumerable<Joven> JovenesAsignadosPediatra(int IdMedico)
+        {
+            return _appContext.Jovenes.Where(j => j.PediatraId == IdMedico).ToList();
+        }
+
+        public IEnumerable<Joven> JovenesAsignadosNutricionista(int IdMedico)
+        {
+            return _appContext.Jovenes.Where(j => j.NutricionistaId == IdMedico).ToList();
+        }
     }
 }

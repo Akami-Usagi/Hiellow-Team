@@ -26,9 +26,5 @@ namespace HogarGestor.App.Persistencia
         Medico ConsultarMedicoNutricionista(int idJoven);
 
         Medico ConsultarMedicoPediatra(int idJoven);
-
-        IEnumerable<PatronesCrecimiento> GetPatronesDeCrecimiento(int idJoven);
-
-        //IEnumerable<Joven> JovenMedico(int idJoven);
     }
 }

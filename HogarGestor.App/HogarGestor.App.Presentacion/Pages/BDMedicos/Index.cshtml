@@ -47,7 +47,9 @@
                     <a asp-page="./Edit" asp-route-id="@medico.Id"><span class="material-icons">edit</span></a>
                     <a asp-page="./Delete" asp-route-id="@medico.Id"><span class="material-icons">delete</span></a>
                     <a asp-page="./Details" asp-route-id="@medico.Id"><span class="material-icons">description</span></a>
-                    
+                    <a asp-page = ".\JovenesAsignados" asp-route-id = "@medico.Id" title="Jovenes Asignados" style="text-decoration: none">
+                        <span class="material-icons">contact_page</span>
+                    </a>
                 </td>
             </tr>
         </tbody>

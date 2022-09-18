@@ -151,5 +151,6 @@ namespace HogarGestor.App.Persistencia
                     .FirstOrDefault();
             return joven.PatronesCrecimientoJoven;
         }
+
     }
 }
