@@ -1,0 +1,28 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Pages_BDFamiliares.AddPatronModel
+@{
+}
+<h1>Agregar Patron de Crecimiento</h1>
+<br>
+<form method="post">
+    <input type="hidden" asp-for="joven.Id">
+    <div class="form-group">
+        <label>Patron de Crecimiento</label>
+        <select asp-for="patrones.Medicion" class="form-control">
+            <option value="0">Peso</option>
+            <option value="1">Talla</option>
+            <option value="2">PerimetroCefalico</option>
+            <option value="3">PerimetroAbdominal</option>
+        </select>
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Valor</label>
+        <input asp-for="patrones.Valor" class="form-control">
+    </div>
+    <br>
+    <div>
+    <button type="submit" class="btn btn-secondary btn-lg" asp-page-handler="Save">Agregar Patron</button>
+    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Cancelar</a>
+    </div>
+</form>

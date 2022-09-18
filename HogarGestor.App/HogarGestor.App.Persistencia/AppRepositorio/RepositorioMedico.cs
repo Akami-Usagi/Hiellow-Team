@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HogarGestor.App.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace HogarGestor.App.Persistencia
 {
@@ -82,6 +83,12 @@ namespace HogarGestor.App.Persistencia
         public IEnumerable<Joven> JovenesAsignadosNutricionista(int IdMedico)
         {
             return _appContext.Jovenes.Where(j => j.Nutricionista.Id == IdMedico).ToList();
+        }
+
+        public IEnumerable<PatronesCrecimiento> GetPatronesPaciente(int IdJoven)
+        {
+            var joven = _appContext.Jovenes.Where(j => j.Id == IdJoven).Include(j => j.HistoriaJoven).FirstOrDefault();
+            return joven.HistoriaJoven.PatronCrecimiento;
         }
     }
 }

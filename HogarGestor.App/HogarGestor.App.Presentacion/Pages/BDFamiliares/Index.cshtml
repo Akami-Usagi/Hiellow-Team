@@ -31,13 +31,15 @@
                     <a asp-page = ".\Delete" asp-route-id = "@familiar.Id" title="Borrar" style="text-decoration: none">
                         <span class="material-icons" style="color: white; text-decoration-line: none">delete</span>
                     </a>
-                    <a asp-page = ".\Details" asp-route-id = "@familiar.Id" title="Buscar" style="text-decoration: none">
+                    <a asp-page = ".\Details" asp-route-id = "@familiar.Id" title="Detalles" style="text-decoration: none">
                         <span class="material-icons" style="color: white; text-decoration-line: none">description</span>
                     </a>
                     <a asp-page = ".\Edit" asp-route-id = "@familiar.Id" title="Editar" style="text-decoration: none">
                         <span class="material-icons" style="color: white; text-decoration-line: none">mode_edit</span>
                     </a>
-                    
+                    <a asp-page = ".\JovenAsignado" asp-route-id = "@familiar.Id" title="Joven Asignado" style="text-decoration: none">
+                        <span class="material-icons" style="color: white; text-decoration-line: none">contact_page</span>
+                    </a>
                     
                 </td>
             </tr>

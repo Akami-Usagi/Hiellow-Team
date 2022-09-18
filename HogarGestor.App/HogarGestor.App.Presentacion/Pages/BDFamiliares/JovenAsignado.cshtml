@@ -1,8 +1,8 @@
 ﻿@page
-@model HogarGestor.App.Presentacion.Pages_BDMedicos.JovenesAsignadosModel
+@model HogarGestor.App.Presentacion.Pages_BDFamiliares.JovenAsignadoModel
 @{
 }
-<h1>Jovenes a cargo de @(Model.medico.Nombre + " " + Model.medico.Apellidos)</h1>
+<h1>Joven a cargo de @(Model.familiar.Nombre + " " + Model.familiar.Apellidos)</h1>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -25,8 +25,8 @@
                 <td>@joven.Genero</td>
                 <td>
                          
-                    <a asp-page = ".\ListaPatrones" asp-route-id = "@joven.Id" title="Ver Detalles" style="text-decoration: none">
-                        <span class="material-icons" style="color: white; text-decoration-line: none">  description  </span>
+                    <a asp-page = ".\AddPatron" asp-route-id = "@joven.Id" title="Ver Detalles" style="text-decoration: none">
+                        <span class="material-icons" style="color: white; text-decoration-line: none">data_saver_on</span>
                     </a>
                                              
                 </td>

@@ -1,3 +1,70 @@
+/* _content/HogarGestor.App.Presentacion/Pages/BDFamiliares/AddPatron.cshtml.rz.scp.css */
+/* From uiverse.io */
+button[b-cl0gcx20tc] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover[b-cl0gcx20tc] {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active[b-cl0gcx20tc] {
+    transform: translateY(-1px);
+  }
+
+  .form-group[b-cl0gcx20tc] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.349);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  .form-group:hover[b-cl0gcx20tc] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .form-control[b-cl0gcx20tc] {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.171);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
 /* _content/HogarGestor.App.Presentacion/Pages/BDFamiliares/Create.cshtml.rz.scp.css */
 /* From uiverse.io */
 button[b-n9pss45a80] {
@@ -197,6 +264,31 @@ table[b-zyzlzoxxp0] {
       transform: translateY(-7px);
     }
   
+/* _content/HogarGestor.App.Presentacion/Pages/BDFamiliares/JovenAsignado.cshtml.rz.scp.css */
+table[b-tjl5b2guxo] {
+    color: rgb(150, 150, 150);
+    border-collapse:collapse;
+    border:solid rgb(150, 150, 150) 1px;
+    border-radius:10px;
+  }
+    
+    tbody[b-tjl5b2guxo] {
+      padding: 1.3em 3em;
+      color: rgb(155, 155, 155);
+      background-color: rgba(255, 255, 255, 0.411);
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      outline: none;
+    }
+  
+    tbody:hover[b-tjl5b2guxo] {
+      background-color: #2e2e2e;
+      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+      color: #fff;
+      transform: translateY(-7px);
+    }
 /* _content/HogarGestor.App.Presentacion/Pages/BDJovenes/Create.cshtml.rz.scp.css */
 /* From uiverse.io */
 button[b-jfoenhtao5] {

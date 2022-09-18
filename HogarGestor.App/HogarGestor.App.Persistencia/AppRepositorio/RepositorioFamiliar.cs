@@ -57,5 +57,10 @@ namespace HogarGestor.App.Persistencia.AppRepositorio
             }
             return FamiliarEncontrado;
         }
+
+         public IEnumerable<Joven> JovenesAsignadosFamiliar(int IdFamiliar)
+        {
+            return _appContext.Jovenes.Where(j => j.FamiliarDesignado.Id == IdFamiliar).ToList();
+        }
     }
 }

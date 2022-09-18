@@ -17,5 +17,6 @@ namespace HogarGestor.App.Persistencia
         IEnumerable<Medico> GetAllNutricionistas(Especialidad especialidad);
         IEnumerable<Joven> JovenesAsignadosPediatra(int IdMedico);
         IEnumerable<Joven> JovenesAsignadosNutricionista(int IdMedico);
+        IEnumerable<PatronesCrecimiento> GetPatronesPaciente(int IdJoven);
     }
 }

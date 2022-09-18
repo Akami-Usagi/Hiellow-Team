@@ -13,5 +13,6 @@ namespace HogarGestor.App.Persistencia
         Familiar UpdateFamiliar(Familiar familiar);
         void DeleteFamiliar(int IdFamiliar);
         Familiar GetFamiliar(int IdFamiliar);
+        IEnumerable<Joven> JovenesAsignadosFamiliar(int IdFamiliar);
     }
 }
