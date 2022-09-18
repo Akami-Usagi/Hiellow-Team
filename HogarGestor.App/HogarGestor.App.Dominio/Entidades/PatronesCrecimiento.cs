@@ -8,7 +8,7 @@ namespace HogarGestor.App.Dominio
 
         public float Valor { get; set; }
 
-        public Joven JovenId { get; set; }
+        //public Joven JovenId { get; set; }
 
         //public Joven? Joven { get; set; }
     }

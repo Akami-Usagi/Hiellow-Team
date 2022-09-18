@@ -1,6 +1,7 @@
 using System.Linq;
 using HogarGestor.App.Dominio;
 using Microsoft.EntityFrameworkCore;
+
 namespace HogarGestor.App.Persistencia
 {
     public class RepositorioJoven : IRepositorioJoven
@@ -129,15 +130,26 @@ namespace HogarGestor.App.Persistencia
             return joven.Nutricionista;
         }
 
-
-        public Medico ConsultarMedicoPediatra(int idJoven){
-                var joven =
+        public Medico ConsultarMedicoPediatra(int idJoven)
+        {
+            var joven =
                 _appContext
                     .Jovenes
                     .Where(p => p.Id == idJoven)
                     .Include(p => p.Pediatra)
                     .FirstOrDefault();
             return joven.Pediatra;
+        }
+
+        public IEnumerable<PatronesCrecimiento> GetPatronesDeCrecimiento(int idJoven)
+        {
+            var joven =
+                _appContext
+                    .Jovenes
+                    .Where(j => j.Id == idJoven)
+                    .Include(j => j.PatronesCrecimientoJoven)
+                    .FirstOrDefault();
+            return joven.PatronesCrecimientoJoven;
         }
     }
 }

@@ -24,6 +24,11 @@ namespace HogarGestor.App.Persistencia
         IEnumerable<Joven> GetFilter(string filtro);
 
         Medico ConsultarMedicoNutricionista(int idJoven);
+
         Medico ConsultarMedicoPediatra(int idJoven);
+
+        IEnumerable<PatronesCrecimiento> GetPatronesDeCrecimiento(int idJoven);
+
+        //IEnumerable<Joven> JovenMedico(int idJoven);
     }
 }
