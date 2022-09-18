@@ -12,11 +12,13 @@ namespace HogarGestor.App.Presentacion.Pages_BDFamiliares
     {
         private readonly IRepositorioJoven _RepoJoven;
         [BindProperty]
-        public PatronesCrecimiento patrones {get;set;}
+        public PatronesCrecimiento patron {get;set;}
         [BindProperty]
         public Historia historia {get;set;}
         [BindProperty]
         public Joven joven {get;set;}
+        [BindProperty]
+        public List<PatronesCrecimiento> listaPatrones{get;set;}
         public AddPatronModel(IRepositorioJoven _RepoJoven){
             this._RepoJoven = _RepoJoven;
         }
@@ -33,34 +35,23 @@ namespace HogarGestor.App.Presentacion.Pages_BDFamiliares
         }
 
         public IActionResult OnPostSave(){
-            if(joven.Id > 0){
-                var jovenFound = _RepoJoven.GetJoven(joven.Id);
-                if(jovenFound != null){
-                    if(jovenFound.HistoriaJoven != null){
-                        historia = new Historia{Registro = "Inicial"};
-                        jovenFound.HistoriaJoven = historia;
-                        if(jovenFound.HistoriaJoven.PatronCrecimiento != null){
-                            jovenFound.HistoriaJoven.PatronCrecimiento.Add(patrones);
-                        }
-                        else{
-                            jovenFound.HistoriaJoven.PatronCrecimiento = new List<PatronesCrecimiento>{
-                                    new PatronesCrecimiento{
-                                        Medicion = patrones.Medicion,
-                                        Valor = patrones.Valor
-                                    }
-                                };
-                            
-                        }
-                        _RepoJoven.UpdateJoven(jovenFound);
-                    }
-
-                }
-                return RedirectToPage("./Index");
+            historia = _RepoJoven.GetHistoriaJoven(joven.Id);
+            if(historia == null){
+                historia = new Historia{
+                    Registro = "Inicial",
+                    PatronCrecimiento = listaPatrones
+                    };
+                historia.PatronCrecimiento.Add(patron);
+                historia = _RepoJoven.ToAssignHistoria(joven.Id, historia);
             }
-            else{return Page();
+            else{
+                
+                listaPatrones.Add(patron);
+                historia.PatronCrecimiento = listaPatrones;
+                historia = _RepoJoven.ToAssignHistoria(joven.Id, historia);
             }
+            return RedirectToPage("./Index");
         }
-
 
     }
 }

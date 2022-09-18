@@ -12,7 +12,7 @@
             <th scope="col">Genero</th>
             <th scope="col">Parentesco</th>
             <th scope="col">Correo Electronico</th>
-            <th scope="col">Opciones <a asp-page="./Create" title="Agregar Medico">
+            <th scope="col">Opciones <a asp-page="./Create" title="Agregar Familiar">
             <span class="material-icons" style="color: rgb(150, 150, 150);">group_add</span></a></th>
         </tr>
     </thead>
@@ -31,7 +31,7 @@
                     <a asp-page = ".\Delete" asp-route-id = "@familiar.Id" title="Borrar" style="text-decoration: none">
                         <span class="material-icons" style="color: white; text-decoration-line: none">delete</span>
                     </a>
-                    <a asp-page = ".\Details" asp-route-id = "@familiar.Id" title="Detalles" style="text-decoration: none">
+                    <a asp-page = ".\Details" asp-route-id = "@familiar.Id" title="Ver Detalles" style="text-decoration: none">
                         <span class="material-icons" style="color: white; text-decoration-line: none">description</span>
                     </a>
                     <a asp-page = ".\Edit" asp-route-id = "@familiar.Id" title="Editar" style="text-decoration: none">

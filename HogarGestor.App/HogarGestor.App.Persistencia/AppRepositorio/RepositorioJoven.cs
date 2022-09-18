@@ -129,6 +129,28 @@ namespace HogarGestor.App.Persistencia{
             return joven.FamiliarDesignado;
         }
 
-        
+        public Historia GetHistoriaJoven(int IdJoven)
+        {
+            var joven = _appContext.Jovenes.Where(j => j.Id == IdJoven).Include(j=> j.HistoriaJoven).FirstOrDefault();
+            return joven.HistoriaJoven;
+        }
+
+        public Historia ToAssignHistoria(int IdJoven, Historia historia)
+        {
+            var JovenEncontrado = _appContext.Jovenes.FirstOrDefault(j => j.Id == IdJoven);
+            if(JovenEncontrado!=null){
+                JovenEncontrado.HistoriaJoven = historia;
+                _appContext.SaveChanges();
+                return historia;
+            }
+            return null;
+        }
+        public IEnumerable<PatronesCrecimiento> GetPatronesJoven(int IdJoven)
+        {
+            var joven = _appContext.Jovenes.Where(j => j.Id == IdJoven).Include(j => j.HistoriaJoven).FirstOrDefault();
+            var historia = GetHistoriaJoven(joven.Id);
+            var historiaFound = _appContext.Historias.Where(h => h.Id == historia.Id).Include(h => h.PatronCrecimiento).FirstOrDefault();
+            return historiaFound.PatronCrecimiento;
+        }
     }
 }

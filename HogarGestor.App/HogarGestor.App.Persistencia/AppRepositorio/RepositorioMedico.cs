@@ -85,10 +85,6 @@ namespace HogarGestor.App.Persistencia
             return _appContext.Jovenes.Where(j => j.Nutricionista.Id == IdMedico).ToList();
         }
 
-        public IEnumerable<PatronesCrecimiento> GetPatronesPaciente(int IdJoven)
-        {
-            var joven = _appContext.Jovenes.Where(j => j.Id == IdJoven).Include(j => j.HistoriaJoven).FirstOrDefault();
-            return joven.HistoriaJoven.PatronCrecimiento;
-        }
+        
     }
 }

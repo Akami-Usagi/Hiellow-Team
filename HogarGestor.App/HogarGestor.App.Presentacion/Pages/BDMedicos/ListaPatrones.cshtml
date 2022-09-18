@@ -1,0 +1,23 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Pages_BDMedicos.ListaPatronesModel
+@{
+}
+<h1>Patrones de Crecimiento</h1>
+<br>
+<div>
+    
+    <dl class="row">
+        @foreach (var item in Model.listaPatrones)
+        {
+            
+        
+            <dt class="col-sm-2">@item.Medicion</dt>
+            <dd class="col-sm-10">@item.Valor</dd>
+        
+        }
+    </dl>
+</div>
+<br>
+<div>
+    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Regresar</a>
+</div>

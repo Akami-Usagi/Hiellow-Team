@@ -17,6 +17,9 @@ namespace HogarGestor.App.Persistencia{
         Medico ConsultarPediatra(int IdJoven);
         Medico ConsultarNutricionista(int IdJoven);
         Familiar ConsultarFamiliar(int IdJoven);
-       // IEnumerable<PatronesCrecimiento> GetPatronJoven(int IdJoven);
+        Historia GetHistoriaJoven(int IdJoven);
+        Historia ToAssignHistoria(int IdJoven, Historia historia);
+        IEnumerable<PatronesCrecimiento> GetPatronesJoven(int IdJoven);
+       
     }
 }
