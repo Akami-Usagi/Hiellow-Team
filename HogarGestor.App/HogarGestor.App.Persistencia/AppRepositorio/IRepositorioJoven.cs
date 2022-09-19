@@ -16,10 +16,12 @@ namespace HogarGestor.App.Persistencia{
         IEnumerable<Joven> GetFiltro(string filtro);
         Medico ConsultarPediatra(int IdJoven);
         Medico ConsultarNutricionista(int IdJoven);
+        Medico ConsultarMedico(int IdJoven);
         Familiar ConsultarFamiliar(int IdJoven);
         Historia GetHistoriaJoven(int IdJoven);
         Historia ToAssignHistoria(int IdJoven, Historia historia);
         IEnumerable<PatronesCrecimiento> GetPatronesJoven(int IdJoven);
+        IEnumerable<SugerenciaCuidado> GetSugerenciasJoven(int IdJoven);
        
     }
 }

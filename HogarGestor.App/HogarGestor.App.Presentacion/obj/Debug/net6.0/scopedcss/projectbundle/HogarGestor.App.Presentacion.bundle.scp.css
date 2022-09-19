@@ -289,6 +289,26 @@ table[b-tjl5b2guxo] {
       color: #fff;
       transform: translateY(-7px);
     }
+/* _content/HogarGestor.App.Presentacion/Pages/BDFamiliares/ListaSugerencias.cshtml.rz.scp.css */
+dd[b-xl0587lit1] {
+    padding: 1.3em 3em;
+    
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.404);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    
+    outline: none;
+  }
+
+  dd:hover[b-xl0587lit1] {
+    background-color: #2e2e2e;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
 /* _content/HogarGestor.App.Presentacion/Pages/BDJovenes/Create.cshtml.rz.scp.css */
 /* From uiverse.io */
 button[b-jfoenhtao5] {

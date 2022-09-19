@@ -1,0 +1,23 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Pages_BDFamiliares.ListaSugerenciasModel
+@{
+}
+<h1>Patrones de Crecimiento de @Model.joven.Nombre @Model.joven.Apellidos</h1>
+<br>
+<div>
+    
+    <dl class="row">
+        @foreach (var item in Model.listaSugerencias)
+        {
+            
+        
+            <dt class="col-sm-2">@item.FechaHora</dt>
+            <dd class="col-sm-10">@item.Descripcion</dd>
+        
+        }
+    </dl>
+</div>
+<br>
+<div>
+    <a type="button" class="btn btn-secondary btn-lg" asp-route-id="@Model.familiar.Id" asp-page="./JovenAsignado">Regresar</a>
+</div>

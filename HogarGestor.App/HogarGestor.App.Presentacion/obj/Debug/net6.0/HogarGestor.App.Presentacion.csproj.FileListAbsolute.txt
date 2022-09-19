@@ -86,3 +86,4 @@ C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\sc
 C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\scopedcss\Pages\BDFamiliares\AddPatron.cshtml.rz.scp.css
 C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\scopedcss\Pages\BDMedicos\ListaPatrones.cshtml.rz.scp.css
 C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\scopedcss\Pages\BDMedicos\SugerenciaCuidado.cshtml.rz.scp.css
+C:\Hiellow-Team\hogargestor.app\hogargestor.app.presentacion\obj\Debug\net6.0\scopedcss\Pages\BDFamiliares\ListaSugerencias.cshtml.rz.scp.css

@@ -7,24 +7,25 @@ using HogarGestor.App.Dominio;
 using HogarGestor.App.Persistencia;
 using HogarGestor.App.Presentacion.Pages_BDJovenes;
 
-namespace HogarGestor.App.Presentacion.Pages_BDMedicos
+namespace HogarGestor.App.Presentacion.Pages_BDFamiliares
 {
-    public class ListaPatronesModel : PageModel
+    public class ListaSugerenciasModel : PageModel
     {
         private readonly IRepositorioJoven _RepoJoven;
-        private readonly IRepositorioMedico _RepoMedico;
+        private readonly IRepositorioFamiliar _RepoFamiliar;
         [BindProperty]
         public Joven joven{get;set;}
         [BindProperty]
         public Historia historia{get;set;}
         [BindProperty]
-        public Medico medico {get;set;}
-        public IEnumerable<PatronesCrecimiento> listaPatrones{get;set;}
+        public Familiar familiar {get;set;}
+        public IEnumerable<SugerenciaCuidado> listaSugerencias{get;set;}
         [BindProperty(SupportsGet = true)]
         public string GetFilter {get;set;}
-        public ListaPatronesModel(IRepositorioJoven _RepoJoven, IRepositorioMedico _RepoMedico){
+
+        public ListaSugerenciasModel(IRepositorioJoven _RepoJoven, IRepositorioFamiliar _RepoFamiliar){
             this._RepoJoven = _RepoJoven;
-            this._RepoMedico = _RepoMedico;
+            this._RepoFamiliar = _RepoFamiliar;
         }
         public IActionResult OnGet(int Id)
         {
@@ -34,12 +35,10 @@ namespace HogarGestor.App.Presentacion.Pages_BDMedicos
             }
             else{
                 historia = _RepoJoven.GetHistoriaJoven(joven.Id);
-                medico = _RepoJoven.ConsultarMedico(joven.Id);                               
-                listaPatrones = _RepoJoven.GetPatronesJoven(joven.Id);
+                familiar = _RepoJoven.ConsultarFamiliar(joven.Id);
+                listaSugerencias = _RepoJoven.GetSugerenciasJoven(joven.Id);
                 return Page();
             }
-            
-            
         }
     }
 }

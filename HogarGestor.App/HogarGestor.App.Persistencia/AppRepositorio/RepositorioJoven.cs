@@ -123,6 +123,16 @@ namespace HogarGestor.App.Persistencia{
             return joven.Nutricionista;
         }
 
+        public Medico ConsultarMedico(int IdJoven){
+            var joven = _appContext.Jovenes.Where(j => j.Id == IdJoven).Include(j=> j.Pediatra).FirstOrDefault();
+            if(joven.Pediatra != null){
+                return joven.Pediatra;
+            }
+            else{
+                return joven.Nutricionista;
+            }
+        }
+
         public Familiar ConsultarFamiliar(int IdJoven)
         {
             var joven = _appContext.Jovenes.Where(j => j.Id == IdJoven).Include(j=> j.FamiliarDesignado).FirstOrDefault();
@@ -151,6 +161,14 @@ namespace HogarGestor.App.Persistencia{
             var historia = GetHistoriaJoven(joven.Id);
             var historiaFound = _appContext.Historias.Where(h => h.Id == historia.Id).Include(h => h.PatronCrecimiento).FirstOrDefault();
             return historiaFound.PatronCrecimiento;
+        }
+
+        public IEnumerable<SugerenciaCuidado> GetSugerenciasJoven(int IdJoven)
+        {
+            var joven = _appContext.Jovenes.Where(j => j.Id == IdJoven).Include(j => j.HistoriaJoven).FirstOrDefault();
+            var historia = GetHistoriaJoven(joven.Id);
+            var historiaFound = _appContext.Historias.Where(h => h.Id == historia.Id).Include(h => h.SugerenciasCuidado).FirstOrDefault();
+            return historiaFound.SugerenciasCuidado;
         }
     }
 }
