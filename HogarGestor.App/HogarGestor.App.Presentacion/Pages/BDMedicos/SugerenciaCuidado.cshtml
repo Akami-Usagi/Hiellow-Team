@@ -1,0 +1,23 @@
+﻿@page
+@model HogarGestor.App.Presentacion.Pages_BDMedicos.SugerenciaCuidadoModel
+@{
+}
+<h1>Agregar Sugerencia de Ciudado</h1>
+<br>
+<form method="post">
+    <input type="hidden" asp-for="joven.Id">
+    <div class="form-group">
+        <label>Fecha</label>
+        <input asp-for="sugerencia.FechaHora" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Descripcion</label>
+        <input asp-for="sugerencia.Descripcion" class="form-control">
+    </div>
+    <br>
+    <div>
+    <button type="submit" class="btn btn-secondary btn-lg" asp-page-handler="Save">Agregar Patron</button>
+    <a type="button" class="btn btn-secondary btn-lg" asp-route-id="@Model.medico.Id" asp-page="./JovenesAsignados">Cancelar</a>
+    </div>
+</form>

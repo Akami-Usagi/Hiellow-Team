@@ -10,7 +10,7 @@
             <th scope="col">Apellidos</th>
             <th scope="col">Telefono</th>
             <th scope="col">Genero</th>
-            <th scope="col">Patron de Crecimiento</th>
+            <th scope="col">Historia</th>
         </tr>
     </thead>
     @foreach (var joven in Model.Jovenes)
@@ -28,6 +28,9 @@
                     <a asp-page = ".\ListaPatrones" asp-route-id = "@joven.Id" title="Ver Patrones de Crecimiento" style="text-decoration: none">
                         <span class="material-icons" style="color: white; text-decoration-line: none">data_saver_off</span>
                     </a>
+                    <a asp-page = ".\SugerenciaCuidado" asp-route-id = "@joven.Id" title="Ingresar Sugerencia de Cuidado" style="text-decoration: none">
+                        <span class="material-icons" style="color: white; text-decoration-line: none">post_add</span>
+                    </a>
                                              
                 </td>
                 
@@ -37,5 +40,5 @@
     }
 </table>
 <div>
-    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Regresar</a>
+    <a type="button" class="btn btn-secondary btn-lg"  asp-page="./Index">Regresar</a>
 </div>

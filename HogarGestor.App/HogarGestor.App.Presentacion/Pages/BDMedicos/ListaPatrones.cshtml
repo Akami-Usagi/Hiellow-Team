@@ -2,7 +2,7 @@
 @model HogarGestor.App.Presentacion.Pages_BDMedicos.ListaPatronesModel
 @{
 }
-<h1>Patrones de Crecimiento</h1>
+<h1>Patrones de Crecimiento de @Model.joven.Nombre @Model.joven.Apellidos</h1>
 <br>
 <div>
     
@@ -19,5 +19,5 @@
 </div>
 <br>
 <div>
-    <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Regresar</a>
+    <a type="button" class="btn btn-secondary btn-lg" asp-route-id="@Model.medico.Id" asp-page="./JovenesAsignados">Regresar</a>
 </div>

@@ -13,6 +13,7 @@ namespace HogarGestor.App.Presentacion.Pages_BDMedicos
         private readonly IRepositorioMedico _RepoMedico;
         public IEnumerable<Joven> Jovenes {get;set;}
         [BindProperty(SupportsGet = true)]
+        
         public int GetFilter {get;set;}
         [BindProperty]
         public Medico medico {get;set;}

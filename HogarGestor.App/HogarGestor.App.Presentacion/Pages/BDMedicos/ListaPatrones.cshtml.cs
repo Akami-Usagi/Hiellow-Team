@@ -15,6 +15,7 @@ namespace HogarGestor.App.Presentacion.Pages_BDMedicos
         public Historia historia{get;set;}
         [BindProperty]
        // public List<PatronesCrecimiento> listaPatrones{get;set;}
+       public Medico medico {get;set;}
         public IEnumerable<PatronesCrecimiento> listaPatrones{get;set;}
         [BindProperty(SupportsGet = true)]
         public string GetFilter {get;set;}
@@ -24,7 +25,11 @@ namespace HogarGestor.App.Presentacion.Pages_BDMedicos
         }
         public IActionResult OnGet(int Id)
         {
-            
+            joven = _RepoJoven.GetJoven(Id);
+            medico = _RepoJoven.ConsultarPediatra(joven.Id);
+            if(medico == null){
+                medico = _RepoJoven.ConsultarNutricionista(joven.Id);
+            }
             listaPatrones = _RepoJoven.GetPatronesJoven(Id);
             if(!listaPatrones.Any()){
                 return RedirectToPage("./Index");
