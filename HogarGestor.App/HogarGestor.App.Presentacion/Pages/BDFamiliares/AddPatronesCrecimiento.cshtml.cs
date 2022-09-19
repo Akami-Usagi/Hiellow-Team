@@ -7,11 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace HospiEnCasa.App.Presentacion.Pages_BDJovenes
+namespace HospiEnCasa.App.Presentacion.Pages_BDFamiliares
 {
     public class AddPatronesCrecimientoModel : PageModel
     {
-
         private readonly IRepositorioJoven _RepoJoven;
 
         [BindProperty]

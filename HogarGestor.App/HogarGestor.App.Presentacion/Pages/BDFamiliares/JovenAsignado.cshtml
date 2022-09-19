@@ -1,17 +1,17 @@
 ﻿@page
-@model HospiEnCasa.App.Presentacion.Pages_BDMedicos.JovenesAsignadosModel
+@model HospiEnCasa.App.Presentacion.Pages_BDFamiliares.JovenAsignadoModel
 @{
 }
 
 <form method="get">
     <div class="form-actions no-color">
         <p>
-            Id Medico :  <input type="text" name="GetFilter" asp-for="GetFilter"/>
+            Id Familiar :  <input type="text" name="GetFilter" asp-for="GetFilter"/>
             <input type="submit" value="Filter" class="btn btn-default" />
+                        
         </p>
     </div>
 </form>
-
 
 <table class="table table-bordered">
     <thead>
@@ -27,20 +27,24 @@
     @foreach (var joven in Model.Jovenes)
     {
         <tbody>
+        
             <tr>
                 <td>@joven.Nombre</td>
                 <td>@joven.Apellido</td>
                 <td>@joven.Telefono</td>
                 <td>@joven.Documento</td>
                 <td>@joven.GeneroId</td>
-                <td>
-                    <a asp-page="./ListaPatrones" asp-route-id="@joven.Id"><span class="material-icons">description</span></a>
+                <td> 
+                    <a asp-page = "./AddPatronesCrecimiento" asp-route-id = "@joven.Id" title="Ver Detalles" style="text-decoration: none">
+                       <span class="material-icons">add_task</span>
+                    </a>                      
                 </td>
             </tr>
+        
         </tbody>
     }
 </table>
-
 <div>
     <a type="button" class="btn btn-secondary btn-lg" asp-page="./index">Regresar</a>
 </div>
+

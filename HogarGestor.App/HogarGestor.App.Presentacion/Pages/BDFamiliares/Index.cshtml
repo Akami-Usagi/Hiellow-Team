@@ -3,7 +3,7 @@
 @{
 }
 
-<h1>Lista De Familiares</h1>
+<h1>Familiares</h1>
 
 <p>
     <a asp-page="./Create">Create New</a>
@@ -47,6 +47,9 @@
                     <a asp-page="./Edit" asp-route-id="@familiar.Id"><span class="material-icons">edit</span></a>
                     <a asp-page="./Delete" asp-route-id="@familiar.Id"><span class="material-icons">delete</span></a>
                     <a asp-page="./Details" asp-route-id="@familiar.Id"><span class="material-icons">description</span></a>
+                    <a asp-page = "./JovenAsignado" asp-route-id = "@familiar.Id" title="Joven Asignado" style="text-decoration: none">
+                        <span class="material-icons">contact_page</span>
+                    </a>
                 </td>
             </tr>
         </tbody>

@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnY2xlYXJcVG9Bc3NpZ25QZWRpYXRyYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDFamiliares/AddPatronesCrecimiento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXEFkZFBhdHJvbmVzQ3JlY2ltaWVudG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDFamiliares/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -39,8 +43,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDJovenes/AddPatronesCrecimiento.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRKb3ZlbmVzXEFkZFBhdHJvbmVzQ3JlY2ltaWVudG8uY3NodG1s
+[C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDFamiliares/JovenAsignado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQkRGYW1pbGlhcmVzXEpvdmVuQXNpZ25hZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rojas/HogarGestor/Hiellow-Team/HogarGestor.App/HogarGestor.App.Presentacion/Pages/BDJovenes/Create.cshtml]
